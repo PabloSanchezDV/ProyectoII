@@ -1,13 +1,14 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class InCameraDetector : MonoBehaviour
 {
-    [SerializeField] private Transform[] _checkPoints;
+    private Transform[] _checkPoints;
+    public Transform[] CheckPoints {  set { _checkPoints = value; } }
 
     private Camera _camera;
-    private MeshRenderer _renderer;
     private Plane[] _cameraFrustrum;
     private Collider _collider;
 
@@ -15,34 +16,27 @@ public class InCameraDetector : MonoBehaviour
     void Start()
     {
         _camera = Camera.main;
-        _renderer = GetComponent<MeshRenderer>();
         _collider = GetComponent<Collider>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.Space)) 
-        {
-            CheckIfItsOnCamera();
-        }
-    }
+    /// <summary>
+    /// Returns true if the animal is on camera and any checkpoint is on camera view.
 
-    private void CheckIfItsOnCamera()
+    public bool IsOnCamera()
     {
         var bounds = _collider.bounds;
         _cameraFrustrum = GeometryUtility.CalculateFrustumPlanes(_camera);
         if (GeometryUtility.TestPlanesAABB(_cameraFrustrum, bounds))
         {
-            ThrowRay();
+            return DoesRayHit();
         }
         else
         {
-            _renderer.material.color = Color.green;
+            return false;
         }
     }
 
-    private void ThrowRay()
+    private bool DoesRayHit()
     {
         foreach(Transform checkpoint in _checkPoints)
         {
@@ -52,18 +46,19 @@ public class InCameraDetector : MonoBehaviour
 
                 if(hit.transform.gameObject.Equals(gameObject))
                 {
-                    _renderer.material.color = Color.red;
-                    break;
+                    return true;
                 }
                 else
                 {
-                    _renderer.material.color = Color.green;
+                    return false;
                 }
             }
             else
             {
-                _renderer.material.color = Color.green;
+                return false;
             }
         }
+
+        throw new Exception("The animal " + transform.name + " doesn't have any checkpoints.");
     }
 }
