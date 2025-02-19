@@ -48,4 +48,15 @@ public class AnimalsHolder : MonoBehaviour
             }
         }
     }
+
+    public void ChekAnimlasInCamera()
+    {
+        foreach (Animal animal in animals)
+        {
+            if (animal != null)
+            {
+                animal.ShowIfItsOnCamera();
+            }
+        }
+    }
 }

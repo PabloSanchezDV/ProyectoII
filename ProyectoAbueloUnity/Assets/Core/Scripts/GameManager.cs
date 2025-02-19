@@ -29,5 +29,9 @@ public class GameManager : MonoBehaviour
         _daytime += _daytimeModifier * Time.deltaTime;
         //Debug.Log(_daytime);
         AnimalsHolder.instance.UpdateAllAnimals(_daytime);
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            AnimalsHolder.instance.ChekAnimlasInCamera();
+        }
     }
 }

@@ -108,6 +108,14 @@ public class Animal : MonoBehaviour
     {
         return _inCameraDetector.IsOnCamera();
     }
+
+    //Only for prototype
+    public void ShowIfItsOnCamera()
+    {
+        if (IsOnCamera())
+            Debug.Log(this.gameObject.name + " is on camera doing " + _currentAction);
+    }
+
     #endregion
 
     #region PathSystem Methods
