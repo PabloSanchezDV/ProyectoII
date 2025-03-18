@@ -138,24 +138,24 @@ public class AudioManager : MonoBehaviour
 
     private float ChangeSFXVolumeAsPerModifier(float originalVolume)
     {
-        if (SettingsManager.Instance.AreSFXEnabled)
-            return originalVolume * SettingsManager.Instance.SFXVolumeModifier;
+        if (SettingsManager.Instance.Database.AreSFXEnabled)
+            return originalVolume * SettingsManager.Instance.Database.SFXVolumeModifier;
         else
             return 0f;
     }
 
     private float ChangeTinnitusSFXVolumeAsPerModifier(float originalVolume)
     {
-        if (SettingsManager.Instance.AreTinnitusSFXEnabled)
-            return originalVolume * SettingsManager.Instance.TinnitusSFXVolumeModifier;
+        if (SettingsManager.Instance.Database.AreTinnitusSFXEnabled)
+            return originalVolume * SettingsManager.Instance.Database.TinnitusSFXVolumeModifier;
         else
             return 0f;
     }
 
     private float ChangeMusicVolumeAsPerModifier(float originalVolume)
     {
-        if (SettingsManager.Instance.IsMusicEnabled)
-            return originalVolume * SettingsManager.Instance.MusicVolumeModifier;
+        if (SettingsManager.Instance.Database.IsMusicEnabled)
+            return originalVolume * SettingsManager.Instance.Database.MusicVolumeModifier;
         else
             return 0f;
     }
