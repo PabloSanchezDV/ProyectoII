@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class AnimalsHolder : MonoBehaviour
 {
-    public static AnimalsHolder instance;
+    public static AnimalsHolder Instance;
     
     private List<Animal> animals = new List<Animal>();
 
     private void Awake()
     {
-        if(instance == null)
-            instance = this;
+        if(Instance == null)
+            Instance = this;
         else
             Destroy(this);
     }
@@ -46,6 +46,15 @@ public class AnimalsHolder : MonoBehaviour
             {
                 animal.UpdatePositionAndRotationOnDebugTimeChange(time);
             }
+        }
+    }
+
+    public void CheckAnimalsOnCamera()
+    {
+        foreach(Animal animal in animals)
+        {
+            if(animal.IsOnCamera())
+                Debug.Log(animal.ToString() + " captured in camera doing " + animal.Action + ".");
         }
     }
 }
