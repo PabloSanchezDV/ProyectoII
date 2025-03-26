@@ -1,6 +1,6 @@
 Using pre-set license
 Built from '2022.3/staging' branch; Version is '2022.3.19f1 (244b723c30a6) revision 2378610'; Using compiler version '192829333'; Build Type 'Release'
-OS: 'Windows 11  (10.0.26100) 64bit Professional' Language: 'es' Physical Memory: 32581 MB
+OS: 'Windows 10  (10.0.19045) 64bit Core' Language: 'es' Physical Memory: 16335 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
 
 COMMAND LINE ARGUMENTS:
@@ -11,13 +11,13 @@ C:\Program Files\Unity\Hub\Editor\2022.3.19f1\Editor\Unity.exe
 -name
 AssetImportWorker1
 -projectPath
-C:/Users/Usuario/Documents/GitHub/ProyectoII/ProyectoAbueloUnity
+C:/Users/Usuario/OneDrive/Escritorio/ProyectoII/ProyectoAbueloUnity
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-52067
-Successfully changed project path to: C:/Users/Usuario/Documents/GitHub/ProyectoII/ProyectoAbueloUnity
-C:/Users/Usuario/Documents/GitHub/ProyectoII/ProyectoAbueloUnity
+56689
+Successfully changed project path to: C:/Users/Usuario/OneDrive/Escritorio/ProyectoII/ProyectoAbueloUnity
+C:/Users/Usuario/OneDrive/Escritorio/ProyectoII/ProyectoAbueloUnity
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -49,69 +49,70 @@ C:/Users/Usuario/Documents/GitHub/ProyectoII/ProyectoAbueloUnity
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [13112] Host "[IP] 192.168.1.129 [Port] 0 [Flags] 2 [Guid] 751968394 [EditorId] 751968394 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-CM1QIIF) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [28632] Host "[IP] 192.168.1.33 [Port] 0 [Flags] 2 [Guid] 3974045357 [EditorId] 3974045357 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-N0P0HHP) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [13112] Host "[IP] 192.168.1.129 [Port] 0 [Flags] 2 [Guid] 751968394 [EditorId] 751968394 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-CM1QIIF) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [28632] Host "[IP] 192.168.1.33 [Port] 0 [Flags] 2 [Guid] 3974045357 [EditorId] 3974045357 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-N0P0HHP) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
 [Physics::Module] Initialized MultithreadedJobDispatcher with 11 workers.
-Refreshing native plugins compatible for Editor in 7.95 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 18.24 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.19f1 (244b723c30a6)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.19f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/Usuario/Documents/GitHub/ProyectoII/ProyectoAbueloUnity/Assets
+[Subsystems] Discovering subsystems at path C:/Users/Usuario/OneDrive/Escritorio/ProyectoII/ProyectoAbueloUnity/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce RTX 4060 (ID=0x2882)
-    Vendor:   NVIDIA
-    VRAM:     7957 MB
-    Driver:   32.0.15.6094
+    Renderer: Radeon RX 590 Series (ID=0x67df)
+    Vendor:   ATI
+    VRAM:     8135 MB
+    Driver:   31.0.21912.14
 Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.19f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.19f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.19f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56912
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56184
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.19f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.19f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.19f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.008682 seconds.
-- Loaded All Assemblies, in  0.303 seconds
+Registered in 0.030043 seconds.
+- Loaded All Assemblies, in  0.652 seconds
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
+Android Extension - Scanning For ADB Devices 464 ms
 Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.289 seconds
-Domain Reload Profiling: 591ms
-	BeginReloadAssembly (90ms)
+- Finished resetting the current domain, in  0.964 seconds
+Domain Reload Profiling: 1609ms
+	BeginReloadAssembly (193ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (26ms)
-	RebuildNativeTypeToScriptingClass (8ms)
-	initialDomainReloadingComplete (54ms)
-	LoadAllAssembliesAndSetupDomain (123ms)
-		LoadAssemblies (89ms)
+	RebuildCommonClasses (56ms)
+	RebuildNativeTypeToScriptingClass (19ms)
+	initialDomainReloadingComplete (128ms)
+	LoadAllAssembliesAndSetupDomain (249ms)
+		LoadAssemblies (187ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (120ms)
-			TypeCache.Refresh (119ms)
-				TypeCache.ScanAssembly (108ms)
-			ScanForSourceGeneratedMonoScriptInfo (0ms)
-			ResolveRequiredComponents (0ms)
-	FinalizeReload (289ms)
+		AnalyzeDomain (243ms)
+			TypeCache.Refresh (241ms)
+				TypeCache.ScanAssembly (225ms)
+			ScanForSourceGeneratedMonoScriptInfo (1ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (964ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (239ms)
+		SetupLoadedEditorAssemblies (879ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (97ms)
-			SetLoadedEditorAssemblies (4ms)
+			InitializePlatformSupportModulesInManaged (643ms)
+			SetLoadedEditorAssemblies (7ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (2ms)
-			ProcessInitializeOnLoadAttributes (94ms)
-			ProcessInitializeOnLoadMethodAttributes (43ms)
+			BeforeProcessingInitializeOnLoad (4ms)
+			ProcessInitializeOnLoadAttributes (163ms)
+			ProcessInitializeOnLoadMethodAttributes (62ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -119,8 +120,8 @@ Domain Reload Profiling: 591ms
 ========================================================================
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.546 seconds
-Refreshing native plugins compatible for Editor in 2.47 ms, found 3 plugins.
+- Loaded All Assemblies, in  1.059 seconds
+Refreshing native plugins compatible for Editor in 8.80 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
 Native extension for WebGL target not found
@@ -129,51 +130,1025 @@ Package Manager log level set to [2]
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.597 seconds
-Domain Reload Profiling: 1141ms
-	BeginReloadAssembly (126ms)
+- Finished resetting the current domain, in  1.168 seconds
+Domain Reload Profiling: 2217ms
+	BeginReloadAssembly (223ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (4ms)
+		DisableScriptedObjects (7ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (19ms)
-	RebuildCommonClasses (27ms)
-	RebuildNativeTypeToScriptingClass (8ms)
-	initialDomainReloadingComplete (34ms)
-	LoadAllAssembliesAndSetupDomain (349ms)
-		LoadAssemblies (257ms)
+		CreateAndSetChildDomain (32ms)
+	RebuildCommonClasses (47ms)
+	RebuildNativeTypeToScriptingClass (14ms)
+	initialDomainReloadingComplete (71ms)
+	LoadAllAssembliesAndSetupDomain (694ms)
+		LoadAssemblies (566ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (164ms)
-			TypeCache.Refresh (145ms)
-				TypeCache.ScanAssembly (131ms)
-			ScanForSourceGeneratedMonoScriptInfo (13ms)
-			ResolveRequiredComponents (3ms)
-	FinalizeReload (597ms)
+		AnalyzeDomain (263ms)
+			TypeCache.Refresh (233ms)
+				TypeCache.ScanAssembly (214ms)
+			ScanForSourceGeneratedMonoScriptInfo (22ms)
+			ResolveRequiredComponents (6ms)
+	FinalizeReload (1169ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (445ms)
+		SetupLoadedEditorAssemblies (933ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (22ms)
-			SetLoadedEditorAssemblies (3ms)
+			InitializePlatformSupportModulesInManaged (42ms)
+			SetLoadedEditorAssemblies (6ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (53ms)
-			ProcessInitializeOnLoadAttributes (343ms)
-			ProcessInitializeOnLoadMethodAttributes (19ms)
-			AfterProcessingInitializeOnLoad (5ms)
+			BeforeProcessingInitializeOnLoad (167ms)
+			ProcessInitializeOnLoadAttributes (670ms)
+			ProcessInitializeOnLoadMethodAttributes (26ms)
+			AfterProcessingInitializeOnLoad (23ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (6ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 2.26 ms, found 3 plugins.
+		AwakeInstancesAfterBackupRestoration (10ms)
+Failed to load shader (instanceID 412, GUID 67f9497810829eb4791ec19e95781e51)
+Failed to load shader (instanceID 414, GUID b34a29e523cb9d545881e193a079f2df)
+Failed to load shader (instanceID 416, GUID e8ce9961912f3214586fe8709b9012c1)
+Failed to load shader (instanceID 418, GUID 7ad194cbe7d006f4bace915156972026)
+Failed to load shader (instanceID 420, GUID f997a3dc9254c44459323cced085150c)
+Failed to load shader (instanceID 422, GUID 382151503e2a43a4ebb7366d1632731d)
+Failed to load shader (instanceID 424, GUID 0d8afcb51cc9f0349a6d190da929b838)
+Failed to load shader (instanceID 426, GUID f7ea35cfb33fcad4ab8f2429ec103bef)
+Failed to load shader (instanceID 428, GUID d7640629310e79646af0f46eb55ae466)
+Failed to load shader (instanceID 430, GUID 3020ac7ece79a7f4eb789a236f8bd6c5)
+Failed to load shader (instanceID 432, GUID 5bb6ef6f3e1b20348b4fdb01e4c404e2)
+Failed to load shader (instanceID 434, GUID 2c459b89a7c8b1a4fbefe0d81341651c)
+Failed to load shader (instanceID 436, GUID 0ef78d24e85a44f4da9d5b5eaa00e50b)
+Failed to load shader (instanceID 438, GUID fe144c7e314047f4bb779d555c5405ac)
+Failed to load shader (instanceID 440, GUID 5ab0816423f0dfe45841cab3b05ec9ef)
+Failed to load shader (instanceID 442, GUID cdbdb71de5f9c454b980f6d0e87f0afb)
+Failed to load shader (instanceID 444, GUID 4bf4cff0d0bac3d43894e2e8839feb40)
+Failed to load shader (instanceID 446, GUID 81af42a93ade3dd46a9b583d4eec76d6)
+Failed to load shader (instanceID 448, GUID a71093f2a4fe26a40805c22739e10e4a)
+Failed to load shader (instanceID 450, GUID c1e1d3119c6fd4646aea0b4b74cacc1a)
+Failed to load shader (instanceID 452, GUID 34a819c9e33402547a81619693adc8d5)
+Failed to load shader (instanceID 454, GUID 4117fce9491711c4094d33a048e36e73)
+Failed to load shader (instanceID 456, GUID de7f3ac52268a194383c7d62c2a343c1)
+Failed to load shader (instanceID 458, GUID f75014305794b3948a3c6d5ccd550e05)
+Failed to load shader (instanceID 460, GUID 51bcf79c50dc92e47ba87821b61100c3)
+Failed to load shader (instanceID 462, GUID 02d2da9bc88d25c4d878c1ed4e0b3854)
+Failed to load shader (instanceID 464, GUID b958ad1c92bd3d64c9e61318b8681dab)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
+Refreshing native plugins compatible for Editor in 8.62 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3660 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 76 unused Assets / (3.8 MB). Loaded Objects now: 4089.
-Memory consumption went from 150.8 MB to 147.0 MB.
-Total: 3.367400 ms (FindLiveObjects: 0.207600 ms CreateObjectMapping: 0.090600 ms MarkObjects: 2.259200 ms  DeleteObjects: 0.809200 ms)
+Unloading 3519 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 39 unused Assets / (57.8 KB). Loaded Objects now: 3985.
+Memory consumption went from 137.4 MB to 137.4 MB.
+Total: 3.768700 ms (FindLiveObjects: 0.357100 ms CreateObjectMapping: 0.097100 ms MarkObjects: 3.179200 ms  DeleteObjects: 0.134000 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 6d391050e5a25f67b0a2c618074f2cd9 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  1.421 seconds
+Refreshing native plugins compatible for Editor in 10.14 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.098 seconds
+Domain Reload Profiling: 3503ms
+	BeginReloadAssembly (299ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (8ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (60ms)
+	RebuildCommonClasses (75ms)
+	RebuildNativeTypeToScriptingClass (28ms)
+	initialDomainReloadingComplete (77ms)
+	LoadAllAssembliesAndSetupDomain (926ms)
+		LoadAssemblies (1026ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (50ms)
+			TypeCache.Refresh (16ms)
+				TypeCache.ScanAssembly (2ms)
+			ScanForSourceGeneratedMonoScriptInfo (21ms)
+			ResolveRequiredComponents (11ms)
+	FinalizeReload (2098ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (975ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (57ms)
+			SetLoadedEditorAssemblies (8ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (209ms)
+			ProcessInitializeOnLoadAttributes (650ms)
+			ProcessInitializeOnLoadMethodAttributes (27ms)
+			AfterProcessingInitializeOnLoad (24ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (8ms)
+Failed to load shader (instanceID 412, GUID 67f9497810829eb4791ec19e95781e51)
+Failed to load shader (instanceID 414, GUID b34a29e523cb9d545881e193a079f2df)
+Failed to load shader (instanceID 416, GUID e8ce9961912f3214586fe8709b9012c1)
+Failed to load shader (instanceID 418, GUID 7ad194cbe7d006f4bace915156972026)
+Failed to load shader (instanceID 420, GUID f997a3dc9254c44459323cced085150c)
+Failed to load shader (instanceID 422, GUID 382151503e2a43a4ebb7366d1632731d)
+Failed to load shader (instanceID 424, GUID 0d8afcb51cc9f0349a6d190da929b838)
+Failed to load shader (instanceID 426, GUID f7ea35cfb33fcad4ab8f2429ec103bef)
+Failed to load shader (instanceID 428, GUID d7640629310e79646af0f46eb55ae466)
+Failed to load shader (instanceID 430, GUID 3020ac7ece79a7f4eb789a236f8bd6c5)
+Failed to load shader (instanceID 432, GUID 5bb6ef6f3e1b20348b4fdb01e4c404e2)
+Failed to load shader (instanceID 434, GUID 2c459b89a7c8b1a4fbefe0d81341651c)
+Failed to load shader (instanceID 436, GUID 0ef78d24e85a44f4da9d5b5eaa00e50b)
+Failed to load shader (instanceID 438, GUID fe144c7e314047f4bb779d555c5405ac)
+Failed to load shader (instanceID 440, GUID 5ab0816423f0dfe45841cab3b05ec9ef)
+Failed to load shader (instanceID 442, GUID cdbdb71de5f9c454b980f6d0e87f0afb)
+Failed to load shader (instanceID 444, GUID 4bf4cff0d0bac3d43894e2e8839feb40)
+Failed to load shader (instanceID 446, GUID 81af42a93ade3dd46a9b583d4eec76d6)
+Failed to load shader (instanceID 448, GUID a71093f2a4fe26a40805c22739e10e4a)
+Failed to load shader (instanceID 450, GUID c1e1d3119c6fd4646aea0b4b74cacc1a)
+Failed to load shader (instanceID 452, GUID 34a819c9e33402547a81619693adc8d5)
+Failed to load shader (instanceID 454, GUID 4117fce9491711c4094d33a048e36e73)
+Failed to load shader (instanceID 456, GUID de7f3ac52268a194383c7d62c2a343c1)
+Failed to load shader (instanceID 458, GUID f75014305794b3948a3c6d5ccd550e05)
+Failed to load shader (instanceID 460, GUID 51bcf79c50dc92e47ba87821b61100c3)
+Failed to load shader (instanceID 462, GUID 02d2da9bc88d25c4d878c1ed4e0b3854)
+Failed to load shader (instanceID 464, GUID b958ad1c92bd3d64c9e61318b8681dab)
+Refreshing native plugins compatible for Editor in 8.95 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3512 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 24 unused Assets / (31.8 KB). Loaded Objects now: 3989.
+Memory consumption went from 137.6 MB to 137.5 MB.
+Total: 3.892000 ms (FindLiveObjects: 0.348100 ms CreateObjectMapping: 0.101800 ms MarkObjects: 3.377400 ms  DeleteObjects: 0.062900 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 6d391050e5a25f67b0a2c618074f2cd9 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.856 seconds
+Refreshing native plugins compatible for Editor in 8.70 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.859 seconds
+Domain Reload Profiling: 2703ms
+	BeginReloadAssembly (236ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (7ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (49ms)
+	RebuildCommonClasses (48ms)
+	RebuildNativeTypeToScriptingClass (15ms)
+	initialDomainReloadingComplete (60ms)
+	LoadAllAssembliesAndSetupDomain (484ms)
+		LoadAssemblies (578ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (40ms)
+			TypeCache.Refresh (12ms)
+				TypeCache.ScanAssembly (1ms)
+			ScanForSourceGeneratedMonoScriptInfo (18ms)
+			ResolveRequiredComponents (8ms)
+	FinalizeReload (1859ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (942ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (46ms)
+			SetLoadedEditorAssemblies (9ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (184ms)
+			ProcessInitializeOnLoadAttributes (654ms)
+			ProcessInitializeOnLoadMethodAttributes (26ms)
+			AfterProcessingInitializeOnLoad (22ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (9ms)
+Failed to load shader (instanceID 412, GUID 67f9497810829eb4791ec19e95781e51)
+Failed to load shader (instanceID 414, GUID b34a29e523cb9d545881e193a079f2df)
+Failed to load shader (instanceID 416, GUID e8ce9961912f3214586fe8709b9012c1)
+Failed to load shader (instanceID 418, GUID 7ad194cbe7d006f4bace915156972026)
+Failed to load shader (instanceID 420, GUID f997a3dc9254c44459323cced085150c)
+Failed to load shader (instanceID 422, GUID 382151503e2a43a4ebb7366d1632731d)
+Failed to load shader (instanceID 424, GUID 0d8afcb51cc9f0349a6d190da929b838)
+Failed to load shader (instanceID 426, GUID f7ea35cfb33fcad4ab8f2429ec103bef)
+Failed to load shader (instanceID 428, GUID d7640629310e79646af0f46eb55ae466)
+Failed to load shader (instanceID 430, GUID 3020ac7ece79a7f4eb789a236f8bd6c5)
+Failed to load shader (instanceID 432, GUID 5bb6ef6f3e1b20348b4fdb01e4c404e2)
+Failed to load shader (instanceID 434, GUID 2c459b89a7c8b1a4fbefe0d81341651c)
+Failed to load shader (instanceID 436, GUID 0ef78d24e85a44f4da9d5b5eaa00e50b)
+Failed to load shader (instanceID 438, GUID fe144c7e314047f4bb779d555c5405ac)
+Failed to load shader (instanceID 440, GUID 5ab0816423f0dfe45841cab3b05ec9ef)
+Failed to load shader (instanceID 442, GUID cdbdb71de5f9c454b980f6d0e87f0afb)
+Failed to load shader (instanceID 444, GUID 4bf4cff0d0bac3d43894e2e8839feb40)
+Failed to load shader (instanceID 446, GUID 81af42a93ade3dd46a9b583d4eec76d6)
+Failed to load shader (instanceID 448, GUID a71093f2a4fe26a40805c22739e10e4a)
+Failed to load shader (instanceID 450, GUID c1e1d3119c6fd4646aea0b4b74cacc1a)
+Failed to load shader (instanceID 452, GUID 34a819c9e33402547a81619693adc8d5)
+Failed to load shader (instanceID 454, GUID 4117fce9491711c4094d33a048e36e73)
+Failed to load shader (instanceID 456, GUID de7f3ac52268a194383c7d62c2a343c1)
+Failed to load shader (instanceID 458, GUID f75014305794b3948a3c6d5ccd550e05)
+Failed to load shader (instanceID 460, GUID 51bcf79c50dc92e47ba87821b61100c3)
+Failed to load shader (instanceID 462, GUID 02d2da9bc88d25c4d878c1ed4e0b3854)
+Failed to load shader (instanceID 464, GUID b958ad1c92bd3d64c9e61318b8681dab)
+Refreshing native plugins compatible for Editor in 8.49 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3514 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 24 unused Assets / (31.6 KB). Loaded Objects now: 3994.
+Memory consumption went from 139.5 MB to 139.5 MB.
+Total: 5.005600 ms (FindLiveObjects: 0.320600 ms CreateObjectMapping: 0.096900 ms MarkObjects: 4.521600 ms  DeleteObjects: 0.065100 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 6d391050e5a25f67b0a2c618074f2cd9 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.848 seconds
+Refreshing native plugins compatible for Editor in 14.32 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.021 seconds
+Domain Reload Profiling: 2858ms
+	BeginReloadAssembly (240ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (7ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (49ms)
+	RebuildCommonClasses (57ms)
+	RebuildNativeTypeToScriptingClass (20ms)
+	initialDomainReloadingComplete (55ms)
+	LoadAllAssembliesAndSetupDomain (465ms)
+		LoadAssemblies (559ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (42ms)
+			TypeCache.Refresh (12ms)
+				TypeCache.ScanAssembly (1ms)
+			ScanForSourceGeneratedMonoScriptInfo (17ms)
+			ResolveRequiredComponents (9ms)
+	FinalizeReload (2022ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (983ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (56ms)
+			SetLoadedEditorAssemblies (8ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (182ms)
+			ProcessInitializeOnLoadAttributes (681ms)
+			ProcessInitializeOnLoadMethodAttributes (32ms)
+			AfterProcessingInitializeOnLoad (23ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (9ms)
+Failed to load shader (instanceID 412, GUID 67f9497810829eb4791ec19e95781e51)
+Failed to load shader (instanceID 414, GUID b34a29e523cb9d545881e193a079f2df)
+Failed to load shader (instanceID 416, GUID e8ce9961912f3214586fe8709b9012c1)
+Failed to load shader (instanceID 418, GUID 7ad194cbe7d006f4bace915156972026)
+Failed to load shader (instanceID 420, GUID f997a3dc9254c44459323cced085150c)
+Failed to load shader (instanceID 422, GUID 382151503e2a43a4ebb7366d1632731d)
+Failed to load shader (instanceID 424, GUID 0d8afcb51cc9f0349a6d190da929b838)
+Failed to load shader (instanceID 426, GUID f7ea35cfb33fcad4ab8f2429ec103bef)
+Failed to load shader (instanceID 428, GUID d7640629310e79646af0f46eb55ae466)
+Failed to load shader (instanceID 430, GUID 3020ac7ece79a7f4eb789a236f8bd6c5)
+Failed to load shader (instanceID 432, GUID 5bb6ef6f3e1b20348b4fdb01e4c404e2)
+Failed to load shader (instanceID 434, GUID 2c459b89a7c8b1a4fbefe0d81341651c)
+Failed to load shader (instanceID 436, GUID 0ef78d24e85a44f4da9d5b5eaa00e50b)
+Failed to load shader (instanceID 438, GUID fe144c7e314047f4bb779d555c5405ac)
+Failed to load shader (instanceID 440, GUID 5ab0816423f0dfe45841cab3b05ec9ef)
+Failed to load shader (instanceID 442, GUID cdbdb71de5f9c454b980f6d0e87f0afb)
+Failed to load shader (instanceID 444, GUID 4bf4cff0d0bac3d43894e2e8839feb40)
+Failed to load shader (instanceID 446, GUID 81af42a93ade3dd46a9b583d4eec76d6)
+Failed to load shader (instanceID 448, GUID a71093f2a4fe26a40805c22739e10e4a)
+Failed to load shader (instanceID 450, GUID c1e1d3119c6fd4646aea0b4b74cacc1a)
+Failed to load shader (instanceID 452, GUID 34a819c9e33402547a81619693adc8d5)
+Failed to load shader (instanceID 454, GUID 4117fce9491711c4094d33a048e36e73)
+Failed to load shader (instanceID 456, GUID de7f3ac52268a194383c7d62c2a343c1)
+Failed to load shader (instanceID 458, GUID f75014305794b3948a3c6d5ccd550e05)
+Failed to load shader (instanceID 460, GUID 51bcf79c50dc92e47ba87821b61100c3)
+Failed to load shader (instanceID 462, GUID 02d2da9bc88d25c4d878c1ed4e0b3854)
+Failed to load shader (instanceID 464, GUID b958ad1c92bd3d64c9e61318b8681dab)
+Refreshing native plugins compatible for Editor in 8.83 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3514 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 24 unused Assets / (31.6 KB). Loaded Objects now: 3997.
+Memory consumption went from 141.5 MB to 141.4 MB.
+Total: 4.222700 ms (FindLiveObjects: 0.545700 ms CreateObjectMapping: 0.235000 ms MarkObjects: 3.342600 ms  DeleteObjects: 0.096900 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 6d391050e5a25f67b0a2c618074f2cd9 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 152209.194324 seconds.
+  path: Assets/Core/Scripts/Audio/NewBehaviourScript.cs
+  artifactKey: Guid(1765a02465dedeb45a78f977181fbfa4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Core/Scripts/Audio/NewBehaviourScript.cs using Guid(1765a02465dedeb45a78f977181fbfa4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5819d29976a5ff63e29e3666113a70e9') in 0.003080 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.836 seconds
+Refreshing native plugins compatible for Editor in 8.29 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.113 seconds
+Domain Reload Profiling: 2938ms
+	BeginReloadAssembly (247ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (7ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (49ms)
+	RebuildCommonClasses (53ms)
+	RebuildNativeTypeToScriptingClass (15ms)
+	initialDomainReloadingComplete (57ms)
+	LoadAllAssembliesAndSetupDomain (452ms)
+		LoadAssemblies (549ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (43ms)
+			TypeCache.Refresh (12ms)
+				TypeCache.ScanAssembly (1ms)
+			ScanForSourceGeneratedMonoScriptInfo (22ms)
+			ResolveRequiredComponents (6ms)
+	FinalizeReload (2114ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1156ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (43ms)
+			SetLoadedEditorAssemblies (6ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (174ms)
+			ProcessInitializeOnLoadAttributes (865ms)
+			ProcessInitializeOnLoadMethodAttributes (39ms)
+			AfterProcessingInitializeOnLoad (29ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (12ms)
+Failed to load shader (instanceID 412, GUID 67f9497810829eb4791ec19e95781e51)
+Failed to load shader (instanceID 414, GUID b34a29e523cb9d545881e193a079f2df)
+Failed to load shader (instanceID 416, GUID e8ce9961912f3214586fe8709b9012c1)
+Failed to load shader (instanceID 418, GUID 7ad194cbe7d006f4bace915156972026)
+Failed to load shader (instanceID 420, GUID f997a3dc9254c44459323cced085150c)
+Failed to load shader (instanceID 422, GUID 382151503e2a43a4ebb7366d1632731d)
+Failed to load shader (instanceID 424, GUID 0d8afcb51cc9f0349a6d190da929b838)
+Failed to load shader (instanceID 426, GUID f7ea35cfb33fcad4ab8f2429ec103bef)
+Failed to load shader (instanceID 428, GUID d7640629310e79646af0f46eb55ae466)
+Failed to load shader (instanceID 430, GUID 3020ac7ece79a7f4eb789a236f8bd6c5)
+Failed to load shader (instanceID 432, GUID 5bb6ef6f3e1b20348b4fdb01e4c404e2)
+Failed to load shader (instanceID 434, GUID 2c459b89a7c8b1a4fbefe0d81341651c)
+Failed to load shader (instanceID 436, GUID 0ef78d24e85a44f4da9d5b5eaa00e50b)
+Failed to load shader (instanceID 438, GUID fe144c7e314047f4bb779d555c5405ac)
+Failed to load shader (instanceID 440, GUID 5ab0816423f0dfe45841cab3b05ec9ef)
+Failed to load shader (instanceID 442, GUID cdbdb71de5f9c454b980f6d0e87f0afb)
+Failed to load shader (instanceID 444, GUID 4bf4cff0d0bac3d43894e2e8839feb40)
+Failed to load shader (instanceID 446, GUID 81af42a93ade3dd46a9b583d4eec76d6)
+Failed to load shader (instanceID 448, GUID a71093f2a4fe26a40805c22739e10e4a)
+Failed to load shader (instanceID 450, GUID c1e1d3119c6fd4646aea0b4b74cacc1a)
+Failed to load shader (instanceID 452, GUID 34a819c9e33402547a81619693adc8d5)
+Failed to load shader (instanceID 454, GUID 4117fce9491711c4094d33a048e36e73)
+Failed to load shader (instanceID 456, GUID de7f3ac52268a194383c7d62c2a343c1)
+Failed to load shader (instanceID 458, GUID f75014305794b3948a3c6d5ccd550e05)
+Failed to load shader (instanceID 460, GUID 51bcf79c50dc92e47ba87821b61100c3)
+Failed to load shader (instanceID 462, GUID 02d2da9bc88d25c4d878c1ed4e0b3854)
+Failed to load shader (instanceID 464, GUID b958ad1c92bd3d64c9e61318b8681dab)
+Refreshing native plugins compatible for Editor in 9.21 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3511 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 25 unused Assets / (32.0 KB). Loaded Objects now: 3998.
+Memory consumption went from 143.1 MB to 143.1 MB.
+Total: 5.150400 ms (FindLiveObjects: 0.398300 ms CreateObjectMapping: 0.114100 ms MarkObjects: 4.525200 ms  DeleteObjects: 0.111300 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 6d391050e5a25f67b0a2c618074f2cd9 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.836 seconds
+Refreshing native plugins compatible for Editor in 7.66 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.828 seconds
+Domain Reload Profiling: 2653ms
+	BeginReloadAssembly (268ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (7ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (54ms)
+	RebuildCommonClasses (47ms)
+	RebuildNativeTypeToScriptingClass (14ms)
+	initialDomainReloadingComplete (54ms)
+	LoadAllAssembliesAndSetupDomain (441ms)
+		LoadAssemblies (559ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (33ms)
+			TypeCache.Refresh (10ms)
+				TypeCache.ScanAssembly (1ms)
+			ScanForSourceGeneratedMonoScriptInfo (15ms)
+			ResolveRequiredComponents (6ms)
+	FinalizeReload (1828ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (905ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (48ms)
+			SetLoadedEditorAssemblies (7ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (177ms)
+			ProcessInitializeOnLoadAttributes (624ms)
+			ProcessInitializeOnLoadMethodAttributes (26ms)
+			AfterProcessingInitializeOnLoad (22ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (9ms)
+Failed to load shader (instanceID 412, GUID 67f9497810829eb4791ec19e95781e51)
+Failed to load shader (instanceID 414, GUID b34a29e523cb9d545881e193a079f2df)
+Failed to load shader (instanceID 416, GUID e8ce9961912f3214586fe8709b9012c1)
+Failed to load shader (instanceID 418, GUID 7ad194cbe7d006f4bace915156972026)
+Failed to load shader (instanceID 420, GUID f997a3dc9254c44459323cced085150c)
+Failed to load shader (instanceID 422, GUID 382151503e2a43a4ebb7366d1632731d)
+Failed to load shader (instanceID 424, GUID 0d8afcb51cc9f0349a6d190da929b838)
+Failed to load shader (instanceID 426, GUID f7ea35cfb33fcad4ab8f2429ec103bef)
+Failed to load shader (instanceID 428, GUID d7640629310e79646af0f46eb55ae466)
+Failed to load shader (instanceID 430, GUID 3020ac7ece79a7f4eb789a236f8bd6c5)
+Failed to load shader (instanceID 432, GUID 5bb6ef6f3e1b20348b4fdb01e4c404e2)
+Failed to load shader (instanceID 434, GUID 2c459b89a7c8b1a4fbefe0d81341651c)
+Failed to load shader (instanceID 436, GUID 0ef78d24e85a44f4da9d5b5eaa00e50b)
+Failed to load shader (instanceID 438, GUID fe144c7e314047f4bb779d555c5405ac)
+Failed to load shader (instanceID 440, GUID 5ab0816423f0dfe45841cab3b05ec9ef)
+Failed to load shader (instanceID 442, GUID cdbdb71de5f9c454b980f6d0e87f0afb)
+Failed to load shader (instanceID 444, GUID 4bf4cff0d0bac3d43894e2e8839feb40)
+Failed to load shader (instanceID 446, GUID 81af42a93ade3dd46a9b583d4eec76d6)
+Failed to load shader (instanceID 448, GUID a71093f2a4fe26a40805c22739e10e4a)
+Failed to load shader (instanceID 450, GUID c1e1d3119c6fd4646aea0b4b74cacc1a)
+Failed to load shader (instanceID 452, GUID 34a819c9e33402547a81619693adc8d5)
+Failed to load shader (instanceID 454, GUID 4117fce9491711c4094d33a048e36e73)
+Failed to load shader (instanceID 456, GUID de7f3ac52268a194383c7d62c2a343c1)
+Failed to load shader (instanceID 458, GUID f75014305794b3948a3c6d5ccd550e05)
+Failed to load shader (instanceID 460, GUID 51bcf79c50dc92e47ba87821b61100c3)
+Failed to load shader (instanceID 462, GUID 02d2da9bc88d25c4d878c1ed4e0b3854)
+Failed to load shader (instanceID 464, GUID b958ad1c92bd3d64c9e61318b8681dab)
+Refreshing native plugins compatible for Editor in 8.29 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3512 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 24 unused Assets / (31.6 KB). Loaded Objects now: 4001.
+Memory consumption went from 145.3 MB to 145.3 MB.
+Total: 3.712400 ms (FindLiveObjects: 0.371100 ms CreateObjectMapping: 0.095800 ms MarkObjects: 3.186800 ms  DeleteObjects: 0.057300 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 6d391050e5a25f67b0a2c618074f2cd9 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.928 seconds
+Refreshing native plugins compatible for Editor in 8.50 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.148 seconds
+Domain Reload Profiling: 3064ms
+	BeginReloadAssembly (278ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (10ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (59ms)
+	RebuildCommonClasses (60ms)
+	RebuildNativeTypeToScriptingClass (18ms)
+	initialDomainReloadingComplete (71ms)
+	LoadAllAssembliesAndSetupDomain (488ms)
+		LoadAssemblies (604ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (39ms)
+			TypeCache.Refresh (12ms)
+				TypeCache.ScanAssembly (1ms)
+			ScanForSourceGeneratedMonoScriptInfo (18ms)
+			ResolveRequiredComponents (7ms)
+	FinalizeReload (2148ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1168ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (49ms)
+			SetLoadedEditorAssemblies (7ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (208ms)
+			ProcessInitializeOnLoadAttributes (833ms)
+			ProcessInitializeOnLoadMethodAttributes (38ms)
+			AfterProcessingInitializeOnLoad (31ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (12ms)
+Failed to load shader (instanceID 412, GUID 67f9497810829eb4791ec19e95781e51)
+Failed to load shader (instanceID 414, GUID b34a29e523cb9d545881e193a079f2df)
+Failed to load shader (instanceID 416, GUID e8ce9961912f3214586fe8709b9012c1)
+Failed to load shader (instanceID 418, GUID 7ad194cbe7d006f4bace915156972026)
+Failed to load shader (instanceID 420, GUID f997a3dc9254c44459323cced085150c)
+Failed to load shader (instanceID 422, GUID 382151503e2a43a4ebb7366d1632731d)
+Failed to load shader (instanceID 424, GUID 0d8afcb51cc9f0349a6d190da929b838)
+Failed to load shader (instanceID 426, GUID f7ea35cfb33fcad4ab8f2429ec103bef)
+Failed to load shader (instanceID 428, GUID d7640629310e79646af0f46eb55ae466)
+Failed to load shader (instanceID 430, GUID 3020ac7ece79a7f4eb789a236f8bd6c5)
+Failed to load shader (instanceID 432, GUID 5bb6ef6f3e1b20348b4fdb01e4c404e2)
+Failed to load shader (instanceID 434, GUID 2c459b89a7c8b1a4fbefe0d81341651c)
+Failed to load shader (instanceID 436, GUID 0ef78d24e85a44f4da9d5b5eaa00e50b)
+Failed to load shader (instanceID 438, GUID fe144c7e314047f4bb779d555c5405ac)
+Failed to load shader (instanceID 440, GUID 5ab0816423f0dfe45841cab3b05ec9ef)
+Failed to load shader (instanceID 442, GUID cdbdb71de5f9c454b980f6d0e87f0afb)
+Failed to load shader (instanceID 444, GUID 4bf4cff0d0bac3d43894e2e8839feb40)
+Failed to load shader (instanceID 446, GUID 81af42a93ade3dd46a9b583d4eec76d6)
+Failed to load shader (instanceID 448, GUID a71093f2a4fe26a40805c22739e10e4a)
+Failed to load shader (instanceID 450, GUID c1e1d3119c6fd4646aea0b4b74cacc1a)
+Failed to load shader (instanceID 452, GUID 34a819c9e33402547a81619693adc8d5)
+Failed to load shader (instanceID 454, GUID 4117fce9491711c4094d33a048e36e73)
+Failed to load shader (instanceID 456, GUID de7f3ac52268a194383c7d62c2a343c1)
+Failed to load shader (instanceID 458, GUID f75014305794b3948a3c6d5ccd550e05)
+Failed to load shader (instanceID 460, GUID 51bcf79c50dc92e47ba87821b61100c3)
+Failed to load shader (instanceID 462, GUID 02d2da9bc88d25c4d878c1ed4e0b3854)
+Failed to load shader (instanceID 464, GUID b958ad1c92bd3d64c9e61318b8681dab)
+Refreshing native plugins compatible for Editor in 7.69 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3513 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 24 unused Assets / (31.6 KB). Loaded Objects now: 4005.
+Memory consumption went from 147.3 MB to 147.2 MB.
+Total: 4.404700 ms (FindLiveObjects: 0.317000 ms CreateObjectMapping: 0.116900 ms MarkObjects: 3.902000 ms  DeleteObjects: 0.067200 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 6d391050e5a25f67b0a2c618074f2cd9 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.840 seconds
+Refreshing native plugins compatible for Editor in 8.30 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.909 seconds
+Domain Reload Profiling: 2739ms
+	BeginReloadAssembly (237ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (7ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (51ms)
+	RebuildCommonClasses (56ms)
+	RebuildNativeTypeToScriptingClass (19ms)
+	initialDomainReloadingComplete (52ms)
+	LoadAllAssembliesAndSetupDomain (466ms)
+		LoadAssemblies (555ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (43ms)
+			TypeCache.Refresh (12ms)
+				TypeCache.ScanAssembly (1ms)
+			ScanForSourceGeneratedMonoScriptInfo (22ms)
+			ResolveRequiredComponents (7ms)
+	FinalizeReload (1909ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (904ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (46ms)
+			SetLoadedEditorAssemblies (6ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (179ms)
+			ProcessInitializeOnLoadAttributes (627ms)
+			ProcessInitializeOnLoadMethodAttributes (25ms)
+			AfterProcessingInitializeOnLoad (20ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (8ms)
+Failed to load shader (instanceID 412, GUID 67f9497810829eb4791ec19e95781e51)
+Failed to load shader (instanceID 414, GUID b34a29e523cb9d545881e193a079f2df)
+Failed to load shader (instanceID 416, GUID e8ce9961912f3214586fe8709b9012c1)
+Failed to load shader (instanceID 418, GUID 7ad194cbe7d006f4bace915156972026)
+Failed to load shader (instanceID 420, GUID f997a3dc9254c44459323cced085150c)
+Failed to load shader (instanceID 422, GUID 382151503e2a43a4ebb7366d1632731d)
+Failed to load shader (instanceID 424, GUID 0d8afcb51cc9f0349a6d190da929b838)
+Failed to load shader (instanceID 426, GUID f7ea35cfb33fcad4ab8f2429ec103bef)
+Failed to load shader (instanceID 428, GUID d7640629310e79646af0f46eb55ae466)
+Failed to load shader (instanceID 430, GUID 3020ac7ece79a7f4eb789a236f8bd6c5)
+Failed to load shader (instanceID 432, GUID 5bb6ef6f3e1b20348b4fdb01e4c404e2)
+Failed to load shader (instanceID 434, GUID 2c459b89a7c8b1a4fbefe0d81341651c)
+Failed to load shader (instanceID 436, GUID 0ef78d24e85a44f4da9d5b5eaa00e50b)
+Failed to load shader (instanceID 438, GUID fe144c7e314047f4bb779d555c5405ac)
+Failed to load shader (instanceID 440, GUID 5ab0816423f0dfe45841cab3b05ec9ef)
+Failed to load shader (instanceID 442, GUID cdbdb71de5f9c454b980f6d0e87f0afb)
+Failed to load shader (instanceID 444, GUID 4bf4cff0d0bac3d43894e2e8839feb40)
+Failed to load shader (instanceID 446, GUID 81af42a93ade3dd46a9b583d4eec76d6)
+Failed to load shader (instanceID 448, GUID a71093f2a4fe26a40805c22739e10e4a)
+Failed to load shader (instanceID 450, GUID c1e1d3119c6fd4646aea0b4b74cacc1a)
+Failed to load shader (instanceID 452, GUID 34a819c9e33402547a81619693adc8d5)
+Failed to load shader (instanceID 454, GUID 4117fce9491711c4094d33a048e36e73)
+Failed to load shader (instanceID 456, GUID de7f3ac52268a194383c7d62c2a343c1)
+Failed to load shader (instanceID 458, GUID f75014305794b3948a3c6d5ccd550e05)
+Failed to load shader (instanceID 460, GUID 51bcf79c50dc92e47ba87821b61100c3)
+Failed to load shader (instanceID 462, GUID 02d2da9bc88d25c4d878c1ed4e0b3854)
+Failed to load shader (instanceID 464, GUID b958ad1c92bd3d64c9e61318b8681dab)
+Refreshing native plugins compatible for Editor in 8.56 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3513 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 24 unused Assets / (31.6 KB). Loaded Objects now: 4008.
+Memory consumption went from 149.2 MB to 149.2 MB.
+Total: 6.271900 ms (FindLiveObjects: 0.738400 ms CreateObjectMapping: 0.171400 ms MarkObjects: 5.249900 ms  DeleteObjects: 0.110100 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 6d391050e5a25f67b0a2c618074f2cd9 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.854 seconds
+Refreshing native plugins compatible for Editor in 7.47 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.791 seconds
+Domain Reload Profiling: 2634ms
+	BeginReloadAssembly (239ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (7ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (44ms)
+	RebuildCommonClasses (66ms)
+	RebuildNativeTypeToScriptingClass (23ms)
+	initialDomainReloadingComplete (66ms)
+	LoadAllAssembliesAndSetupDomain (448ms)
+		LoadAssemblies (556ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (33ms)
+			TypeCache.Refresh (10ms)
+				TypeCache.ScanAssembly (1ms)
+			ScanForSourceGeneratedMonoScriptInfo (14ms)
+			ResolveRequiredComponents (6ms)
+	FinalizeReload (1792ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (893ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (45ms)
+			SetLoadedEditorAssemblies (6ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (182ms)
+			ProcessInitializeOnLoadAttributes (612ms)
+			ProcessInitializeOnLoadMethodAttributes (26ms)
+			AfterProcessingInitializeOnLoad (23ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (9ms)
+Failed to load shader (instanceID 412, GUID 67f9497810829eb4791ec19e95781e51)
+Failed to load shader (instanceID 414, GUID b34a29e523cb9d545881e193a079f2df)
+Failed to load shader (instanceID 416, GUID e8ce9961912f3214586fe8709b9012c1)
+Failed to load shader (instanceID 418, GUID 7ad194cbe7d006f4bace915156972026)
+Failed to load shader (instanceID 420, GUID f997a3dc9254c44459323cced085150c)
+Failed to load shader (instanceID 422, GUID 382151503e2a43a4ebb7366d1632731d)
+Failed to load shader (instanceID 424, GUID 0d8afcb51cc9f0349a6d190da929b838)
+Failed to load shader (instanceID 426, GUID f7ea35cfb33fcad4ab8f2429ec103bef)
+Failed to load shader (instanceID 428, GUID d7640629310e79646af0f46eb55ae466)
+Failed to load shader (instanceID 430, GUID 3020ac7ece79a7f4eb789a236f8bd6c5)
+Failed to load shader (instanceID 432, GUID 5bb6ef6f3e1b20348b4fdb01e4c404e2)
+Failed to load shader (instanceID 434, GUID 2c459b89a7c8b1a4fbefe0d81341651c)
+Failed to load shader (instanceID 436, GUID 0ef78d24e85a44f4da9d5b5eaa00e50b)
+Failed to load shader (instanceID 438, GUID fe144c7e314047f4bb779d555c5405ac)
+Failed to load shader (instanceID 440, GUID 5ab0816423f0dfe45841cab3b05ec9ef)
+Failed to load shader (instanceID 442, GUID cdbdb71de5f9c454b980f6d0e87f0afb)
+Failed to load shader (instanceID 444, GUID 4bf4cff0d0bac3d43894e2e8839feb40)
+Failed to load shader (instanceID 446, GUID 81af42a93ade3dd46a9b583d4eec76d6)
+Failed to load shader (instanceID 448, GUID a71093f2a4fe26a40805c22739e10e4a)
+Failed to load shader (instanceID 450, GUID c1e1d3119c6fd4646aea0b4b74cacc1a)
+Failed to load shader (instanceID 452, GUID 34a819c9e33402547a81619693adc8d5)
+Failed to load shader (instanceID 454, GUID 4117fce9491711c4094d33a048e36e73)
+Failed to load shader (instanceID 456, GUID de7f3ac52268a194383c7d62c2a343c1)
+Failed to load shader (instanceID 458, GUID f75014305794b3948a3c6d5ccd550e05)
+Failed to load shader (instanceID 460, GUID 51bcf79c50dc92e47ba87821b61100c3)
+Failed to load shader (instanceID 462, GUID 02d2da9bc88d25c4d878c1ed4e0b3854)
+Failed to load shader (instanceID 464, GUID b958ad1c92bd3d64c9e61318b8681dab)
+Refreshing native plugins compatible for Editor in 7.41 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3514 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 24 unused Assets / (31.6 KB). Loaded Objects now: 4012.
+Memory consumption went from 151.1 MB to 151.1 MB.
+Total: 3.714900 ms (FindLiveObjects: 0.324900 ms CreateObjectMapping: 0.094600 ms MarkObjects: 3.235600 ms  DeleteObjects: 0.058600 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 6d391050e5a25f67b0a2c618074f2cd9 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.822 seconds
+Refreshing native plugins compatible for Editor in 9.48 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.995 seconds
+Domain Reload Profiling: 2808ms
+	BeginReloadAssembly (223ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (48ms)
+	RebuildCommonClasses (52ms)
+	RebuildNativeTypeToScriptingClass (15ms)
+	initialDomainReloadingComplete (51ms)
+	LoadAllAssembliesAndSetupDomain (471ms)
+		LoadAssemblies (569ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (18ms)
+			TypeCache.Refresh (6ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (9ms)
+	FinalizeReload (1996ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1013ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (51ms)
+			SetLoadedEditorAssemblies (7ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (201ms)
+			ProcessInitializeOnLoadAttributes (703ms)
+			ProcessInitializeOnLoadMethodAttributes (27ms)
+			AfterProcessingInitializeOnLoad (24ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (9ms)
+Failed to load shader (instanceID 412, GUID 67f9497810829eb4791ec19e95781e51)
+Failed to load shader (instanceID 414, GUID b34a29e523cb9d545881e193a079f2df)
+Failed to load shader (instanceID 416, GUID e8ce9961912f3214586fe8709b9012c1)
+Failed to load shader (instanceID 418, GUID 7ad194cbe7d006f4bace915156972026)
+Failed to load shader (instanceID 420, GUID f997a3dc9254c44459323cced085150c)
+Failed to load shader (instanceID 422, GUID 382151503e2a43a4ebb7366d1632731d)
+Failed to load shader (instanceID 424, GUID 0d8afcb51cc9f0349a6d190da929b838)
+Failed to load shader (instanceID 426, GUID f7ea35cfb33fcad4ab8f2429ec103bef)
+Failed to load shader (instanceID 428, GUID d7640629310e79646af0f46eb55ae466)
+Failed to load shader (instanceID 430, GUID 3020ac7ece79a7f4eb789a236f8bd6c5)
+Failed to load shader (instanceID 432, GUID 5bb6ef6f3e1b20348b4fdb01e4c404e2)
+Failed to load shader (instanceID 434, GUID 2c459b89a7c8b1a4fbefe0d81341651c)
+Failed to load shader (instanceID 436, GUID 0ef78d24e85a44f4da9d5b5eaa00e50b)
+Failed to load shader (instanceID 438, GUID fe144c7e314047f4bb779d555c5405ac)
+Failed to load shader (instanceID 440, GUID 5ab0816423f0dfe45841cab3b05ec9ef)
+Failed to load shader (instanceID 442, GUID cdbdb71de5f9c454b980f6d0e87f0afb)
+Failed to load shader (instanceID 444, GUID 4bf4cff0d0bac3d43894e2e8839feb40)
+Failed to load shader (instanceID 446, GUID 81af42a93ade3dd46a9b583d4eec76d6)
+Failed to load shader (instanceID 448, GUID a71093f2a4fe26a40805c22739e10e4a)
+Failed to load shader (instanceID 450, GUID c1e1d3119c6fd4646aea0b4b74cacc1a)
+Failed to load shader (instanceID 452, GUID 34a819c9e33402547a81619693adc8d5)
+Failed to load shader (instanceID 454, GUID 4117fce9491711c4094d33a048e36e73)
+Failed to load shader (instanceID 456, GUID de7f3ac52268a194383c7d62c2a343c1)
+Failed to load shader (instanceID 458, GUID f75014305794b3948a3c6d5ccd550e05)
+Failed to load shader (instanceID 460, GUID 51bcf79c50dc92e47ba87821b61100c3)
+Failed to load shader (instanceID 462, GUID 02d2da9bc88d25c4d878c1ed4e0b3854)
+Failed to load shader (instanceID 464, GUID b958ad1c92bd3d64c9e61318b8681dab)
+Refreshing native plugins compatible for Editor in 9.36 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3514 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 24 unused Assets / (31.6 KB). Loaded Objects now: 4015.
+Memory consumption went from 153.0 MB to 153.0 MB.
+Total: 4.095400 ms (FindLiveObjects: 0.400500 ms CreateObjectMapping: 0.112400 ms MarkObjects: 3.498200 ms  DeleteObjects: 0.083000 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 6d391050e5a25f67b0a2c618074f2cd9 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.805 seconds
+Refreshing native plugins compatible for Editor in 7.69 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.842 seconds
+Domain Reload Profiling: 2635ms
+	BeginReloadAssembly (239ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (7ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (50ms)
+	RebuildCommonClasses (50ms)
+	RebuildNativeTypeToScriptingClass (14ms)
+	initialDomainReloadingComplete (59ms)
+	LoadAllAssembliesAndSetupDomain (430ms)
+		LoadAssemblies (550ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (16ms)
+			TypeCache.Refresh (7ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (7ms)
+	FinalizeReload (1843ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (896ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (48ms)
+			SetLoadedEditorAssemblies (7ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (182ms)
+			ProcessInitializeOnLoadAttributes (608ms)
+			ProcessInitializeOnLoadMethodAttributes (27ms)
+			AfterProcessingInitializeOnLoad (24ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (8ms)
+Failed to load shader (instanceID 412, GUID 67f9497810829eb4791ec19e95781e51)
+Failed to load shader (instanceID 414, GUID b34a29e523cb9d545881e193a079f2df)
+Failed to load shader (instanceID 416, GUID e8ce9961912f3214586fe8709b9012c1)
+Failed to load shader (instanceID 418, GUID 7ad194cbe7d006f4bace915156972026)
+Failed to load shader (instanceID 420, GUID f997a3dc9254c44459323cced085150c)
+Failed to load shader (instanceID 422, GUID 382151503e2a43a4ebb7366d1632731d)
+Failed to load shader (instanceID 424, GUID 0d8afcb51cc9f0349a6d190da929b838)
+Failed to load shader (instanceID 426, GUID f7ea35cfb33fcad4ab8f2429ec103bef)
+Failed to load shader (instanceID 428, GUID d7640629310e79646af0f46eb55ae466)
+Failed to load shader (instanceID 430, GUID 3020ac7ece79a7f4eb789a236f8bd6c5)
+Failed to load shader (instanceID 432, GUID 5bb6ef6f3e1b20348b4fdb01e4c404e2)
+Failed to load shader (instanceID 434, GUID 2c459b89a7c8b1a4fbefe0d81341651c)
+Failed to load shader (instanceID 436, GUID 0ef78d24e85a44f4da9d5b5eaa00e50b)
+Failed to load shader (instanceID 438, GUID fe144c7e314047f4bb779d555c5405ac)
+Failed to load shader (instanceID 440, GUID 5ab0816423f0dfe45841cab3b05ec9ef)
+Failed to load shader (instanceID 442, GUID cdbdb71de5f9c454b980f6d0e87f0afb)
+Failed to load shader (instanceID 444, GUID 4bf4cff0d0bac3d43894e2e8839feb40)
+Failed to load shader (instanceID 446, GUID 81af42a93ade3dd46a9b583d4eec76d6)
+Failed to load shader (instanceID 448, GUID a71093f2a4fe26a40805c22739e10e4a)
+Failed to load shader (instanceID 450, GUID c1e1d3119c6fd4646aea0b4b74cacc1a)
+Failed to load shader (instanceID 452, GUID 34a819c9e33402547a81619693adc8d5)
+Failed to load shader (instanceID 454, GUID 4117fce9491711c4094d33a048e36e73)
+Failed to load shader (instanceID 456, GUID de7f3ac52268a194383c7d62c2a343c1)
+Failed to load shader (instanceID 458, GUID f75014305794b3948a3c6d5ccd550e05)
+Failed to load shader (instanceID 460, GUID 51bcf79c50dc92e47ba87821b61100c3)
+Failed to load shader (instanceID 462, GUID 02d2da9bc88d25c4d878c1ed4e0b3854)
+Failed to load shader (instanceID 464, GUID b958ad1c92bd3d64c9e61318b8681dab)
+Refreshing native plugins compatible for Editor in 7.21 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3514 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 24 unused Assets / (31.6 KB). Loaded Objects now: 4018.
+Memory consumption went from 155.0 MB to 154.9 MB.
+Total: 3.451100 ms (FindLiveObjects: 0.339200 ms CreateObjectMapping: 0.099000 ms MarkObjects: 2.958400 ms  DeleteObjects: 0.053200 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
   custom:CustomObjectIndexerAttribute: 6d391050e5a25f67b0a2c618074f2cd9 -> 

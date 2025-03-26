@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 7811609216020040579}
   - component: {fileID: 7724987121128615407}
   - component: {fileID: 1069738046450433438}
-  - component: {fileID: 3155318663043881176}
-  - component: {fileID: 8230854848597869620}
+  - component: {fileID: 1671078218445831033}
+  - component: {fileID: 5289255324792772848}
   m_Layer: 7
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -94,7 +94,7 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 854459516496847600}
   m_Enabled: 1
---- !u!114 &3155318663043881176
+--- !u!114 &1671078218445831033
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -107,11 +107,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sharedProfile: {fileID: 11400000, guid: 850a77b79c93bca408ff16ec86a56a48, type: 2}
-  isGlobal: 1
+  isGlobal: 0
   blendDistance: 0
   weight: 1
   priority: 0
---- !u!114 &8230854848597869620
+--- !u!114 &5289255324792772848
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -126,7 +126,7 @@ MonoBehaviour:
   volumeTrigger: {fileID: 7811609216020040579}
   volumeLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 0
   stopNaNPropagation: 1
   finalBlitToCameraTarget: 0
   antialiasingMode: 0
