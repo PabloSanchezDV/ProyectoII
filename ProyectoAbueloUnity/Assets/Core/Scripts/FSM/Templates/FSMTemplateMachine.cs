@@ -27,6 +27,7 @@ public class FSMTemplateMachine : MonoBehaviour
             _currentState.UpdateLogic();
         }
     }
+
     void LateUpdate()
     {
         if (_currentState != null)

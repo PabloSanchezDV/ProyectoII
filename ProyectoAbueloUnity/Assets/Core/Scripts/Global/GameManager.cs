@@ -28,6 +28,6 @@ public class GameManager : MonoBehaviour
     {
         _daytime += _daytimeModifier * Time.deltaTime;
         //Debug.Log(_daytime);
-        AnimalsHolder.Instance.UpdateAllAnimals(_daytime);
+        //AnimalsHolder.Instance.UpdateAllAnimals(_daytime);
     }
 }
