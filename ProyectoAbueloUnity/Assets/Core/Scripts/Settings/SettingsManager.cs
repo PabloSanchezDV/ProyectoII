@@ -5,7 +5,7 @@ using UnityEngine;
 public class SettingsManager : MonoBehaviour
 {
     private static SettingsManager _instance;
-    public static SettingsManager Instance {  get { return _instance; } }
+    public static SettingsManager Instance { get { return _instance; } }
 
     [SerializeField] private SettingsDatabase _db;
 
