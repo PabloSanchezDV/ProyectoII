@@ -23,7 +23,7 @@ public class FreeMove : Gameplay
         if(isCameraToggled)
         {
             isCameraToggled = false;
-            _fsm.ChangeState(((InputHandler)_fsm)._cameraMode);
+            _fsm.ChangeState(((InputHandler)_fsm).cameraMode);
         }
     }
 

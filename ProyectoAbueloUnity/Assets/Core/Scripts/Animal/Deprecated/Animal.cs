@@ -52,9 +52,6 @@ public class Animal : MonoBehaviour
 
         switch(action)
         {
-            case Action.Idle:
-                // Do idle
-                break;
             case Action.Walk:
                 UpdatePositionAndRotation();
                 break;
@@ -79,10 +76,6 @@ public class Animal : MonoBehaviour
     {
         switch (action)
         {
-            case Action.Idle:
-                // Set Up idle
-                StopFollowingPath();
-                break;
             case Action.Walk:
                 _pathSystem.SetNextPath();
                 KeepFollowingPath();

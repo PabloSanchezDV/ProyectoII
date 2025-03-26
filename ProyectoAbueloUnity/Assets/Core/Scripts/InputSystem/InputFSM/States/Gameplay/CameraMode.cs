@@ -40,7 +40,7 @@ public class CameraMode : Gameplay
         if (isCameraToggled)
         {
             isCameraToggled = false;
-            _fsm.ChangeState(((InputHandler)_fsm)._freeMove);
+            _fsm.ChangeState(((InputHandler)_fsm).freeMove);
         }
     }
 

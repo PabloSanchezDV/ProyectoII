@@ -6,8 +6,8 @@ using UnityEngine;
 public class InputHandler : FSMTemplateMachine
 {
     #region States
-    [NonSerialized] public FreeMove _freeMove;
-    [NonSerialized] public CameraMode _cameraMode;
+    [NonSerialized] public FreeMove freeMove;
+    [NonSerialized] public CameraMode cameraMode;
     #endregion
 
     #region Fields
@@ -38,15 +38,15 @@ public class InputHandler : FSMTemplateMachine
     {
         _inputActions = new InputActions();
 
-        _freeMove = new FreeMove(this, _inputActions);
-        _cameraMode = new CameraMode(this, _inputActions);
+        freeMove = new FreeMove(this, _inputActions);
+        cameraMode = new CameraMode(this, _inputActions);
 
         _player = GameObject.FindGameObjectWithTag("Player");
     }
 
     protected override void GetInitialState(out FSMTemplateState state)
     {
-        state = _freeMove;
-        _freeMove.Enter();
+        state = freeMove;
+        freeMove.Enter();
     }
 }
