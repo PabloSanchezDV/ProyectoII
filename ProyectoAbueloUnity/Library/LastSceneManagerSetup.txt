@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Z - TO DELETE/Scenes/AnimalFSMTest.unity
+- path: Assets/Core/Scenes/FirstExperience.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
