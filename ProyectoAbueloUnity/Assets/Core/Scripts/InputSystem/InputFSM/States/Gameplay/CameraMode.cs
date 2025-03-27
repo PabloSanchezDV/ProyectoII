@@ -2,18 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-//using UnityEngine.Rendering.PostProcessing;
+using UnityEngine.Rendering.PostProcessing;
 
 public class CameraMode : Gameplay
 {
-   /* InputAction _zoom;
+    InputAction _zoom;
     private Camera _mainCamera;
-    //private PostProcessVolume _postProcessVolume;
-    //private DepthOfField _depthOfField;
+    private PostProcessVolume _postProcessVolume;
+    private DepthOfField _depthOfField;
     private CameraSetting _currentSetting;
     private bool _isCameraInitialized = false;
 
-    */public CameraMode(FSMTemplateMachine fsm, InputActions inputActions) : base(fsm, inputActions) { }/*
+    public CameraMode(FSMTemplateMachine fsm, InputActions inputActions) : base(fsm, inputActions) { }
 
     public override void Enter()
     {
@@ -168,5 +168,5 @@ public class CameraMode : Gameplay
         ResetCameraValues();
     }
 
-    private enum CameraSetting { FocusDistance, Aperture, FocalLength }*/
+    private enum CameraSetting { FocusDistance, Aperture, FocalLength }
 }
