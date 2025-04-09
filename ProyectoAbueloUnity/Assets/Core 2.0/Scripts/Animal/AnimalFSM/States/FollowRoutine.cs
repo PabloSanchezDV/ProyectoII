@@ -14,7 +14,7 @@ public class FollowRoutine : FSMTemplateState
     public override void Enter()
     {
         base.Enter();     
-        ((AnimalFSM)_fsm).AnimalIKControl.Initialize(((AnimalFSM)_fsm).AnimalAnimator);
+        ((AnimalFSM)_fsm).AnimalIKControl.Initialize(((AnimalFSM)_fsm).AnimalAnimator); 
     }
 
     public override void UpdateLogic()
