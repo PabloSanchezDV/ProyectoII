@@ -7,4 +7,9 @@ using UnityEngine;
 public class ActionState : FollowRoutine 
 {
     public ActionState(FSMTemplateMachine fsm) : base(fsm) { }
+
+    public override void Enter()
+    {
+        base.Enter();
+    }
 }

@@ -79,7 +79,7 @@ public class CameraMode : Gameplay
 
     private void Zoom()
     {
-        _mainCamera.fieldOfView += _zoom.ReadValue<Vector2>().y * ((InputHandler)_fsm).zoomModifier * Time.deltaTime;
+        _mainCamera.fieldOfView -= _zoom.ReadValue<Vector2>().y * ((InputHandler)_fsm).zoomModifier * Time.deltaTime;
         if (_mainCamera.fieldOfView > ((InputHandler)_fsm).zoomUpperLimit)
             _mainCamera.fieldOfView = ((InputHandler)_fsm).zoomUpperLimit;
         else if (_mainCamera.fieldOfView < ((InputHandler)_fsm).zoomLowerLimit)

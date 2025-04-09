@@ -13,8 +13,9 @@ public class LookAtPlayer : FSMTemplateState
     public override void Enter()
     {
         base.Enter();
+        ((AnimalFSM)_fsm).IsFollowingRoutine = false;
         ((AnimalFSM)_fsm).AnimalAnimator.SetTrigger("LookingAtPlayer");
-        //TODO: Activate IK
+        ((AnimalFSM)_fsm).AnimalIKControl.Initialize(((AnimalFSM)_fsm).AnimalAnimator);
     }
 
     public override void UpdateLogic()
@@ -34,9 +35,16 @@ public class LookAtPlayer : FSMTemplateState
         }
     }
 
+    public override void UpdatePhysics()
+    {
+        base.UpdatePhysics();
+        ((AnimalFSM)_fsm).CalculateNoise();
+        ((AnimalFSM)_fsm).AnimalIKControl.SetInterpolationValue(_lookAtPlayerFLV);
+    }
+
     public override void Exit()
     {
         base.Exit();
-        //TODO: Deactivate IK
+        ((AnimalFSM)_fsm).AnimalIKControl.ResetHead(_lookAtPlayerFLV);
     }
 }

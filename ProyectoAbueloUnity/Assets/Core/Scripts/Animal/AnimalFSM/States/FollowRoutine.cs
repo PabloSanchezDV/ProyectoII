@@ -11,42 +11,50 @@ public class FollowRoutine : FSMTemplateState
 
     public FollowRoutine(FSMTemplateMachine fsm) : base(fsm) { }
 
+    public override void Enter()
+    {
+        base.Enter();     
+        ((AnimalFSM)_fsm).AnimalIKControl.Initialize(((AnimalFSM)_fsm).AnimalAnimator);
+    }
+
     public override void UpdateLogic()
     {
         base.UpdateLogic();
         _followRoutineFLV = ((AnimalFSM)_fsm).GetFollowRoutineMembershipValue(((AnimalFSM)_fsm).Noise);
         _lookAtPlayerFLV = ((AnimalFSM)_fsm).GetLookAtPlayerMembershipValue(((AnimalFSM)_fsm).Noise);
 
-        if (_followRoutineFLV < _lookAtPlayerFLV)
+        if (_followRoutineFLV <= _lookAtPlayerFLV)
         {
             Debug.Log("Change state to: " + ((AnimalFSM)_fsm).lookAtPlayer);
             _fsm.ChangeState(((AnimalFSM)_fsm).lookAtPlayer);
         }
+
+        if (Vector3.Distance(((AnimalFSM)_fsm).AnimalPathFollower.transform.position, _fsm.transform.position) <= 0.5f)
+            ((AnimalFSM)_fsm).IsFollowingRoutine = true;
     }
 
     public override void UpdatePhysics()
     {
         base.UpdatePhysics();
+        ((AnimalFSM)_fsm).CalculateNoise();
+        ((AnimalFSM)_fsm).AnimalIKControl.SetInterpolationValue(_lookAtPlayerFLV);
         ((AnimalFSM)_fsm).Speed = _followRoutineFLV * ((AnimalFSM)_fsm).OriginalSpeed;
         ((AnimalFSM)_fsm).AnimalAnimator.speed = _followRoutineFLV;
-    }
 
-    public void GetStateAtTime(float time, out FSMTemplateState state)
-    {
-        state = GetState(GetActionAtTime(time));
-    }
-
-    private Action GetActionAtTime(float time)
-    {
-        for (int i = 0; i < ((AnimalFSM)_fsm).Times.Length - 1; i++)
+        if (!((AnimalFSM)_fsm).IsFollowingRoutine)
         {
-            if (time >= ((AnimalFSM)_fsm).Times[i] && time < ((AnimalFSM)_fsm).Times[i + 1])
-            {
-                return ((AnimalFSM)_fsm).Actions[i];
-            }
+            ((AnimalFSM)_fsm).AnimalNavMeshAgent.SetDestination(((AnimalFSM)_fsm).AnimalPathFollower.transform.position);
+            ((AnimalFSM)_fsm).AnimalNavMeshAgent.isStopped = false;
         }
+        else
+        {
+            ((AnimalFSM)_fsm).AnimalNavMeshAgent.isStopped = true;
+        }
+    }
 
-        return ((AnimalFSM)_fsm).Actions[((AnimalFSM)_fsm).Times.Length - 1];
+    public void GetState(out FSMTemplateState state)
+    {
+        state = GetState(((AnimalFSM)_fsm).AnimalPathFollower.CurrentAction);
     }
 
     private FSMTemplateState GetState(Action action)

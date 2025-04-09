@@ -10,7 +10,7 @@ public class Idle : FollowRoutine
     // It always will transition to the proper state given the fact that GetStateAtTime cannot return idle state
     public override void Enter()
     {
-        GetStateAtTime(GameManager.instance.Daytime, out _currentState);
+        GetState(out _currentState);
         Debug.Log("Change state to: " + _currentState);
         _fsm.ChangeState(_currentState);
     }

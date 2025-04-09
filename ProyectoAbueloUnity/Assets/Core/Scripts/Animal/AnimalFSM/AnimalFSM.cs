@@ -2,7 +2,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using PathCreation;
+using UnityEditor.SceneManagement;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class AnimalFSM : FSMTemplateMachine
 {
@@ -20,13 +22,22 @@ public class AnimalFSM : FSMTemplateMachine
     #region Fields
     [Header("References")]
     [SerializeField] private Transform _root;
+    [SerializeField] private Transform _headBone;
     [SerializeField] private PathCreator[] _pathCreators;
     [SerializeField] private Transform[] _checkPoints;
+    [SerializeField] private PathFollower _pathFollower;
 
     [Header("Atributes")]
     [SerializeField] private float _speed;
     [SerializeField] private float _minSpeed;
     [SerializeField] private float _fleeSpeed;
+    [SerializeField] private float _resetHeadBoneTime;
+    [SerializeField] private float _minDistanceToAnimal;
+    [SerializeField] private float _maxDistanceToAnimal;
+    [SerializeField] private float _soundAttack;
+    [SerializeField] private float _soundRelease;
+    [SerializeField] private float _despawnTime;
+    [SerializeField] private string _navMeshLayerName;
     private float _currentSpeed;
     private float _currentFleeSpeed;
 
@@ -49,13 +60,20 @@ public class AnimalFSM : FSMTemplateMachine
     private Collider _collider;
     private Animator _animator;
     private Camera _camera;
+    private IKControl _ikControl;
+    private Transform _player;
+    private Rigidbody _playerRB;
+    private NavMeshAgent _navMeshAgent;
     private Plane[] _cameraFrustrum;
     private Vector3 _offset;
-    [SerializeField] private float _noise; //Just for debugging 
+    private float _noise;
+    private float _timeFromLastNoise;
+    private bool _isFollowingRoutine;
     #endregion
 
     #region Properties
     public Animator AnimalAnimator { get { return _animator; } }
+    public PathFollower AnimalPathFollower { get { return _pathFollower; } }
     public Action[] Actions { get { return _actions; } }
     public float[] Times { get { return _times; } }
     public PathCreator[] PathCreators { get { return _pathCreators; } }
@@ -88,6 +106,16 @@ public class AnimalFSM : FSMTemplateMachine
     }
     public float Noise { get { return _noise; } }
     public Vector3 Offset { get { return _offset; } }
+
+    public Transform Player {  get { return _player; } }
+
+    public IKControl AnimalIKControl { get { return _ikControl; } }
+
+    public bool IsFollowingRoutine { get { return _isFollowingRoutine; } set { _isFollowingRoutine = value; } }
+
+    public NavMeshAgent AnimalNavMeshAgent { get { return _navMeshAgent; } }
+    public float DespawnTime { get { return _despawnTime; } }
+    public string NavMeshLayerName { get { return _navMeshLayerName; } }
     #endregion
 
     private void Awake()
@@ -120,6 +148,7 @@ public class AnimalFSM : FSMTemplateMachine
         _endsLookingAtPlayer = _maxValueToFleeFromPlayer;
         _startsFleeingFromPlayer = _maxValueToLookAtPlayer;
 
+        _isFollowingRoutine = true;
         _currentSpeed = _speed;
 
         _offset = transform.position - _root.transform.position;
@@ -129,15 +158,25 @@ public class AnimalFSM : FSMTemplateMachine
             _camera = Camera.main;
             _collider = GetComponent<Collider>();
             _animator = GetComponent<Animator>();
-        } while (_camera == null || _collider == null || _animator == null);
+            _player = GameObject.FindGameObjectWithTag("Player").transform;
+            _navMeshAgent = GetComponent<NavMeshAgent>();
+        } while (_camera == null || _collider == null || _animator == null || _player == null || _navMeshAgent == null);
+
+        _ikControl = (IKControl)gameObject.AddComponent(typeof(IKControl));
+        _ikControl.SetHeadBone(_headBone);
+        _ikControl.SetTarget(_player);
+
+        _pathFollower.Initialize();
+        IntializeAnimalPosition();
+        _playerRB = _player.GetComponent<Rigidbody>();
 
         Debug.Log(transform.name + " is initialized");
     }
 
-    public void CalculateNoiseValue() 
+    private void IntializeAnimalPosition()
     {
-        //TODO: Do Noise Function
-        _noise = Mathf.Clamp(_noise, 0, 100);
+        transform.position = _pathFollower.transform.position;
+        transform.rotation = _pathFollower.transform.rotation;
     }
 
     public bool IsOnCamera()
@@ -179,6 +218,73 @@ public class AnimalFSM : FSMTemplateMachine
 
         throw new Exception("The animal " + transform.name + " doesn't have any checkpoints.");
     }
+
+    public void DespawnAfterTime()
+    {
+        StartCoroutine(DespawnAfter());
+    }
+
+    IEnumerator DespawnAfter()
+    {
+        yield return new WaitForSeconds(_despawnTime);
+        transform.position = _pathFollower.transform.position;
+        Debug.Log("Change state to: " + idle);
+        ChangeState(idle);
+    }
+
+    #region Noise
+    public void CalculateNoise() 
+    {
+        float noiseValue = CalculateNoiseValue();
+        if (noiseValue > 0.1f)
+        {
+            if (_timeFromLastNoise > _soundRelease)
+                _timeFromLastNoise = 0;
+            else
+            {
+                _timeFromLastNoise = Mathf.Lerp(_timeFromLastNoise, _soundAttack, Time.deltaTime * 5f);
+                if (Mathf.Abs(_timeFromLastNoise - _soundAttack) < 0.01f)
+                {
+                    _timeFromLastNoise = _soundAttack;
+                }
+            }
+        }
+        if (_timeFromLastNoise < _soundRelease)
+        {
+            _noise = RideNoiseFunction(noiseValue, _timeFromLastNoise) * 100;
+            _timeFromLastNoise += Time.deltaTime;
+        }
+    }
+
+    private float RideNoiseFunction(float noiseValue, float time)
+    {
+        if(noiseValue == 0)
+            return 0;
+        return (noiseValue + NoiseFunction(time, _soundAttack, _soundAttack + _soundRelease / 2, _soundRelease)) / 2;
+    }
+
+    private float CalculateNoiseValue()
+    {
+        float distance = Vector3.Distance(_player.position, transform.position);
+
+        if (distance < _maxDistanceToAnimal)
+        {
+            float distanceFactor = Mathf.InverseLerp(_maxDistanceToAnimal, _minDistanceToAnimal, distance);
+            float speedFactor = Mathf.Clamp01(_playerRB.velocity.magnitude / 5);
+            return distanceFactor * speedFactor;
+        }
+        return 0;
+    }
+
+    private float NoiseFunction(float x, float a, float b, float c)
+    {
+        if (x <= 0) return 0f;
+        if (x <= a) return x / a;
+        if (x <= b) return 1f;
+        if (x <= c) return (x - c) * (x - c) / ((b - c) * (b - c));
+        return 0f;
+    }
+    #endregion
 
     #region Fuzzy Logic
     /*

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ShowMessageOnPathEnd : MonoBehaviour
 {
-    [SerializeField] private Animal _animal;
+    [SerializeField] private GameObject _animal;
 
     private void OnTriggerEnter(Collider other)
     {

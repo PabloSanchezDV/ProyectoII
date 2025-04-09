@@ -16,7 +16,7 @@ public class Action3 : ActionState
     public override void UpdateLogic()
     {
         base.UpdateLogic();
-        GetStateAtTime(GameManager.instance.Daytime, out _currentState);
+        GetState(out _currentState);
         if (_currentState != this)
         {
             _fsm.ChangeState(_currentState);
