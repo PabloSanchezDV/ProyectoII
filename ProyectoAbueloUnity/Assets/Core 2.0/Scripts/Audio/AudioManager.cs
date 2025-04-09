@@ -29,6 +29,43 @@ public class AudioManager : MonoBehaviour
         _db.placeholderCurrentVolume = ChangeSFXVolumeAsPerModifier(_db.placeholderVolume);
         return CreateAudioSource(gameObject, _db.placeholderAC, _db.placeholderCurrentVolume, _db.placeholderPitchSwift, _db.placeholderMinDistance, _db.placeholderMaxDistance);
     }
+
+    public AudioSource PlayStepsSound(GameObject gameObject)
+    {
+        _db.stepsCurrentVolume = ChangeSFXVolumeAsPerModifier(_db.stepsVolume);
+        return CreateAudioSource(gameObject, _db.stepsAC, _db.stepsCurrentVolume, _db.stepsPitchSwift, _db.stepsMinDistance, _db.stepsMaxDistance);
+    }
+
+    public AudioSource PlayStepsMamutSound(GameObject gameObject)
+    {
+        _db.stepsMamutCurrentVolume = ChangeSFXVolumeAsPerModifier(_db.stepsMamutVolume);
+        return CreateAudioSource(gameObject, _db.stepsMamutAC, _db.stepsMamutCurrentVolume, _db.stepsMamutPitchSwift, _db.stepsMamutMinDistance, _db.stepsMamutMaxDistance);
+    }
+
+    public AudioSource PlayEatingMamutSound(GameObject gameObject)
+    {
+        _db.eatingMamutCurrentVolume = ChangeSFXVolumeAsPerModifier(_db.eatingMamutVolume);
+        return CreateAudioSource(gameObject, _db.eatingMamutAC, _db.eatingMamutCurrentVolume, _db.eatingMamutPitchSwift, _db.eatingMamutMinDistance, _db.eatingMamutMaxDistance);
+    }
+
+    public AudioSource PlayScaredMamutSound(GameObject gameObject)
+    {
+        _db.scaredMamutCurrentVolume = ChangeSFXVolumeAsPerModifier(_db.scaredMamutVolume);
+        return CreateAudioSource(gameObject, _db.scaredMamutAC, _db.scaredMamutCurrentVolume, _db.scaredMamutPitchSwift, _db.scaredMamutMinDistance, _db.scaredMamutMaxDistance);
+    }
+
+    public AudioSource PlayCameraOnSound(GameObject gameObject)
+    {
+        _db.cameraOnCurrentVolume = ChangeSFXVolumeAsPerModifier(_db.cameraOnVolume);
+        return CreateAudioSource(gameObject, _db.cameraOnAC, _db.cameraOnCurrentVolume, _db.cameraOnPitchSwift, _db.cameraOnMinDistance, _db.cameraOnMaxDistance);
+    }
+
+    public AudioSource PlayPhotoSound(GameObject gameObject)
+    {
+        _db.photoCurrentVolume = ChangeSFXVolumeAsPerModifier(_db.photoVolume);
+        return CreateAudioSource(gameObject, _db.photoAC, _db.photoCurrentVolume, _db.photoPitchSwift, _db.photoMinDistance, _db.photoMaxDistance);
+    }
+
     #endregion
 
     #region Tinnitus SFX
