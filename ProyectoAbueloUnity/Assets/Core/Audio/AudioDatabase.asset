@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d562e75120792324e8e2b651795fbe46, type: 3}
+  m_Name: AudioDatabase
+  m_EditorClassIdentifier: 
+  placeholderAC: {fileID: 0}
+  placeholderVolume: 0
+  placeholderMinDistance: 0
+  placeholderMaxDistance: 0
+  placeholderPitchSwift: 0
+  stepsAC: {fileID: 8300000, guid: f186945f3a28f6f419a76c1754f8b29e, type: 3}
+  stepsVolume: 1
+  stepsMinDistance: 1
+  stepsMaxDistance: 10
+  stepsPitchSwift: 0.2
+  cameraOnAC: {fileID: 8300000, guid: c7883e95563fddf4681891e56734f9cb, type: 3}
+  cameraOnVolume: 1
+  cameraOnMinDistance: 1
+  cameraOnMaxDistance: 10
+  cameraOnPitchSwift: 0.2
+  photoAC: {fileID: 8300000, guid: 664adb6fea5636e4490a077e82b807b6, type: 3}
+  photoVolume: 1
+  photoMinDistance: 1
+  photoMaxDistance: 10
+  photoPitchSwift: 0
+  stepsMammothAC: {fileID: 8300000, guid: 567e5e26f2eeff349a27219c9300e51b, type: 3}
+  stepsMammothVolume: 1
+  stepsMammothMinDistance: 10
+  stepsMammothMaxDistance: 50
+  stepsMammothPitchSwift: 0.2
+  eatingMammothAC: {fileID: 8300000, guid: 886081436e164ac43bbc837aff2d94ac, type: 3}
+  eatingMammothVolume: 1
+  eatingMammothMinDistance: 10
+  eatingMammothMaxDistance: 50
+  eatingMammothPitchSwift: 0
+  sleepingMammothAC: {fileID: 0}
+  sleepMammothVolume: 0
+  sleepingMammothMinDistance: 0
+  sleepingMammothMaxDistance: 0
+  sleepingMammothPitchSwift: 0
+  scaredMammothAC: {fileID: 8300000, guid: db097f5732d06494980cb5ab2782c244, type: 3}
+  scaredMammothVolume: 1
+  scaredMammothMinDistance: 10
+  scaredMammothMaxDistance: 50
+  scaredMammothPitchSwift: 0.2
+  placeholderTinnitusAC: {fileID: 0}
+  placeholderTinnitusVolume: 0
+  placeholderTinnitusMinDistance: 0
+  placeholderTinnitusMaxDistance: 0
+  placeholderTinnitusPitchSwift: 0
+  placeholderMusicAC: {fileID: 0}
+  placeholderMusicVolume: 0
