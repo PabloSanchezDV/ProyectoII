@@ -23,6 +23,12 @@ MonoBehaviour:
   - __PanelContainer__rootVisualContainer__75ccfb49a474d794fbe85ac5c0ef9412__MaterialGraphView__UnityEditor.Experimental.GraphView.GraphView+PersistedSelection
   - __PanelContainer__rootVisualContainer__6d67de904f52c1347be0f7dfbabc03f1__MaterialGraphView__UnityEditor.Experimental.GraphView.GraphView+PersistedViewTransform
   - __PanelContainer__rootVisualContainer__6d67de904f52c1347be0f7dfbabc03f1__MaterialGraphView__UnityEditor.Experimental.GraphView.GraphView+PersistedSelection
+  - __PanelContainer__rootVisualContainer__a3346310e38cd4b4dbfd970047cec8b5__MaterialGraphView__UnityEditor.Experimental.GraphView.GraphView+PersistedViewTransform
+  - __PanelContainer__rootVisualContainer__a3346310e38cd4b4dbfd970047cec8b5__MaterialGraphView__UnityEditor.Experimental.GraphView.GraphView+PersistedSelection
+  - __PanelContainer__rootVisualContainer__2d7470c17d3a8754abc44bc146599e2a__MaterialGraphView__UnityEditor.Experimental.GraphView.GraphView+PersistedViewTransform
+  - __PanelContainer__rootVisualContainer__2d7470c17d3a8754abc44bc146599e2a__MaterialGraphView__UnityEditor.Experimental.GraphView.GraphView+PersistedSelection
+  - __PanelContainer__rootVisualContainer__8a997bccca2ac924eadc681b67f10906__MaterialGraphView__UnityEditor.Experimental.GraphView.GraphView+PersistedViewTransform
+  - __PanelContainer__rootVisualContainer__8a997bccca2ac924eadc681b67f10906__MaterialGraphView__UnityEditor.Experimental.GraphView.GraphView+PersistedSelection
   m_Values:
   - '{}'
   - '{}'
@@ -32,5 +38,11 @@ MonoBehaviour:
   - '{}'
   - '{}'
   - '{}'
-  - '{"position":{"x":1237.0,"y":656.0,"z":0.0},"scale":{"x":0.25,"y":0.25,"z":1.0}}'
-  - '{"m_Version":1,"m_SelectedElementsArray":[]}'
+  - '{}'
+  - '{}'
+  - '{"position":{"x":1172.0,"y":460.0,"z":0.0},"scale":{"x":0.32690176367759707,"y":0.32690176367759707,"z":1.0}}'
+  - '{"m_Version":29,"m_SelectedElementsArray":["870e6649-b679-4031-8ab3-ff01dfa93aaa","0e8046aa-9781-4392-97ba-3c3399cbd5df","a993252b-1faf-456e-abd4-558676961454","2f03a9f4-a759-497b-863b-6c5a5d02a78c","f696a777-8903-4823-a255-8b2f1502f804","127a9e54-a043-4580-bb48-6342f0d70a95","d7e97b5b-0f85-4dde-b84d-41c51b8063f7","58b15e4b-c7be-4853-8464-26785cbad7e9","9193b5ed-182b-4b63-9319-f741f7200cd1","1240c3f6-a52a-487f-bc2e-2ec995a54bd5","5bcd40d4-2f7a-4413-ab25-a43c41d5f137","8f85cde2-1245-4faf-9b42-4213f4b21adb","d1823ba7-5d08-4c1f-9b53-f610a45b649d","7bed4ded-f575-4b64-8ad6-e410f59fab43","3638f5bb3cb6410faa1037f5ecd41a1c","bfc9b6e0b0b04c408298d28d955ec614","876b8c14e25843028d1ffd0c4ef343a5","2a36f9c0053f4067bdbb2937a578defa","0d1d334cd387454cafd18f528280e833","8c3883b8bac745ce94a482798f168d95","a3a89f916bde4e1ba99c2b04d270a9b3","ec3b3b9ee03f40ea833a1f16189c9ea2","a4a697ad97a4499384b87a6ee22d70d3","f9de04c7cca24e6da581a7fb58901471","b4ee2931ec3e43a0a2e0260b3334d8f4","d213613a4ef64b93943e8bb40738082f","69739f95d1b1455eb5ceb514acd7e75f","5ded158b-64a7-4e68-ae58-eae6560576ad","60842b8f-66fc-4b7d-aed3-45a3d93401ad"]}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
