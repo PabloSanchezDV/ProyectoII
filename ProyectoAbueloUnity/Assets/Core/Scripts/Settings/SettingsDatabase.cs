@@ -23,6 +23,6 @@ public class SettingsDatabase : ScriptableObject
     public float TinnitusSFXVolumeModifier { get { return _tinnitusSFXVolumeModifier; } }
     public float MusicVolumeModifier { get { return _musicVolumeModifier; } }
 
-    public float MouseSensitivity { get { return _mouseSensitivity; } }
+    public float MouseSensitivity { get { return _mouseSensitivity; } set { _mouseSensitivity = value; } }
     public float FieldOfView { get { return _fov; } }
 }
