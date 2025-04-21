@@ -11,6 +11,7 @@ public class Action1 : ActionState
         base.Enter();
 
         ((AnimalFSM)_fsm).AnimalAnimator.SetBool("Action1", true);
+        ((AnimalFSM)_fsm).CurrentAction = Action.Action1;
     }
 
     public override void UpdateLogic()

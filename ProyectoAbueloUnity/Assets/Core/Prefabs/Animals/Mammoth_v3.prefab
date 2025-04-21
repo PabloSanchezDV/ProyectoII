@@ -193,7 +193,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   _checkPoints:
-  - {fileID: 0}
+  - {fileID: 3756743106750183439}
   _pathFollower: {fileID: 0}
   _speed: 5
   _minSpeed: 1
@@ -220,6 +220,11 @@ MonoBehaviour:
 --- !u!4 &2985041434683029210 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -5651751901618623305, guid: 484c34d4ad9cccc42a0ff0dd38495421, type: 3}
+  m_PrefabInstance: {fileID: 1800330205000669805}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3756743106750183439 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -5990157782169066910, guid: 484c34d4ad9cccc42a0ff0dd38495421, type: 3}
   m_PrefabInstance: {fileID: 1800330205000669805}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &8823931377533397734 stripped

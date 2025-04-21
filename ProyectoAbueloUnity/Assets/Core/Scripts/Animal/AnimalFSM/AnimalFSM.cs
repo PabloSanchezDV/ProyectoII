@@ -71,6 +71,7 @@ public class AnimalFSM : FSMTemplateMachine
     private float _noise;
     private float _timeFromLastNoise;
     private bool _isFollowingRoutine;
+    private Action _currentAction;
     #endregion
 
     #region Properties
@@ -118,6 +119,8 @@ public class AnimalFSM : FSMTemplateMachine
     public NavMeshAgent AnimalNavMeshAgent { get { return _navMeshAgent; } }
     public float DespawnTime { get { return _despawnTime; } }
     public string NavMeshLayerName { get { return _navMeshLayerName; } }
+
+    public Action CurrentAction { get { return _currentAction; } set { _currentAction = value; } }
     #endregion
 
     private void Awake()

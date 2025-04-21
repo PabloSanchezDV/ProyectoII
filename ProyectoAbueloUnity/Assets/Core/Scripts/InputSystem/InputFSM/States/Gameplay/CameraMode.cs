@@ -12,6 +12,7 @@ public class CameraMode : Gameplay
     private DepthOfField _depthOfField;
     private CameraSetting _currentSetting;
     private bool _isCameraInitialized = false;
+    private bool _isTakingPicture = false;
 
     public CameraMode(FSMTemplateMachine fsm, InputActions inputActions) : base(fsm, inputActions) { }
 
@@ -33,10 +34,15 @@ public class CameraMode : Gameplay
         timeBetweenSteps = ((InputHandler)_fsm).timeBetweenSteps / 2;
 
         AudioManager.Instance.PlayCameraOnSound(_camera.gameObject);
+        EventHolder.Instance.onCameraStateEnter?.Invoke();
+        EventHolder.Instance.onPictureShown.AddListener(ResetIsTakingPicture);
     }
 
     public override void UpdateLogic()
     {
+        if(_isTakingPicture)
+            return;
+
         base.UpdateLogic();
         if (isCameraToggled)
         {
@@ -47,6 +53,9 @@ public class CameraMode : Gameplay
 
     public override void UpdatePhysics()
     {
+        if (_isTakingPicture)
+            return;
+
         Move();
         LookAround();
         Zoom();
@@ -61,8 +70,6 @@ public class CameraMode : Gameplay
     {
         base.Exit();
 
-        ResetCameraValues();
-
         _zoom = null;
         _inputActions.CameraMode.TakePicture.started -= TakePicture;
         _inputActions.CameraMode.ChangeSetting.started -= ChangeSetting;
@@ -70,13 +77,24 @@ public class CameraMode : Gameplay
 
         _inputActions.CameraMode.Disable();
 
-        Debug.Log("Exiting Camera Mode");
+        EventHolder.Instance.onPictureShown.RemoveListener(ResetIsTakingPicture);
+        EventHolder.Instance.onCameraStateExit?.Invoke();
     }
 
     private void TakePicture(InputAction.CallbackContext context)
     {
+        if (_isTakingPicture)
+            return;
+
         AudioManager.Instance.PlayPhotoSound(_camera.gameObject);
-        AnimalsHolder.Instance.CheckAnimalsOnCamera();
+            AnimalsHolder.Instance.CheckAnimalsOnCamera();
+            EventHolder.Instance.onPictureTaken?.Invoke();
+            _isTakingPicture = true;
+    }
+
+    private void ResetIsTakingPicture()
+    {
+        _isTakingPicture = false;
     }
 
     private void Zoom()
@@ -86,10 +104,14 @@ public class CameraMode : Gameplay
             _mainCamera.fieldOfView = ((InputHandler)_fsm).zoomUpperLimit;
         else if (_mainCamera.fieldOfView < ((InputHandler)_fsm).zoomLowerLimit)
             _mainCamera.fieldOfView = ((InputHandler)_fsm).zoomLowerLimit;
+        EventHolder.Instance.onZoomChange?.Invoke();
     }
 
     private void ChangeSetting(InputAction.CallbackContext context)
     {
+        if (_isTakingPicture)
+            return;
+
         switch (_currentSetting)
         {
             case(CameraSetting.FocusDistance):
@@ -167,6 +189,9 @@ public class CameraMode : Gameplay
 
     private void ResetCamera(InputAction.CallbackContext context)
     {
+        if (_isTakingPicture)
+            return;
+
         ResetCameraValues();
     }
 
