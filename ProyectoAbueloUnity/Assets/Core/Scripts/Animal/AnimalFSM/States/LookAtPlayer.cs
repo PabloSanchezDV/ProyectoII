@@ -45,6 +45,6 @@ public class LookAtPlayer : FSMTemplateState
     public override void Exit()
     {
         base.Exit();
-        ((AnimalFSM)_fsm).AnimalIKControl.ResetHead(_lookAtPlayerFLV);
+        ((AnimalFSM)_fsm).AnimalIKControl.ResetHead();
     }
 }
