@@ -18,6 +18,7 @@ public class Flee : FSMTemplateState
         ((AnimalFSM)_fsm).AnimalAnimator.SetTrigger("Flee");
         ((AnimalFSM)_fsm).AnimalAnimator.SetBool("Moving", true);
         ((AnimalFSM)_fsm).AnimalIKControl.Initialize(((AnimalFSM)_fsm).AnimalAnimator);
+        ((AnimalFSM)_fsm).CurrentAction = Action.Other;
         _hasPassedNonReturningPoint = false; 
         SetFleeTarget();
     }

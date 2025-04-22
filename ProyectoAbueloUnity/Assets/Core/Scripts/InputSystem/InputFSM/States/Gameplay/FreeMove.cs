@@ -45,7 +45,7 @@ public class FreeMove : Gameplay
 
     private void Interact(InputAction.CallbackContext context)
     {
-        if(Physics.Raycast(_camera.transform.position, _camera.transform.forward, out RaycastHit hitInfo, ((InputHandler)_fsm).interactiveRaycastDistance, ~((InputHandler)_fsm).playerLayerMask))
+        if (Physics.Raycast(_camera.position, _camera.forward, out RaycastHit hitInfo, ((InputHandler)_fsm).interactiveRaycastDistance, ~((InputHandler)_fsm).playerLayerMask))
         {
             if(hitInfo.transform.gameObject.TryGetComponent<IInteractive>(out IInteractive iInteractive))
                 iInteractive.Interact();

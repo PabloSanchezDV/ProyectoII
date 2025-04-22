@@ -60,7 +60,7 @@ public class ScreenshotManager : MonoBehaviour
     {
         byte[] byteArray = texture2D.EncodeToPNG();
         System.IO.File.WriteAllBytes(Application.dataPath + $"/Pictures/{GetScreenshotName()}", byteArray);
-        Debug.Log($"Screenshot cameracapture-{System.DateTime.Now}.png saved at " + Application.dataPath);
+        Debug.Log($"Screenshot cameracapture-{GetScreenshotName()}.png saved at " + Application.dataPath + "\"/Pictures");
     }
 
     private Sprite Texture2DToSprite(Texture2D texture2D)
@@ -71,6 +71,6 @@ public class ScreenshotManager : MonoBehaviour
 
     private string GetScreenshotName()
     {
-        return $"cameracapture-{System.DateTime.Now.Year}-{System.DateTime.Now.Month}-{System.DateTime.Now.Day}-{System.DateTime.Now.Hour}-{System.DateTime.Now.Minute}-{System.DateTime.Now.Second}--.png";
+        return $"cameracapture-{System.DateTime.Now.Year}-{System.DateTime.Now.Month}-{System.DateTime.Now.Day}-{System.DateTime.Now.Hour}-{System.DateTime.Now.Minute}-{System.DateTime.Now.Second}.png";
     }
 }

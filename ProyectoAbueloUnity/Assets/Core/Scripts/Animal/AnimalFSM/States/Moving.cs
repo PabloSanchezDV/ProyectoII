@@ -11,7 +11,7 @@ public class Moving : FollowRoutine
     {
         base.Enter();
         ((AnimalFSM)_fsm).AnimalAnimator.SetBool("Moving", true);
-        ((AnimalFSM)_fsm).CurrentAction = Action.Walk;
+        ((AnimalFSM)_fsm).CurrentAction = Action.Walking;
     }
 
     public override void UpdateLogic()
