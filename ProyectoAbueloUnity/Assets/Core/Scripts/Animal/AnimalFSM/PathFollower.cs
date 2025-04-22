@@ -55,7 +55,6 @@ public class PathFollower : MonoBehaviour
         _distanceTravelled += _fsm.OriginalSpeed * Time.deltaTime;
         if (_currentPathIndex <= _fsm.PathCreators.Length - 1)
         {
-            CalculateOffsetBasedOnAnimal(_fsm.transform);
             transform.position = _fsm.PathCreators[_currentPathIndex].path.GetPointAtDistance(_distanceTravelled, _endOfPathInstruction) + _offset;
             transform.rotation = _fsm.PathCreators[_currentPathIndex].path.GetRotationAtDistance(_distanceTravelled, _endOfPathInstruction);
         }
