@@ -408,6 +408,7 @@
 "Assets/Core/Scripts/Animal/Deprecated/RoutinesController.cs"
 "Assets/Core/Scripts/Animal/Enum/Action.cs"
 "Assets/Core/Scripts/Animal/Enum/Animal.cs"
+"Assets/Core/Scripts/Animal/Enum/PictureAction.cs"
 "Assets/Core/Scripts/Audio/AudioDatabase.cs"
 "Assets/Core/Scripts/Audio/AudioManager.cs"
 "Assets/Core/Scripts/Camera/ScreenshotManager.cs"

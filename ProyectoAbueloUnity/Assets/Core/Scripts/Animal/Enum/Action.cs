@@ -1,1 +1,1 @@
-public enum Action { Walk, Action1, Action2, Action3, Action4 };
+public enum Action { Walking, Action1, Action2, Action3, Action4, Other };

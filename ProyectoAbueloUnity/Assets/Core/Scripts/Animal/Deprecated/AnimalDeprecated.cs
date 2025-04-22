@@ -52,7 +52,7 @@ public class AnimalDeprecated : MonoBehaviour
 
         switch(action)
         {
-            case Action.Walk:
+            case Action.Walking:
                 UpdatePositionAndRotation();
                 break;
             case Action.Action1:
@@ -76,7 +76,7 @@ public class AnimalDeprecated : MonoBehaviour
     {
         switch (action)
         {
-            case Action.Walk:
+            case Action.Walking:
                 _pathSystem.SetNextPath();
                 KeepFollowingPath();
                 break;

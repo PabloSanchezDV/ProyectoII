@@ -87,9 +87,9 @@ public class CameraMode : Gameplay
             return;
 
         AudioManager.Instance.PlayPhotoSound(_camera.gameObject);
-            AnimalsHolder.Instance.CheckAnimalsOnCamera();
-            EventHolder.Instance.onPictureTaken?.Invoke();
-            _isTakingPicture = true;
+        AnimalsHolder.Instance.CheckAnimalsOnCamera();
+        EventHolder.Instance.onPictureTaken?.Invoke();
+        _isTakingPicture = true;
     }
 
     private void ResetIsTakingPicture()

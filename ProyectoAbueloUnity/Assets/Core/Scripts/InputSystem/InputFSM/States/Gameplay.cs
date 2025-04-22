@@ -36,7 +36,7 @@ public class Gameplay : FSMTemplateState
         do
         {
             _rb = ((InputHandler)_fsm).Player.GetComponent<Rigidbody>();
-            _camera = ((InputHandler)_fsm).Player.transform.GetChild(0);
+            _camera = ((InputHandler)_fsm).Camera.transform;
 
             if (_rb != null && _camera != null)
                 _isInitialized = true;

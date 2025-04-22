@@ -61,9 +61,9 @@ public class AnimalFSM : FSMTemplateMachine
 
     private Collider _collider;
     private Animator _animator;
-    private Camera _camera;
     private IKControl _ikControl;
-    private Transform _player;
+    private Transform _player; 
+    private Camera _camera;
     private Rigidbody _playerRB;
     private NavMeshAgent _navMeshAgent;
     private Plane[] _cameraFrustrum;
@@ -196,12 +196,12 @@ public class AnimalFSM : FSMTemplateMachine
 
         do
         {
-            _camera = Camera.main;
             _collider = GetComponent<Collider>();
             _animator = GetComponent<Animator>();
             _player = GameObject.FindGameObjectWithTag("Player").transform;
+            _camera = _player.GetChild(0).GetComponent<Camera>();
             _navMeshAgent = GetComponent<NavMeshAgent>();
-        } while (_camera == null || _collider == null || _animator == null || _player == null || _navMeshAgent == null);
+        } while (_collider == null || _animator == null || _player == null || _navMeshAgent == null);
 
         _ikControl = (IKControl)gameObject.AddComponent(typeof(IKControl));
         _ikControl.SetHeadBone(_headBone);

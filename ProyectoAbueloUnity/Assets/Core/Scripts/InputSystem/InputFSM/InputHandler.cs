@@ -29,10 +29,12 @@ public class InputHandler : FSMTemplateMachine
 
     private InputActions _inputActions;
     private GameObject _player;
+    private GameObject _camera;
     #endregion
 
     #region Properties
     public GameObject Player {  get { return _player; } }
+    public GameObject Camera { get  { return _camera; } set { _camera = value; } }
     #endregion
 
     private void Awake()
@@ -43,6 +45,9 @@ public class InputHandler : FSMTemplateMachine
         cameraMode = new CameraMode(this, _inputActions);
 
         _player = GameObject.FindGameObjectWithTag("Player");
+        _camera = GameObject.FindGameObjectWithTag("MainCamera");
+
+        Debug.Log("InputHandler initialized");
     }
 
     protected override void GetInitialState(out FSMTemplateState state)

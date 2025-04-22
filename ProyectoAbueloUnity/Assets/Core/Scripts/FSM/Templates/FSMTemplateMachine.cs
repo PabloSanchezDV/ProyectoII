@@ -42,4 +42,9 @@ public class FSMTemplateMachine : MonoBehaviour
         _currentState = newState;
         _currentState.Enter();
     }
+
+    private void OnDisable()
+    {
+        _currentState.Exit();
+    }
 }

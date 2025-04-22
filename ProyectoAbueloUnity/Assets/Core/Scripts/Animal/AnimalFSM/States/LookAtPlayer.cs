@@ -16,6 +16,7 @@ public class LookAtPlayer : FSMTemplateState
         ((AnimalFSM)_fsm).IsFollowingRoutine = false;
         ((AnimalFSM)_fsm).AnimalAnimator.SetTrigger("LookingAtPlayer");
         ((AnimalFSM)_fsm).AnimalIKControl.Initialize(((AnimalFSM)_fsm).AnimalAnimator);
+        ((AnimalFSM)_fsm).CurrentAction = Action.Other;
     }
 
     public override void UpdateLogic()

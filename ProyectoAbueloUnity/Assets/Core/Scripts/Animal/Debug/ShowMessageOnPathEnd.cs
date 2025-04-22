@@ -10,7 +10,7 @@ public class ShowMessageOnPathEnd : MonoBehaviour
     {
         if(other.gameObject.name == _animal.name)
         {
-            Debug.Log(_animal.name + " has reached the end of path at time " + GameManager.instance.Daytime + ".");
+            Debug.Log(_animal.name + " has reached the end of path at time " + GameManager.Instance.Daytime + ".");
         }
     }
 }

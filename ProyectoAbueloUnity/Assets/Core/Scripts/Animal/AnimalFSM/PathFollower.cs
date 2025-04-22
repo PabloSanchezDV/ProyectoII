@@ -26,14 +26,14 @@ public class PathFollower : MonoBehaviour
 
     private void LateUpdate()
     {
-        Action newAction = GetActionAtTime(GameManager.instance.Daytime);
+        Action newAction = GetActionAtTime(GameManager.Instance.Daytime - (GameManager.Instance.StartHour * 60 + GameManager.Instance.StartMinute));
         if(_currentAction != newAction)
         {
-            if(newAction.Equals(Action.Walk))
+            if(newAction.Equals(Action.Walking))
                 SetNextPath();
             _currentAction = newAction;
         }
-        if(_currentAction.Equals(Action.Walk))
+        if(_currentAction.Equals(Action.Walking))
             UpdatePositionAndRotation();
     }
 

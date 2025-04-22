@@ -35,11 +35,11 @@ public class AnimalsHolder : MonoBehaviour
             if(animal.IsOnCamera())
             {
                 Debug.Log(animal.ToString() + " captured in camera doing " + animal.CurrentAction + ".");
-                UIManager.Instance.UpdateAnimalPicture(animal.animal.ToString(), animal.CurrentAction.ToString());
+                UIManager.Instance.UpdateAnimalPicture(animal.animal, animal.CurrentAction);
                 isAnimalOnPicture = true;
             }
         }
         if(!isAnimalOnPicture)
-            UIManager.Instance.UpdateAnimalPicture("", "");
+            UIManager.Instance.UpdateAnimalPicture(Animal.None); // It will leave both fields empty whenever the Animal is set to None
     }
 }

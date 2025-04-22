@@ -61,7 +61,7 @@ public class FollowRoutine : FSMTemplateState
     {
         switch (action)
         {
-            case Action.Walk:
+            case Action.Walking:
                 return ((AnimalFSM)_fsm).moving;
             case Action.Action1:
                 return ((AnimalFSM)_fsm).action1;
