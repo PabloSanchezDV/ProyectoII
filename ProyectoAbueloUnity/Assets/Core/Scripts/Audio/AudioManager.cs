@@ -96,7 +96,7 @@ public class AudioManager : MonoBehaviour
         return CreateAudioSource(gameObject, _db.stepsElkAC, _db.stepsElkCurrentVolume, _db.stepsElkPitchSwift, _db.stepsElkMinDistance, _db.stepsElkMaxDistance);
     }
 
-    public AudioSource PlayLeafsSound(GameObject gameObject)
+    public AudioSource PlayLeavesSound(GameObject gameObject)
     {
         _db.leafsCurrentVolume = ChangeSFXVolumeAsPerModifier(_db.leafsVolume);
         return CreateAudioSource(gameObject, _db.leafsAC, _db.leafsCurrentVolume, _db.leafsPitchSwift, _db.leafsMinDistance, _db.leafsMaxDistance, true);
