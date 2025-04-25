@@ -54,6 +54,60 @@ public class AudioManager : MonoBehaviour
         return CreateAudioSource(gameObject, _db.scaredMammothAC, _db.scaredMammothCurrentVolume, _db.scaredMammothPitchSwift, _db.scaredMammothMinDistance, _db.scaredMammothMaxDistance);
     }
 
+    public AudioSource PlaySleepingMammothSound(GameObject gameObject)
+    {
+        _db.sleepingMammothCurrentVolume = ChangeSFXVolumeAsPerModifier(_db.sleepingMammothVolume);
+        return CreateAudioSource(gameObject, _db.sleepingMammothAC, _db.sleepingMammothCurrentVolume, _db.sleepingMammothPitchSwift, _db.sleepingMammothMinDistance, _db.sleepingMammothMaxDistance, true);
+    }
+
+    public AudioSource PlayHowlMammothSound(GameObject gameObject)
+    {
+        _db.howlMammothCurrentVolume = ChangeSFXVolumeAsPerModifier(_db.howlMammothVolume);
+        return CreateAudioSource(gameObject, _db.howlMammothAC, _db.howlMammothCurrentVolume, _db.howlMammothPitchSwift, _db.howlMammothMinDistance, _db.howlMammothMaxDistance);
+    }
+
+    public AudioSource PlayHeadbuttMammothSound(GameObject gameObject)
+    {
+        _db.headbuttMammothCurrentVolume = ChangeSFXVolumeAsPerModifier(_db.headbuttMammothVolume);
+        return CreateAudioSource(gameObject, _db.headbuttMammothAC, _db.headbuttMammothCurrentVolume, _db.headbuttMammothPitchSwift, _db.headbuttMammothMinDistance, _db.headbuttMammothMaxDistance);
+    }
+
+    public AudioSource PlayEatingElkSound(GameObject gameObject)
+    {
+        _db.eatingElkCurrentVolume = ChangeSFXVolumeAsPerModifier(_db.eatingElkVolume);
+        return CreateAudioSource(gameObject, _db.eatingElkAC, _db.eatingElkCurrentVolume, _db.eatingElkPitchSwift, _db.eatingElkMinDistance, _db.eatingElkMaxDistance, true);
+    }
+
+    public AudioSource PlayHowlElkSound(GameObject gameObject)
+    {
+        _db.howlElkCurrentVolume = ChangeSFXVolumeAsPerModifier(_db.howlElkVolume);
+        return CreateAudioSource(gameObject, _db.howlElkAC, _db.howlElkCurrentVolume, _db.howlElkPitchSwift, _db.howlElkMinDistance, _db.howlElkMaxDistance);
+    }
+
+    public AudioSource PlayScaredElkSound(GameObject gameObject)
+    {
+        _db.scaredElkCurrentVolume = ChangeSFXVolumeAsPerModifier(_db.scaredElkVolume);
+        return CreateAudioSource(gameObject, _db.scaredElkAC, _db.scaredElkCurrentVolume, _db.scaredElkPitchSwift, _db.scaredElkMinDistance, _db.scaredElkMaxDistance);
+    }
+
+    public AudioSource PlayStepsElkSound(GameObject gameObject)
+    {
+        _db.stepsElkCurrentVolume = ChangeSFXVolumeAsPerModifier(_db.stepsElkVolume);
+        return CreateAudioSource(gameObject, _db.stepsElkAC, _db.stepsElkCurrentVolume, _db.stepsElkPitchSwift, _db.stepsElkMinDistance, _db.stepsElkMaxDistance);
+    }
+
+    public AudioSource PlayLeafsSound(GameObject gameObject)
+    {
+        _db.leafsCurrentVolume = ChangeSFXVolumeAsPerModifier(_db.leafsVolume);
+        return CreateAudioSource(gameObject, _db.leafsAC, _db.leafsCurrentVolume, _db.leafsPitchSwift, _db.leafsMinDistance, _db.leafsMaxDistance, true);
+    }
+
+    public AudioSource PlayWindSound(GameObject gameObject)
+    {
+        _db.windCurrentVolume = ChangeSFXVolumeAsPerModifier(_db.windVolume);
+        return CreateAudioSource(gameObject, _db.windAC, _db.windCurrentVolume, _db.windPitchSwift, _db.windMinDistance, _db.windMaxDistance, true);
+    }
+
     public AudioSource PlayCameraOnSound(GameObject gameObject)
     {
         _db.cameraOnCurrentVolume = ChangeSFXVolumeAsPerModifier(_db.cameraOnVolume);
