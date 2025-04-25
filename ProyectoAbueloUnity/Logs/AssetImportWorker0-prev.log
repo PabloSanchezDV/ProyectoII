@@ -15,7 +15,7 @@ C:/Users/Usuario/Documents/GitHub/ProyectoII/ProyectoAbueloUnity
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-59466
+59709
 Successfully changed project path to: C:/Users/Usuario/Documents/GitHub/ProyectoII/ProyectoAbueloUnity
 C:/Users/Usuario/Documents/GitHub/ProyectoII/ProyectoAbueloUnity
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -49,12 +49,12 @@ C:/Users/Usuario/Documents/GitHub/ProyectoII/ProyectoAbueloUnity
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [22124] Host "[IP] 192.168.1.130 [Port] 0 [Flags] 2 [Guid] 331596435 [EditorId] 331596435 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-CM1QIIF) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [15996] Host "[IP] 192.168.1.130 [Port] 0 [Flags] 2 [Guid] 3414299792 [EditorId] 3414299792 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-CM1QIIF) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [22124] Host "[IP] 192.168.1.130 [Port] 0 [Flags] 2 [Guid] 331596435 [EditorId] 331596435 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-CM1QIIF) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [15996] Host "[IP] 192.168.1.130 [Port] 0 [Flags] 2 [Guid] 3414299792 [EditorId] 3414299792 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-CM1QIIF) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
 [Physics::Module] Initialized MultithreadedJobDispatcher with 11 workers.
-Refreshing native plugins compatible for Editor in 10.53 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 8.94 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.19f1 (244b723c30a6)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.19f1/Editor/Data/Resources/UnitySubsystems
@@ -70,47 +70,47 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.19f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.19f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.19f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56604
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56144
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.19f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.19f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.19f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.009036 seconds.
-- Loaded All Assemblies, in  0.331 seconds
+Registered in 0.008735 seconds.
+- Loaded All Assemblies, in  0.345 seconds
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
 Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.311 seconds
-Domain Reload Profiling: 642ms
-	BeginReloadAssembly (97ms)
+- Finished resetting the current domain, in  0.322 seconds
+Domain Reload Profiling: 665ms
+	BeginReloadAssembly (102ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (36ms)
-	RebuildNativeTypeToScriptingClass (7ms)
-	initialDomainReloadingComplete (57ms)
-	LoadAllAssembliesAndSetupDomain (132ms)
-		LoadAssemblies (96ms)
+	RebuildCommonClasses (30ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (62ms)
+	LoadAllAssembliesAndSetupDomain (142ms)
+		LoadAssemblies (98ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (130ms)
-			TypeCache.Refresh (128ms)
-				TypeCache.ScanAssembly (113ms)
+		AnalyzeDomain (139ms)
+			TypeCache.Refresh (138ms)
+				TypeCache.ScanAssembly (125ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
-			ResolveRequiredComponents (1ms)
-	FinalizeReload (312ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (322ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (260ms)
+		SetupLoadedEditorAssemblies (265ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (98ms)
-			SetLoadedEditorAssemblies (3ms)
+			InitializePlatformSupportModulesInManaged (97ms)
+			SetLoadedEditorAssemblies (4ms)
 			RefreshPlugins (0ms)
 			BeforeProcessingInitializeOnLoad (2ms)
-			ProcessInitializeOnLoadAttributes (114ms)
+			ProcessInitializeOnLoadAttributes (120ms)
 			ProcessInitializeOnLoadMethodAttributes (43ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
@@ -119,8 +119,8 @@ Domain Reload Profiling: 642ms
 ========================================================================
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.696 seconds
-Refreshing native plugins compatible for Editor in 3.13 ms, found 3 plugins.
+- Loaded All Assemblies, in  0.730 seconds
+Refreshing native plugins compatible for Editor in 3.68 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
 Native extension for WebGL target not found
@@ -129,47 +129,47 @@ Package Manager log level set to [2]
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.767 seconds
-Domain Reload Profiling: 1460ms
-	BeginReloadAssembly (137ms)
+- Finished resetting the current domain, in  0.814 seconds
+Domain Reload Profiling: 1541ms
+	BeginReloadAssembly (142ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (5ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (22ms)
-	RebuildCommonClasses (27ms)
+		CreateAndSetChildDomain (25ms)
+	RebuildCommonClasses (32ms)
 	RebuildNativeTypeToScriptingClass (8ms)
-	initialDomainReloadingComplete (37ms)
-	LoadAllAssembliesAndSetupDomain (483ms)
-		LoadAssemblies (324ms)
+	initialDomainReloadingComplete (39ms)
+	LoadAllAssembliesAndSetupDomain (506ms)
+		LoadAssemblies (344ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (238ms)
-			TypeCache.Refresh (202ms)
-				TypeCache.ScanAssembly (185ms)
-			ScanForSourceGeneratedMonoScriptInfo (21ms)
-			ResolveRequiredComponents (12ms)
-	FinalizeReload (768ms)
+		AnalyzeDomain (244ms)
+			TypeCache.Refresh (206ms)
+				TypeCache.ScanAssembly (189ms)
+			ScanForSourceGeneratedMonoScriptInfo (28ms)
+			ResolveRequiredComponents (8ms)
+	FinalizeReload (814ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (599ms)
+		SetupLoadedEditorAssemblies (636ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (23ms)
-			SetLoadedEditorAssemblies (6ms)
+			InitializePlatformSupportModulesInManaged (22ms)
+			SetLoadedEditorAssemblies (3ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (72ms)
-			ProcessInitializeOnLoadAttributes (428ms)
+			BeforeProcessingInitializeOnLoad (76ms)
+			ProcessInitializeOnLoadAttributes (464ms)
 			ProcessInitializeOnLoadMethodAttributes (63ms)
 			AfterProcessingInitializeOnLoad (7ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
 		AwakeInstancesAfterBackupRestoration (5ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 3.51 ms, found 3 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 4.10 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 5894 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 107 unused Assets / (3.3 MB). Loaded Objects now: 6349.
-Memory consumption went from 261.0 MB to 257.7 MB.
-Total: 3.851600 ms (FindLiveObjects: 0.335600 ms CreateObjectMapping: 0.201600 ms MarkObjects: 2.501700 ms  DeleteObjects: 0.811700 ms)
+Memory consumption went from 260.9 MB to 257.6 MB.
+Total: 3.969600 ms (FindLiveObjects: 0.489100 ms CreateObjectMapping: 0.243000 ms MarkObjects: 2.691200 ms  DeleteObjects: 0.544500 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -186,10 +186,34 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
+Received Import Request.
+  Time since last request: 670670.780730 seconds.
+  path: Assets/Core/Meshes/Mammoth/Mammoth_v4.fbx
+  artifactKey: Guid(7fa321b6b234a0c4da700e0882bf3147) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Core/Meshes/Mammoth/Mammoth_v4.fbx using Guid(7fa321b6b234a0c4da700e0882bf3147) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8349b53196814960524556314a2b71ce') in 0.270867 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 107
+========================================================================
+Received Import Request.
+  Time since last request: 226.979352 seconds.
+  path: Assets/Core/Meshes/Mammoth/Mammoth_v4.fbx
+  artifactKey: Guid(7fa321b6b234a0c4da700e0882bf3147) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Core/Meshes/Mammoth/Mammoth_v4.fbx using Guid(7fa321b6b234a0c4da700e0882bf3147) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee8e17676fd8085cea1d7ca74e0329e7') in 0.020967 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 107
+========================================================================
+Received Import Request.
+  Time since last request: 21.511673 seconds.
+  path: Assets/Core/Prefabs/Animals/Mammoth_v4.prefab
+  artifactKey: Guid(7344bc9fea07f2847bf02f01bf5c539c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Core/Prefabs/Animals/Mammoth_v4.prefab using Guid(7344bc9fea07f2847bf02f01bf5c539c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e4b660809ec92e3606c93a5ee51b0e1') in 0.035985 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 218
+========================================================================
 Received Prepare
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.450 seconds
-Refreshing native plugins compatible for Editor in 3.83 ms, found 3 plugins.
+- Loaded All Assemblies, in  0.454 seconds
+Refreshing native plugins compatible for Editor in 3.22 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
 Native extension for WebGL target not found
@@ -197,46 +221,46 @@ Native extension for WebGL target not found
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.197 seconds
-Domain Reload Profiling: 1644ms
-	BeginReloadAssembly (148ms)
+- Finished resetting the current domain, in  1.184 seconds
+Domain Reload Profiling: 1635ms
+	BeginReloadAssembly (153ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (4ms)
+		DisableScriptedObjects (12ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (42ms)
-	RebuildCommonClasses (25ms)
+		CreateAndSetChildDomain (41ms)
+	RebuildCommonClasses (28ms)
 	RebuildNativeTypeToScriptingClass (8ms)
-	initialDomainReloadingComplete (27ms)
-	LoadAllAssembliesAndSetupDomain (239ms)
-		LoadAssemblies (285ms)
+	initialDomainReloadingComplete (30ms)
+	LoadAllAssembliesAndSetupDomain (232ms)
+		LoadAssemblies (280ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (23ms)
-			TypeCache.Refresh (7ms)
+		AnalyzeDomain (17ms)
+			TypeCache.Refresh (6ms)
 				TypeCache.ScanAssembly (0ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
-			ResolveRequiredComponents (13ms)
-	FinalizeReload (1197ms)
+			ResolveRequiredComponents (8ms)
+	FinalizeReload (1185ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (542ms)
+		SetupLoadedEditorAssemblies (612ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (22ms)
+			InitializePlatformSupportModulesInManaged (24ms)
 			SetLoadedEditorAssemblies (3ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (69ms)
-			ProcessInitializeOnLoadAttributes (388ms)
-			ProcessInitializeOnLoadMethodAttributes (54ms)
-			AfterProcessingInitializeOnLoad (7ms)
+			BeforeProcessingInitializeOnLoad (75ms)
+			ProcessInitializeOnLoadAttributes (446ms)
+			ProcessInitializeOnLoadMethodAttributes (57ms)
+			AfterProcessingInitializeOnLoad (6ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (8ms)
-Refreshing native plugins compatible for Editor in 3.37 ms, found 3 plugins.
+		AwakeInstancesAfterBackupRestoration (10ms)
+Refreshing native plugins compatible for Editor in 3.36 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 5668 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 66 unused Assets / (3.3 MB). Loaded Objects now: 6353.
-Memory consumption went from 218.5 MB to 215.2 MB.
-Total: 3.798100 ms (FindLiveObjects: 0.351000 ms CreateObjectMapping: 0.237100 ms MarkObjects: 2.480600 ms  DeleteObjects: 0.728400 ms)
+Unloading 66 unused Assets / (3.3 MB). Loaded Objects now: 6402.
+Memory consumption went from 221.0 MB to 217.7 MB.
+Total: 4.343200 ms (FindLiveObjects: 0.366500 ms CreateObjectMapping: 0.231800 ms MarkObjects: 3.188900 ms  DeleteObjects: 0.555100 ms)
 
 Prepare: number of updated asset objects reloaded= 0
 AssetImportParameters requested are different than current active one (requested -> active):
@@ -255,49 +279,17 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 670078.598232 seconds.
-  path: Assets/Core/Meshes/Mammoth/Mammoth_v3.fbx
-  artifactKey: Guid(484c34d4ad9cccc42a0ff0dd38495421) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Core/Meshes/Mammoth/Mammoth_v3.fbx using Guid(484c34d4ad9cccc42a0ff0dd38495421) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2b10c48858fe745a9c2990c515b8f29') in 0.288876 seconds
+  Time since last request: 445.099446 seconds.
+  path: Assets/Core/Scripts/Animal/AnimalFSM/States/Actions/Action1.cs
+  artifactKey: Guid(fda2bf3d24f1d854aa07cd6f343d4aef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Core/Scripts/Animal/AnimalFSM/States/Actions/Action1.cs using Guid(fda2bf3d24f1d854aa07cd6f343d4aef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e76c80aefb583aba7a91d139d8d0f16f') in 0.002950 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 121
+Number of asset objects unloaded after import = 0
 ========================================================================
 Received Import Request.
-  Time since last request: 36.095802 seconds.
+  Time since last request: 196.174763 seconds.
   path: Assets/Core/Prefabs/Animals/Mammoth_v3.prefab
   artifactKey: Guid(7fcecf8e25ceaa249b0f3b6575fb017c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Core/Prefabs/Animals/Mammoth_v3.prefab using Guid(7fcecf8e25ceaa249b0f3b6575fb017c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4fb576ea1c71df6a6459d2859d1d74c') in 0.034007 seconds
+Start importing Assets/Core/Prefabs/Animals/Mammoth_v3.prefab using Guid(7fcecf8e25ceaa249b0f3b6575fb017c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4b87095e467c9d2b3d68b3691af2c83') in 0.248482 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 215
-========================================================================
-Received Import Request.
-  Time since last request: 106.899325 seconds.
-  path: Assets/Core/Meshes/Mammoth/Mammoth_v4.fbx
-  artifactKey: Guid(7fa321b6b234a0c4da700e0882bf3147) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Core/Meshes/Mammoth/Mammoth_v4.fbx using Guid(7fa321b6b234a0c4da700e0882bf3147) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a67506ee30791edf89570c2ff0eb19c') in 0.021731 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 105
-========================================================================
-Received Import Request.
-  Time since last request: 40.049541 seconds.
-  path: Assets/Core/Meshes/Mammoth/Mammoth_v4.fbx
-  artifactKey: Guid(7fa321b6b234a0c4da700e0882bf3147) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Core/Meshes/Mammoth/Mammoth_v4.fbx using Guid(7fa321b6b234a0c4da700e0882bf3147) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff3afdb80c55e2910bf928a9e097004a') in 0.022064 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 107
-========================================================================
-Received Import Request.
-  Time since last request: 12.649842 seconds.
-  path: Assets/Core/Animations/MammothMask.mask
-  artifactKey: Guid(bd20130b2490b3d4d88871738568ac68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Core/Animations/MammothMask.mask using Guid(bd20130b2490b3d4d88871738568ac68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ba2248abe4de008b51126d11f4cdc9c') in 0.001141 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 68.952037 seconds.
-  path: Assets/Core/Animations/Mammoth.controller
-  artifactKey: Guid(e54a69c7d22b4a647ade8b221dc78c78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Core/Animations/Mammoth.controller using Guid(e54a69c7d22b4a647ade8b221dc78c78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d249b621dd9fe3c446750a5cca1f962') in 0.003071 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 31
+Number of asset objects unloaded after import = 236
