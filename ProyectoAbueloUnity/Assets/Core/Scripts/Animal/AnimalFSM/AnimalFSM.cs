@@ -157,7 +157,7 @@ public class AnimalFSM : FSMTemplateMachine
                 action4 = new Action4(this);
                 break;
             case (Animal.Elk):
-                action1 = new Action1(this);
+                action1 = new ElkEat(this);
                 action2 = new Action2(this);
                 action3 = new Action3(this);
                 action4 = new Action4(this);
@@ -390,7 +390,7 @@ public class AnimalFSM : FSMTemplateMachine
                 //AudioManager.Instance.PlayStepsBirdSound(gameObject);
                 break;
             case (Animal.Elk):
-                //AudioManager.Instance.PlayStepsElkSound(gameObject);
+                AudioManager.Instance.PlayStepsElkSound(gameObject);
                 break;
             case(Animal.Ornito):
                 //AudioManager.Instance.PlayStepsOrnitoSound(gameObject);
@@ -411,7 +411,7 @@ public class AnimalFSM : FSMTemplateMachine
                 //AudioManager.Instance.PlayScaredBirdSound(gameObject);
                 break;
             case (Animal.Elk):
-                //AudioManager.Instance.PlayScaredElkSound(gameObject);
+                AudioManager.Instance.PlayScaredElkSound(gameObject);
                 break;
             case (Animal.Ornito):
                 //AudioManager.Instance.PlayScaredOrnitoSound(gameObject);
@@ -420,5 +420,19 @@ public class AnimalFSM : FSMTemplateMachine
                 throw new Exception($"Couldn't play {gameObject.name} scared sound. Animal couldn't be filtered properly.");
         }
     }
+
+    #region Mammoth
+    public void PlayHeadbuttSound()
+    {
+        AudioManager.Instance.PlayHeadbuttMammothSound(gameObject);
+    }
+    #endregion
+
+    #region Elk
+    public void PlayElkHowlSound()
+    {
+        AudioManager.Instance.PlayHowlElkSound(gameObject);
+    }
+    #endregion
     #endregion
 }

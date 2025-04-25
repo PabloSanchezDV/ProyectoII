@@ -12,7 +12,7 @@ public class MammothSleep : Action2
     public override void Enter()
     {
         base.Enter();
-        _sleepingAS = AudioManager.Instance.PlayEatingMammothSound(_fsm.gameObject);
+        _sleepingAS = AudioManager.Instance.PlaySleepingMammothSound(_fsm.gameObject);
     }
 
     public override void Exit()
