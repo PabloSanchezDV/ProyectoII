@@ -37,7 +37,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BillboardTexture:
-        m_Texture: {fileID: 2800000, guid: 56dbb361859213b4696cb9aae8885d83, type: 3}
+        m_Texture: {fileID: 2800000, guid: bb750ffeec0fc6b4d80e5b25b71cc5e3, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _WavesTexture:
