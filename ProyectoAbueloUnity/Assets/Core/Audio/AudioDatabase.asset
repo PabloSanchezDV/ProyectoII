@@ -18,7 +18,7 @@ MonoBehaviour:
   placeholderMaxDistance: 0
   placeholderPitchSwift: 0
   stepsAC: {fileID: 8300000, guid: f1cf56d5694ed5a40b3c27a375df7fc3, type: 3}
-  stepsVolume: 1
+  stepsVolume: 0.005
   stepsMinDistance: 1
   stepsMaxDistance: 10
   stepsPitchSwift: 0.2
@@ -33,64 +33,64 @@ MonoBehaviour:
   photoMaxDistance: 10
   photoPitchSwift: 0
   stepsMammothAC: {fileID: 8300000, guid: 5b8a9ae681c6fc14793556743552b025, type: 3}
-  stepsMammothVolume: 1
-  stepsMammothMinDistance: 10
-  stepsMammothMaxDistance: 50
+  stepsMammothVolume: 0.1
+  stepsMammothMinDistance: 5
+  stepsMammothMaxDistance: 15
   stepsMammothPitchSwift: 0.2
   eatingMammothAC: {fileID: 8300000, guid: 34ca2b6723b0c9448b345918a79d114d, type: 3}
-  eatingMammothVolume: 1
-  eatingMammothMinDistance: 10
-  eatingMammothMaxDistance: 50
+  eatingMammothVolume: 0.3
+  eatingMammothMinDistance: 5
+  eatingMammothMaxDistance: 15
   eatingMammothPitchSwift: 0
   sleepingMammothAC: {fileID: 8300000, guid: aba8882ae543f2c45930f603c419108f, type: 3}
-  sleepingMammothVolume: 1
-  sleepingMammothMinDistance: 10
-  sleepingMammothMaxDistance: 50
+  sleepingMammothVolume: 0.6
+  sleepingMammothMinDistance: 5
+  sleepingMammothMaxDistance: 20
   sleepingMammothPitchSwift: 0
   scaredMammothAC: {fileID: 8300000, guid: 7829eef9bd6186440bb215ab9614556b, type: 3}
-  scaredMammothVolume: 1
-  scaredMammothMinDistance: 10
-  scaredMammothMaxDistance: 50
+  scaredMammothVolume: 0.5
+  scaredMammothMinDistance: 5
+  scaredMammothMaxDistance: 30
   scaredMammothPitchSwift: 0.2
   howlMammothAC: {fileID: 8300000, guid: 44766f56983015b4c93fa7c1ad27dfb0, type: 3}
-  howlMammothVolume: 1
+  howlMammothVolume: 0
   howlMammothMinDistance: 10
   howlMammothMaxDistance: 50
   howlMammothPitchSwift: 0
   headbuttMammothAC: {fileID: 8300000, guid: 9f2532abf4aa02041bc4cc7bee0d5742, type: 3}
-  headbuttMammothVolume: 1
-  headbuttMammothMinDistance: 10
-  headbuttMammothMaxDistance: 50
+  headbuttMammothVolume: 0.4
+  headbuttMammothMinDistance: 5
+  headbuttMammothMaxDistance: 15
   headbuttMammothPitchSwift: 0
   eatingElkAC: {fileID: 8300000, guid: 1dc5e072cc026d04a9c4a7c6c5c51eea, type: 3}
-  eatingElkVolume: 1
-  eatingElkMinDistance: 10
-  eatingElkMaxDistance: 50
+  eatingElkVolume: 0.2
+  eatingElkMinDistance: 5
+  eatingElkMaxDistance: 15
   eatingElkPitchSwift: 0
   howlElkAC: {fileID: 8300000, guid: 48bf0314d89f03540add2454ff12cfae, type: 3}
-  howlElkVolume: 1
-  howlElkMinDistance: 10
-  howlElkMaxDistance: 50
+  howlElkVolume: 0.4
+  howlElkMinDistance: 4
+  howlElkMaxDistance: 20
   howlElkPitchSwift: 0.2
   scaredElkAC: {fileID: 8300000, guid: ea89565c989c03449819af029119ccd2, type: 3}
-  scaredElkVolume: 1
-  scaredElkMinDistance: 10
-  scaredElkMaxDistance: 50
+  scaredElkVolume: 0.4
+  scaredElkMinDistance: 5
+  scaredElkMaxDistance: 30
   scaredElkPitchSwift: 0
   stepsElkAC: {fileID: 8300000, guid: f8109a921f6c51449a06d90ddb09ab72, type: 3}
-  stepsElkVolume: 0.635
-  stepsElkMinDistance: 10
-  stepsElkMaxDistance: 50
+  stepsElkVolume: 0.1
+  stepsElkMinDistance: 5
+  stepsElkMaxDistance: 15
   stepsElkPitchSwift: 0.2
   windAC: {fileID: 8300000, guid: c32b2abeecf0d5e4d878e3186c4a496b, type: 3}
-  windVolume: 0.1
-  windMinDistance: 10
-  windMaxDistance: 50
+  windVolume: 0.011
+  windMinDistance: 5
+  windMaxDistance: 20
   windPitchSwift: 0
   leafsAC: {fileID: 8300000, guid: 00385411c9827e149b86b1e99893ae0a, type: 3}
-  leafsVolume: 0.1
-  leafsMinDistance: 10
-  leafsMaxDistance: 50
+  leafsVolume: 0.03
+  leafsMinDistance: 5
+  leafsMaxDistance: 20
   leafsPitchSwift: 0
   placeholderTinnitusAC: {fileID: 0}
   placeholderTinnitusVolume: 0
