@@ -55,4 +55,15 @@ public class InputHandler : FSMTemplateMachine
         state = freeMove;
         freeMove.Enter();
     }
+
+    public void LookForTargetsOnCamera()
+    {
+        StartCoroutine(WaitForAddingTargetsToList());
+    }
+
+    private IEnumerator WaitForAddingTargetsToList()
+    {
+        yield return new WaitForSeconds(Time.deltaTime * 10f);
+        cameraMode.CheckTargetsOnCamera();
+    }
 }

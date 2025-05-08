@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,8 @@ public class CameraMode : Gameplay
 {
     InputAction _zoom;
     private Camera _mainCamera;
+    private MeshCollider _cameraMeshCollider;
+    private CameraTargetsDetector _cameraTargetsDetector;
     private PostProcessVolume _postProcessVolume;
     private DepthOfField _depthOfField;
     private CameraSetting _currentSetting;
@@ -81,21 +84,6 @@ public class CameraMode : Gameplay
         EventHolder.Instance.onCameraStateExit?.Invoke();
     }
 
-    private void TakePicture(InputAction.CallbackContext context)
-    {
-        if (_isTakingPicture)
-            return;
-
-        AudioManager.Instance.PlayPhotoSound(_camera.gameObject);
-        AnimalsHolder.Instance.CheckAnimalsOnCamera();
-        EventHolder.Instance.onPictureTaken?.Invoke();
-        _isTakingPicture = true;
-    }
-
-    private void ResetIsTakingPicture()
-    {
-        _isTakingPicture = false;
-    }
 
     private void Zoom()
     {
@@ -171,6 +159,8 @@ public class CameraMode : Gameplay
             do
             {
                 _mainCamera = _camera.GetComponent<Camera>();
+                _cameraMeshCollider = _mainCamera.GetComponent<MeshCollider>();
+                _cameraTargetsDetector = _mainCamera.GetComponent<CameraTargetsDetector>();
                 _postProcessVolume = _camera.GetComponent<PostProcessVolume>();
                 _postProcessVolume.profile.TryGetSettings<DepthOfField>(out _depthOfField);
             } while (_mainCamera == null || _postProcessVolume == null || _depthOfField == null);
@@ -194,6 +184,69 @@ public class CameraMode : Gameplay
 
         ResetCameraValues();
     }
+
+    private void TakePicture(InputAction.CallbackContext context)
+    {
+        if (_isTakingPicture)
+            return;
+
+        AudioManager.Instance.PlayPhotoSound(_camera.gameObject);
+
+        // New Camera Detection System
+        LookForTargetsOnCamera();
+        
+        //AnimalsHolder.Instance.CheckAnimalsOnCamera();
+        EventHolder.Instance.onPictureTaken?.Invoke();
+        _isTakingPicture = true;
+    }
+
+    private void ResetIsTakingPicture()
+    {
+        _isTakingPicture = false;
+    }
+
+    private void LookForTargetsOnCamera()
+    {
+        FrustrumToCollider.ApplyFrustumCollider(_mainCamera, _cameraMeshCollider); // Update Mesh
+        _cameraMeshCollider.enabled = true;
+        ((InputHandler)_fsm).LookForTargetsOnCamera();
+    }
+
+    public void CheckTargetsOnCamera()
+    {
+        _cameraMeshCollider.enabled = false;
+
+        bool targetOnCamera = false;
+
+        foreach(CameraTarget cameraTarget in _cameraTargetsDetector.cameraTargetsList)
+        {
+            if(cameraTarget.DoesRayHit(_mainCamera))
+            {
+                if (cameraTarget is AnimalCameraTarget)
+                {
+                    Debug.Log(cameraTarget.targetName + " captured in camera doing " + ((AnimalCameraTarget)cameraTarget).GetAnimalAction() + ".");
+                    UIManager.Instance.UpdatePicture(cameraTarget.targetName, ((AnimalCameraTarget)cameraTarget).GetAnimalAction());
+                    targetOnCamera = true;
+                    break;
+                }
+                else
+                {
+                    Debug.Log(cameraTarget.targetName + " captured in camera.");
+                    UIManager.Instance.UpdatePicture(cameraTarget.name);
+                    targetOnCamera = true;
+                    break;
+                }
+            }            
+        }
+
+        if(!targetOnCamera)
+            UIManager.Instance.UpdatePicture(" ", " ");
+
+        _cameraTargetsDetector.cameraTargetsList.Clear();
+    }
+
+
+    
 
     private enum CameraSetting { FocusDistance, Aperture, FocalLength }
 }
