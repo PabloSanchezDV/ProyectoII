@@ -18,5 +18,5 @@ MonoBehaviour:
   _sfxVolumeModifier: 1
   _tinnitusSFXVolumeModifier: 1
   _musicVolumeModifier: 1
-  _mouseSensitivity: 1
+  _mouseSensitivity: 0.7
   _fov: 60

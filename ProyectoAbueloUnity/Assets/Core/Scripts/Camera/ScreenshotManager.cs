@@ -7,6 +7,7 @@ public class ScreenshotManager : MonoBehaviour
 {
     public static ScreenshotManager Instance;
 
+    [SerializeField] private bool _savePictures;
     [SerializeField] private Camera _mainCamera;
     [SerializeField] private LayerMask _pictureCullingMask;
 
@@ -53,7 +54,9 @@ public class ScreenshotManager : MonoBehaviour
         cam.targetTexture = null;
 
         _lastPictureSprite = Texture2DToSprite(renderedTexture);
-        SaveScreenshot(renderedTexture);
+        
+        if(_savePictures)
+            SaveScreenshot(renderedTexture);
     }
 
     private void SaveScreenshot(Texture2D texture2D)

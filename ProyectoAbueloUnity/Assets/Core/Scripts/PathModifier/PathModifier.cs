@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using PathCreation;
 using UnityEngine;
-
+#if UNITY_EDITOR
 public class PathModifier : MonoBehaviour
 {
     private PathCreator _pathCreator;
@@ -44,3 +44,4 @@ public class PathModifier : MonoBehaviour
     }
 
 }
+#endif

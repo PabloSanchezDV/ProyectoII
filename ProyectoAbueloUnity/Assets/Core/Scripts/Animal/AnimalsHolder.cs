@@ -36,7 +36,7 @@ public class AnimalsHolder : MonoBehaviour
             {
                 Debug.Log(animal.ToString() + " captured in camera doing " + animal.CurrentAction + ".");
                 UIManager.Instance.UpdateAnimalPicture(animal.animal, animal.CurrentAction);
-                isAnimalOnPicture = true;
+                //isAnimalOnPicture = true;
             }
         }
         if(!isAnimalOnPicture)

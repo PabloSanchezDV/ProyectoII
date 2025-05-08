@@ -13,6 +13,7 @@ public class InputHandler : FSMTemplateMachine
     #region Fields
     [Header("Parameters -  Free Move")]
     [SerializeField] public float moveSpeed;
+    [SerializeField] public float stopSpeed;
     [SerializeField] public float maxMoveSpeed;
     [SerializeField] public float maxMoveSpeedCameraMode;
     [SerializeField] public float interactiveRaycastDistance;

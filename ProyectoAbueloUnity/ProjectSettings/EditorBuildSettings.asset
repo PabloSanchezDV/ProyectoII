@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Z - TO DELETE/Demo/MainMenu.unity
+    guid: 86d9fbd70d93a214aaf24b2bfb2a78cf
+  - enabled: 1
+    path: Assets/Z - TO DELETE/Demo/CinematicScene.unity
+    guid: 2f5fa3f59b067e54f9aa595fca1f4cb3
+  - enabled: 1
     path: Assets/Core/Scenes/FirstExperience.unity
     guid: 632fe0761d920884c9daf5c766620b27
   m_configObjects: {}

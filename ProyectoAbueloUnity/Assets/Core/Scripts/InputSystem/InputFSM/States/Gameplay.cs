@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using static UnityEditor.Timeline.TimelinePlaybackControls;
 
 public class Gameplay : FSMTemplateState
 {
@@ -91,6 +88,7 @@ public class Gameplay : FSMTemplateState
     protected void Move()
     {
         direction = ((InputHandler)_fsm).Player.transform.forward * _movement.ReadValue<Vector2>().y + ((InputHandler)_fsm).Player.transform.right * _movement.ReadValue<Vector2>().x;
+
         direction.Normalize();
         _rb.AddForce(direction * ((InputHandler)_fsm).moveSpeed * Time.deltaTime);
 

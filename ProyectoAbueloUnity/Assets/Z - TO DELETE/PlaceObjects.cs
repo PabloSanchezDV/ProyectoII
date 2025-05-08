@@ -1,3 +1,4 @@
+#if UNITY_EDITOR
 using System.Collections;
 using System.Collections.Generic;
 using PathCreation;
@@ -41,3 +42,4 @@ public class PlaceObjects : MonoBehaviour
         }
     }
 }
+#endif

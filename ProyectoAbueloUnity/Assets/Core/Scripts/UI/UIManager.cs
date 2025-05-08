@@ -76,7 +76,7 @@ public class UIManager : MonoBehaviour
 
     private Vector2 GetZoomArrowPosition(float fov)
     {
-        return new Vector2(90, MapCameraFovToPosition(fov));
+        return new Vector2(108, MapCameraFovToPosition(fov));
     }
 
     private float MapCameraFovToPosition(float fov)

@@ -70,7 +70,15 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: d83fdd7aaf8dd9f47a3114cdb4edac71, type: 2}
     - target: {fileID: 919132149155446097, guid: 8b0cf49b05eb43a47a2666744507f726, type: 3}
       propertyPath: m_Name
-      value: Chestnut_tree_UV
+      value: ChestnutTree
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8b0cf49b05eb43a47a2666744507f726, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7032823420476312315, guid: 8b0cf49b05eb43a47a2666744507f726, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

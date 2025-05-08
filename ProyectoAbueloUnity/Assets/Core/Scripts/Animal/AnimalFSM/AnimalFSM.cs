@@ -1,8 +1,6 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using PathCreation;
-using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -246,15 +244,9 @@ public class AnimalFSM : FSMTemplateMachine
                 {
                     return true;
                 }
-                else
-                {
-                    return false;
-                }
             }
-            else
-            {
-                return false;
-            }
+            
+            return false;
         }
 
         throw new Exception("The animal " + transform.name + " doesn't have any checkpoints.");
