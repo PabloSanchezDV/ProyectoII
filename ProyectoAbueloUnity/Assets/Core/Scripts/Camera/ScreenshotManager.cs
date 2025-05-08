@@ -53,7 +53,8 @@ public class ScreenshotManager : MonoBehaviour
         cam.targetTexture = null;
 
         _lastPictureSprite = Texture2DToSprite(renderedTexture);
-        SaveScreenshot(renderedTexture);
+        if(SettingsManager.Instance.Database.IsSavingPicturesEnabled)
+            SaveScreenshot(renderedTexture);
     }
 
     private void SaveScreenshot(Texture2D texture2D)

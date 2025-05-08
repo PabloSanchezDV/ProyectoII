@@ -6,7 +6,7 @@ using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class AnimalFSM : FSMTemplateMachine
+public class AnimalFSM : FSMTemplateMachine, IPhotographable
 {
     #region States
     [NonSerialized] public Idle idle;
@@ -28,6 +28,7 @@ public class AnimalFSM : FSMTemplateMachine
     [SerializeField] private PathCreator[] _pathCreators;
     [SerializeField] private Transform[] _checkPoints;
     [SerializeField] private PathFollower _pathFollower;
+    [SerializeField] private AnimalCameraTarget _cameraTarget;
 
     [Header("Atributes")]
     [SerializeField] private float _speed;
@@ -132,6 +133,7 @@ public class AnimalFSM : FSMTemplateMachine
         SetActions();
 
         InitializeAnimal();
+        _cameraTarget.InitializeAnimalCameraTarget(transform, animal, this, _checkPoints);
     }
 
     protected override void GetInitialState(out FSMTemplateState state)
@@ -220,45 +222,7 @@ public class AnimalFSM : FSMTemplateMachine
         transform.rotation = _pathFollower.transform.rotation;
     }
 
-    public bool IsOnCamera()
-    {
-        var bounds = _collider.bounds;
-        _cameraFrustrum = GeometryUtility.CalculateFrustumPlanes(_camera);
-        if (GeometryUtility.TestPlanesAABB(_cameraFrustrum, bounds))
-        {
-            return DoesRayHit();
-        }
-        else
-        {
-            return false;
-        }
-    }
-
-    private bool DoesRayHit()
-    {
-        foreach (Transform checkpoint in _checkPoints)
-        {
-            Vector3 direction = checkpoint.transform.position - _camera.transform.position;
-            if (Physics.Raycast(_camera.transform.position, direction, out RaycastHit hit, Mathf.Infinity))
-            {
-
-                if (hit.transform.gameObject.Equals(gameObject))
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-            }
-            else
-            {
-                return false;
-            }
-        }
-
-        throw new Exception("The animal " + transform.name + " doesn't have any checkpoints.");
-    }
+    public CameraTarget GetCameraTarget() { return _cameraTarget; }
 
     public void DespawnAfterTime()
     {
