@@ -22,7 +22,7 @@ public class Moving : FollowRoutine
             GetState(out _currentState);
             if(_currentState != this)
             {
-                Debug.Log("Change state to: " + _currentState);
+                DebugManager.Instance.DebugAnimalStateChangeMessage("Change state to: " + _currentState);
                 _fsm.ChangeState(_currentState);
             }
         }

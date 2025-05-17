@@ -61,10 +61,10 @@ public class Gameplay : FSMTemplateState
             switch (_exitReason)
             {
                 case ExitReason.Map:
-                    //_fsm.ChangeState(Map)
+                    _fsm.ChangeState(((InputHandler)_fsm).mapPage);
                     break;
                 case ExitReason.Notebook:
-                    //_fsm.ChangeState(Pictures)
+                    //_fsm.ChangeState(((InputHandler)_fsm).notebook);
                     break;
             }
             _exitCondition = false;

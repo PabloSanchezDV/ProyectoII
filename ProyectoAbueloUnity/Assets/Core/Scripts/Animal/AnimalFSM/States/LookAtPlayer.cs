@@ -31,7 +31,7 @@ public class LookAtPlayer : FSMTemplateState
 
         if(_fleeFLV > Mathf.Epsilon)
         {
-            Debug.Log("Change state to: " + ((AnimalFSM)_fsm).flee);
+            DebugManager.Instance.DebugAnimalStateChangeMessage("Change state to: " + ((AnimalFSM)_fsm).flee);
             _fsm.ChangeState(((AnimalFSM)_fsm).flee);
         }
     }

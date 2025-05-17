@@ -32,7 +32,7 @@ public class Flee : FSMTemplateState
 
             if ( _fleeFLV <= Mathf.Epsilon)
             {
-                Debug.Log("Change state to: " + ((AnimalFSM)_fsm).lookAtPlayer);
+                DebugManager.Instance.DebugAnimalStateChangeMessage("Change state to: " + ((AnimalFSM)_fsm).lookAtPlayer);
                 ((AnimalFSM)_fsm).ChangeState(((AnimalFSM)_fsm).lookAtPlayer);
             }
             if(_fleeFLV >= 1)

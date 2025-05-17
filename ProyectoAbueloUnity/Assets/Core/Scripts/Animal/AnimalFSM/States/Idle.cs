@@ -11,7 +11,7 @@ public class Idle : FollowRoutine
     public override void Enter()
     {
         GetState(out _currentState);
-        Debug.Log("Change state to: " + _currentState);
+        DebugManager.Instance.DebugAnimalStateChangeMessage("Change state to: " + _currentState);
         _fsm.ChangeState(_currentState);
     }
 }

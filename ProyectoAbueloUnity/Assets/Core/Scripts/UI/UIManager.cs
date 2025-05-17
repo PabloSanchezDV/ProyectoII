@@ -23,6 +23,11 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _clockText;
     [SerializeField] private RectTransform _hourHand;
     [SerializeField] private RectTransform _minuteHand;
+
+    [Header("Notebook")]
+    [SerializeField] private RectTransform _notebookCursor;
+    [SerializeField] private float _notebookCursorRaycastDistance;
+    [SerializeField] private LayerMask _notebookCursorRaycastLayerMask;
     
     private Animator _anim;
 
@@ -113,6 +118,53 @@ public class UIManager : MonoBehaviour
     public void TriggerFadeOut()
     {
         _anim.SetTrigger("FadeOut");
+    }
+
+    public Vector3 GetCursorWorldPosition()
+    {
+        Ray cursorRay = _mainCamera.ScreenPointToRay(_notebookCursor.position);
+
+        if (Physics.Raycast(cursorRay, out RaycastHit hitInfo, _notebookCursorRaycastDistance, _notebookCursorRaycastLayerMask)) 
+        {
+            return hitInfo.point;
+        }
+
+        return Vector3.negativeInfinity;
+    }
+
+    public NotebookCursorTarget GetNotebookCursorTarget()
+    {
+        Ray cursorRay = _mainCamera.ScreenPointToRay(_notebookCursor.position);
+
+        if (Physics.Raycast(cursorRay, out RaycastHit hitInfo, _notebookCursorRaycastDistance, _notebookCursorRaycastLayerMask))
+        {
+            if(hitInfo.collider.gameObject.GetComponent<NotebookCursorTarget>() != null)
+                return hitInfo.collider.gameObject.GetComponent<NotebookCursorTarget>();
+        }
+
+        return null;
+    }
+
+    public void UpdateCursorPosition(Vector2 cursorPosition)
+    {
+        cursorPosition = new Vector2(Mathf.Clamp(cursorPosition.x, 0, Screen.width), Mathf.Clamp(cursorPosition.y, 0, Screen.height));
+        _notebookCursor.position = cursorPosition;
+    }
+
+    public void ShowCursor()
+    {
+        _notebookCursor.gameObject.SetActive(true);
+    }
+
+    public void HideCursor()
+    {
+        if(_notebookCursor != null)
+            _notebookCursor.gameObject.SetActive(false);
+    }
+
+    public Vector2 GetCursorPosition()
+    {
+        return (Vector2)_notebookCursor.position;
     }
     #endregion
 
