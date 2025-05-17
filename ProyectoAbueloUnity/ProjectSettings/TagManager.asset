@@ -15,7 +15,7 @@ TagManager:
   - Terrain
   - Photo
   - Animal
-  - 
+  - Notebook
   - 
   - 
   - 
@@ -41,4 +41,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: WorldSpaceUI
+    uniqueID: 1918932981
     locked: 0

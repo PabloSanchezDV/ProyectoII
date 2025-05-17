@@ -14,6 +14,7 @@ public class SettingsDatabase : ScriptableObject
     [SerializeField] private float _musicVolumeModifier = 1.0f;
 
     [SerializeField] private float _mouseSensitivity = 1.0f;
+    [SerializeField] private float _cursorSensitivity = 1000.0f;
     [SerializeField] private float _fov = 60f;
 
     [SerializeField] private bool _isSavingPicturesEnabled = true;
@@ -26,6 +27,7 @@ public class SettingsDatabase : ScriptableObject
     public float MusicVolumeModifier { get { return _musicVolumeModifier; } }
 
     public float MouseSensitivity { get { return _mouseSensitivity; } set { _mouseSensitivity = value; } }
+    public float CursorSensitivity { get { return _cursorSensitivity; } set { _cursorSensitivity = value; } }
     public float FieldOfView { get { return _fov; } }
 
     public bool IsSavingPicturesEnabled { get { return _isSavingPicturesEnabled; } }

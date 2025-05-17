@@ -13,6 +13,7 @@ public class EventHolder : MonoBehaviour
     [NonSerialized] public UnityEvent onZoomChange = new UnityEvent();
     [NonSerialized] public UnityEvent onPictureTaken = new UnityEvent();
     [NonSerialized] public UnityEvent onPictureShown = new UnityEvent();
+    [NonSerialized] public UnityEvent onPageTurned = new UnityEvent();
 
     private void Awake()
     {

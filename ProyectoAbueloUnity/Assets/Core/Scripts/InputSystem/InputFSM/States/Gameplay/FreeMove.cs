@@ -50,6 +50,6 @@ public class FreeMove : Gameplay
             if(hitInfo.transform.gameObject.TryGetComponent<IInteractive>(out IInteractive iInteractive))
                 iInteractive.Interact();
         }
-        Debug.Log("Interacting");
+        DebugManager.Instance.DebugMessage("Interacting");
     }
 }

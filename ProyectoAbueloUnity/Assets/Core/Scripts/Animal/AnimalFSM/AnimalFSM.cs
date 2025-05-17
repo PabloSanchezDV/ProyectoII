@@ -213,7 +213,7 @@ public class AnimalFSM : FSMTemplateMachine, IPhotographable
         IntializeAnimalPosition();
         _playerRB = _player.GetComponent<Rigidbody>();
 
-        Debug.Log(transform.name + " is initialized");
+        DebugManager.Instance.DebugAnimalMessage(transform.name + " is initialized");
     }
 
     private void IntializeAnimalPosition()
@@ -233,14 +233,14 @@ public class AnimalFSM : FSMTemplateMachine, IPhotographable
     {
         yield return new WaitForSeconds(_despawnTime);
         transform.position = _pathFollower.transform.position;
-        Debug.Log("Change state to: " + idle);
+        DebugManager.Instance.DebugAnimalStateChangeMessage("Change state to: " + idle);
         ChangeState(idle);
     }
 
     #region Noise
     public void CalculateNoise() 
     {
-        float noiseValue = CalculateNoiseValue();
+        float noiseValue = CalculateNoiseFactor();
         if (noiseValue > 0.1f)
         {
             if (_timeFromLastNoise > _soundRelease)
@@ -268,7 +268,7 @@ public class AnimalFSM : FSMTemplateMachine, IPhotographable
         return (noiseValue + NoiseFunction(time, _soundAttack, _soundAttack + _soundRelease / 2, _soundRelease)) / 2;
     }
 
-    private float CalculateNoiseValue()
+    private float CalculateNoiseFactor()
     {
         float distance = Vector3.Distance(_player.position, transform.position);
 
