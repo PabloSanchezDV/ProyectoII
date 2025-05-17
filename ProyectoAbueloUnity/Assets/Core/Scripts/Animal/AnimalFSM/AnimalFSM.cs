@@ -213,7 +213,8 @@ public class AnimalFSM : FSMTemplateMachine, IPhotographable
         IntializeAnimalPosition();
         _playerRB = _player.GetComponent<Rigidbody>();
 
-        DebugManager.Instance.DebugAnimalMessage(transform.name + " is initialized");
+        if(DebugManager.Instance != null)
+            DebugManager.Instance.DebugAnimalMessage(transform.name + " is initialized");
     }
 
     private void IntializeAnimalPosition()

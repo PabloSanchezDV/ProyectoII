@@ -1,0 +1,93 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: ElkMask
+  m_Mask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: Armature
+    m_Weight: 1
+  - m_Path: Armature/root
+    m_Weight: 1
+  - m_Path: Armature/root/IK_cabeza
+    m_Weight: 0
+  - m_Path: Armature/root/IK_cabeza/IK_cabeza_end
+    m_Weight: 1
+  - m_Path: Armature/root/IK_patas1.L
+    m_Weight: 1
+  - m_Path: Armature/root/IK_patas1.L/IK_patas1.L_end
+    m_Weight: 1
+  - m_Path: Armature/root/IK_patas1.R
+    m_Weight: 1
+  - m_Path: Armature/root/IK_patas1.R/IK_patas1.R_end
+    m_Weight: 1
+  - m_Path: Armature/root/IK_patas2.L
+    m_Weight: 1
+  - m_Path: Armature/root/IK_patas2.L/IK_patas2.L_end
+    m_Weight: 1
+  - m_Path: Armature/root/IK_patas2.R
+    m_Weight: 1
+  - m_Path: Armature/root/IK_patas2.R/IK_patas2.R_end
+    m_Weight: 1
+  - m_Path: Armature/root/IK_patas3.L
+    m_Weight: 1
+  - m_Path: Armature/root/IK_patas3.L/IK_patas3.L_end
+    m_Weight: 1
+  - m_Path: Armature/root/IK_patas3.R
+    m_Weight: 1
+  - m_Path: Armature/root/IK_patas3.R/IK_patas3.R_end
+    m_Weight: 1
+  - m_Path: Armature/root/torso1
+    m_Weight: 1
+  - m_Path: Armature/root/torso1/cabeza
+    m_Weight: 1
+  - m_Path: Armature/root/torso1/cabeza/cabeza_end
+    m_Weight: 1
+  - m_Path: Armature/root/torso1/rodilla1.L
+    m_Weight: 1
+  - m_Path: Armature/root/torso1/rodilla1.L/patas1.L
+    m_Weight: 1
+  - m_Path: Armature/root/torso1/rodilla1.L/patas1.L/patas1.L_end
+    m_Weight: 1
+  - m_Path: Armature/root/torso1/rodilla1.R
+    m_Weight: 1
+  - m_Path: Armature/root/torso1/rodilla1.R/patas1.R
+    m_Weight: 1
+  - m_Path: Armature/root/torso1/rodilla1.R/patas1.R/patas1.R_end
+    m_Weight: 1
+  - m_Path: Armature/root/torso1/torso2
+    m_Weight: 1
+  - m_Path: Armature/root/torso1/torso2/rodilla2.L
+    m_Weight: 1
+  - m_Path: Armature/root/torso1/torso2/rodilla2.L/patas2.L
+    m_Weight: 1
+  - m_Path: Armature/root/torso1/torso2/rodilla2.L/patas2.L/patas2.L_end
+    m_Weight: 1
+  - m_Path: Armature/root/torso1/torso2/rodilla2.R
+    m_Weight: 1
+  - m_Path: Armature/root/torso1/torso2/rodilla2.R/patas2.R
+    m_Weight: 1
+  - m_Path: Armature/root/torso1/torso2/rodilla2.R/patas2.R/patas2.R_end
+    m_Weight: 1
+  - m_Path: Armature/root/torso1/torso2/torso3
+    m_Weight: 1
+  - m_Path: Armature/root/torso1/torso2/torso3/rodilla3.L
+    m_Weight: 1
+  - m_Path: Armature/root/torso1/torso2/torso3/rodilla3.L/patas3.L
+    m_Weight: 1
+  - m_Path: Armature/root/torso1/torso2/torso3/rodilla3.L/patas3.L/patas3.L_end
+    m_Weight: 1
+  - m_Path: Armature/root/torso1/torso2/torso3/rodilla3.R
+    m_Weight: 1
+  - m_Path: Armature/root/torso1/torso2/torso3/rodilla3.R/patas3.R
+    m_Weight: 1
+  - m_Path: Armature/root/torso1/torso2/torso3/rodilla3.R/patas3.R/patas3.R_end
+    m_Weight: 1
+  - m_Path: mamut_lp
+    m_Weight: 1
