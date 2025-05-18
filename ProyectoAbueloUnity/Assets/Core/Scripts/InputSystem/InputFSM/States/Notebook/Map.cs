@@ -12,15 +12,19 @@ public class Map : Notebook
 
         SetPagePostItParent(NotebookPage.Map);
         ((InputHandler)_fsm).CurrentNotebookPage = NotebookPage.Map;
-        ((InputHandler)_fsm).NotebookCT.ShowPins();
-        ((InputHandler)_fsm).NotebookCollider.enabled = true;
+        ((InputHandler)_fsm).MapCT.ShowPins();
+        ((InputHandler)_fsm).MapCollider.enabled = true;
+        ((InputHandler)_fsm).MapRenderer.enabled = true;
+
     }
 
     public override void Exit()
     {
         base.Exit();
 
-        ((InputHandler)_fsm).NotebookCT.HideMapElements();
-        ((InputHandler)_fsm).NotebookCollider.enabled = false;
+        if(((InputHandler)_fsm).MapCT != null)
+            ((InputHandler)_fsm).MapCT.HideMapElements();
+        if (((InputHandler)_fsm).MapCollider != null)
+            ((InputHandler)_fsm).MapCollider.enabled = false;
     }    
 }

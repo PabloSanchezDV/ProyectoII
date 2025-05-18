@@ -7,7 +7,7 @@ public class PinCT : NotebookCursorTarget
     public PostItCT postIt;
     public Color color;
     public string text;
-    public NotebookCT notebookCT;
+    public MapCT mapCT;
     private MeshRenderer _meshRenderer;
 
     private void Start()
@@ -36,7 +36,7 @@ public class PinCT : NotebookCursorTarget
 
     public override void SecondaryPressed(Vector3 pressedWorldPosition)
     {
-        notebookCT.RemovePinFromList(gameObject);
+        mapCT.RemovePinFromList(gameObject);
         Destroy(gameObject);
     }
 }

@@ -36,7 +36,6 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         _daytime += _daytimeModifier * Time.deltaTime;
-        UIManager.Instance.UpdateClock(_daytime);
 
         if (!_dayEnded)
         {

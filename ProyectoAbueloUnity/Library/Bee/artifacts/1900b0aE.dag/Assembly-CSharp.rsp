@@ -425,7 +425,7 @@
 "Assets/Core/Scripts/FSM/Templates/FSMTemplateState.cs"
 "Assets/Core/Scripts/Global/EventHolder.cs"
 "Assets/Core/Scripts/Global/GameManager.cs"
-"Assets/Core/Scripts/InputSystem/ArmsDisabler.cs"
+"Assets/Core/Scripts/InputSystem/ArmsAnimationEvents.cs"
 "Assets/Core/Scripts/InputSystem/InputActions.cs"
 "Assets/Core/Scripts/InputSystem/InputFSM/Enum/NotebookPage.cs"
 "Assets/Core/Scripts/InputSystem/InputFSM/InputHandler.cs"
