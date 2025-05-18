@@ -63,8 +63,8 @@ Material:
     m_Ints: []
     m_Floats:
     - _AlphaClipThreshold: 0.91
-    - _BillboardSize: 1.29
-    - _Inflate: 0.21
+    - _BillboardSize: 1
+    - _Inflate: 0
     - _QueueControl: 0
     - _QueueOffset: 0
     - _WindHeight: 0.5
