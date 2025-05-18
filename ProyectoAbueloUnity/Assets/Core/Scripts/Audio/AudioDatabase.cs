@@ -15,6 +15,7 @@ public class AudioDatabase : ScriptableObject
     [NonSerialized] public float placeholderCurrentVolume;
 
     [Header("Player")]
+
     public AudioClip stepsAC;
     [Range(0, 1)] public float stepsVolume;
     public float stepsMinDistance;
@@ -23,6 +24,7 @@ public class AudioDatabase : ScriptableObject
     [NonSerialized] public float stepsCurrentVolume;
 
     [Header("Camera")]
+
     public AudioClip cameraOnAC;
     [Range(0, 1)] public float cameraOnVolume;
     public float cameraOnMinDistance;
@@ -37,8 +39,46 @@ public class AudioDatabase : ScriptableObject
     [Range(0, 1)] public float photoPitchSwift;
     [NonSerialized] public float photoCurrentVolume;
 
+    public AudioClip newNotebookEntryAC;
+    [Range(0, 1)] public float newNotebookEntryVolume;
+    public float newNotebookEntryMinDistance;
+    public float newNotebookEntryMaxDistance;
+    [Range(0, 1)] public float newNotebookEntryPitchSwift;
+    [NonSerialized] public float newNotebookEntryCurrentVolume;
+
+    [Header("Notebook")]
+
+    public AudioClip openNotebookAC;
+    [Range(0, 1)] public float openNotebookVolume;
+    public float openNotebookMinDistance;
+    public float openNotebookMaxDistance;
+    [Range(0, 1)] public float openNotebookPitchSwift;
+    [NonSerialized] public float openNotebookCurrentVolume;
+
+    public AudioClip closeNotebookAC;
+    [Range(0, 1)] public float closeNotebookVolume;
+    public float closeNotebookMinDistance;
+    public float closeNotebookMaxDistance;
+    [Range(0, 1)] public float closeNotebookPitchSwift;
+    [NonSerialized] public float closeNotebookCurrentVolume;
+
+    public AudioClip pageAC;
+    [Range(0, 1)] public float pageVolume;
+    public float pageMinDistance;
+    public float pageMaxDistance;
+    [Range(0, 1)] public float pagePitchSwift;
+    [NonSerialized] public float pageCurrentVolume;
+
+    public AudioClip pushpinAC;
+    [Range(0, 1)] public float pushpinVolume;
+    public float pushpinMinDistance;
+    public float pushpinMaxDistance;
+    [Range(0, 1)] public float pushpinPitchSwift;
+    [NonSerialized] public float pushpinCurrentVolume;
+
     [Header("Animals")]
     [Header("Mammoth")]
+
     public AudioClip stepsMammothAC;
     [Range(0, 1)] public float stepsMammothVolume;
     public float stepsMammothMinDistance;
@@ -122,12 +162,70 @@ public class AudioDatabase : ScriptableObject
     [Range(0, 1)] public float windPitchSwift;
     [NonSerialized] public float windCurrentVolume;
 
+    public AudioClip windLonelinessAC;
+    [Range(0, 1)] public float windLonelinessVolume;
+    public float windLonelinessMinDistance;
+    public float windLonelinessMaxDistance;
+    [Range(0, 1)] public float windLonelinessPitchSwift;
+    [NonSerialized] public float windLonelinessCurrentVolume;
+
     public AudioClip leafsAC;
     [Range(0, 1)] public float leafsVolume;
     public float leafsMinDistance;
     public float leafsMaxDistance;
     [Range(0, 1)] public float leafsPitchSwift;
     [NonSerialized] public float leafsCurrentVolume;
+
+    public AudioClip birdsAC;
+    [Range(0, 1)] public float birdsVolume;
+    public float birdsMinDistance;
+    public float birdsMaxDistance;
+    [Range(0, 1)] public float birdsPitchSwift;
+    [NonSerialized] public float birdsCurrentVolume;
+
+    public AudioClip riverAC;
+    [Range(0, 1)] public float riverVolume;
+    public float riverMinDistance;
+    public float riverMaxDistance;
+    [Range(0, 1)] public float riverPitchSwift;
+    [NonSerialized] public float riverCurrentVolume;
+
+    public AudioClip waterfallAC;
+    [Range(0, 1)] public float waterfallVolume;
+    public float waterfallMinDistance;
+    public float waterfallMaxDistance;
+    [Range(0, 1)] public float waterfallPitchSwift;
+    [NonSerialized] public float waterfallCurrentVolume;
+
+    [Header("Arpeggios")]
+
+    public AudioClip arpeggioAmAC;
+    [Range(0, 1)] public float arpeggioAmVolume;
+    public float arpeggioAmMinDistance;
+    public float arpeggioAmMaxDistance;
+    [Range(0, 1)] public float arpeggioAmPitchSwift;
+    [NonSerialized] public float arpeggioAmCurrentVolume;
+
+    public AudioClip arpeggioBbmajCAC;
+    [Range(0, 1)] public float arpeggioBbmajCVolume;
+    public float arpeggioBbmajCMinDistance;
+    public float arpeggioBbmajCMaxDistance;
+    [Range(0, 1)] public float arpeggioBbmajCPitchSwift;
+    [NonSerialized] public float arpeggioBbmajCCurrentVolume;
+
+    public AudioClip arpeggioEmAC;
+    [Range(0, 1)] public float arpeggioEmVolume;
+    public float arpeggioEmMinDistance;
+    public float arpeggioEmMaxDistance;
+    [Range(0, 1)] public float arpeggioEmPitchSwift;
+    [NonSerialized] public float arpeggioEmCurrentVolume;
+
+    public AudioClip arpeggioGAC;
+    [Range(0, 1)] public float arpeggioGVolume;
+    public float arpeggioGMinDistance;
+    public float arpeggioGMaxDistance;
+    [Range(0, 1)] public float arpeggioGPitchSwift;
+    [NonSerialized] public float arpeggioGCurrentVolume;
 
     [Header("Placerholder Tinnitus SFX")]
     public AudioClip placeholderTinnitusAC;

@@ -3,5 +3,5 @@ using System;
 [Serializable]
 public enum SoundEffect
 {
-    Wind, Leaves
+    Wind, Leaves, Birds, River, Waterfall, WindLoneliness
 }

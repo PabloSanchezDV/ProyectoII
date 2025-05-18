@@ -29,12 +29,13 @@ public class AudioManager : MonoBehaviour
         _db.placeholderCurrentVolume = ChangeSFXVolumeAsPerModifier(_db.placeholderVolume);
         return CreateAudioSource(gameObject, _db.placeholderAC, _db.placeholderCurrentVolume, _db.placeholderPitchSwift, _db.placeholderMinDistance, _db.placeholderMaxDistance);
     }
-
     public AudioSource PlayStepsSound(GameObject gameObject)
     {
         _db.stepsCurrentVolume = ChangeSFXVolumeAsPerModifier(_db.stepsVolume);
         return CreateAudioSource(gameObject, _db.stepsAC, _db.stepsCurrentVolume, _db.stepsPitchSwift, _db.stepsMinDistance, _db.stepsMaxDistance);
     }
+
+    #region Mammoth
 
     public AudioSource PlayStepsMammothSound(GameObject gameObject)
     {
@@ -72,6 +73,9 @@ public class AudioManager : MonoBehaviour
         return CreateAudioSource(gameObject, _db.headbuttMammothAC, _db.headbuttMammothCurrentVolume, _db.headbuttMammothPitchSwift, _db.headbuttMammothMinDistance, _db.headbuttMammothMaxDistance);
     }
 
+    #endregion
+
+    #region Elk
     public AudioSource PlayEatingElkSound(GameObject gameObject)
     {
         _db.eatingElkCurrentVolume = ChangeSFXVolumeAsPerModifier(_db.eatingElkVolume);
@@ -96,6 +100,10 @@ public class AudioManager : MonoBehaviour
         return CreateAudioSource(gameObject, _db.stepsElkAC, _db.stepsElkCurrentVolume, _db.stepsElkPitchSwift, _db.stepsElkMinDistance, _db.stepsElkMaxDistance);
     }
 
+    #endregion
+
+    #region AmbientSound
+
     public AudioSource PlayLeavesSound(GameObject gameObject)
     {
         _db.leafsCurrentVolume = ChangeSFXVolumeAsPerModifier(_db.leafsVolume);
@@ -108,6 +116,33 @@ public class AudioManager : MonoBehaviour
         return CreateAudioSource(gameObject, _db.windAC, _db.windCurrentVolume, _db.windPitchSwift, _db.windMinDistance, _db.windMaxDistance, true);
     }
 
+    public AudioSource PlayWindLonelinessSound(GameObject gameObject)
+    {
+        _db.windLonelinessCurrentVolume = ChangeSFXVolumeAsPerModifier(_db.windLonelinessVolume);
+        return CreateAudioSource(gameObject, _db.windLonelinessAC, _db.windLonelinessCurrentVolume, _db.windLonelinessPitchSwift, _db.windLonelinessMinDistance, _db.windLonelinessMaxDistance, true);
+    }
+
+    public AudioSource PlayBirdsSound(GameObject gameObject)
+    {
+        _db.birdsCurrentVolume = ChangeSFXVolumeAsPerModifier(_db.birdsVolume);
+        return CreateAudioSource(gameObject, _db.birdsAC, _db.birdsCurrentVolume, _db.birdsPitchSwift, _db.birdsMinDistance, _db.birdsMaxDistance, true);
+    }
+
+    public AudioSource PlayRiverSound(GameObject gameObject)
+    {
+        _db.riverCurrentVolume = ChangeSFXVolumeAsPerModifier(_db.riverVolume);
+        return CreateAudioSource(gameObject, _db.riverAC, _db.riverCurrentVolume, _db.riverPitchSwift, _db.riverMinDistance, _db.riverMaxDistance, true);
+    }
+
+    public AudioSource PlayWaterfallSound(GameObject gameObject)
+    {
+        _db.waterfallCurrentVolume = ChangeSFXVolumeAsPerModifier(_db.waterfallVolume);
+        return CreateAudioSource(gameObject, _db.waterfallAC, _db.waterfallCurrentVolume, _db.waterfallPitchSwift, _db.waterfallMinDistance, _db.waterfallMaxDistance, true);
+    }
+    #endregion
+
+    #region Camera
+
     public AudioSource PlayCameraOnSound(GameObject gameObject)
     {
         _db.cameraOnCurrentVolume = ChangeSFXVolumeAsPerModifier(_db.cameraOnVolume);
@@ -119,6 +154,69 @@ public class AudioManager : MonoBehaviour
         _db.photoCurrentVolume = ChangeSFXVolumeAsPerModifier(_db.photoVolume);
         return CreateAudioSource(gameObject, _db.photoAC, _db.photoCurrentVolume, _db.photoPitchSwift, _db.photoMinDistance, _db.photoMaxDistance);
     }
+
+    public AudioSource PlayNewNotebookEntrySound(GameObject gameObject)
+    {
+        _db.newNotebookEntryCurrentVolume = ChangeSFXVolumeAsPerModifier(_db.newNotebookEntryVolume);
+        return CreateAudioSource(gameObject, _db.newNotebookEntryAC, _db.newNotebookEntryCurrentVolume, _db.newNotebookEntryPitchSwift, _db.newNotebookEntryMinDistance, _db.newNotebookEntryMaxDistance);
+    }
+
+    #endregion
+
+    #region Notebook
+    public AudioSource PlayOpenNotebookSound(GameObject gameObject)
+    {
+        _db.openNotebookCurrentVolume = ChangeSFXVolumeAsPerModifier(_db.openNotebookVolume);
+        return CreateAudioSource(gameObject, _db.openNotebookAC, _db.openNotebookCurrentVolume, _db.openNotebookPitchSwift, _db.openNotebookMinDistance, _db.openNotebookMaxDistance);
+    }
+
+    public AudioSource PlayCloseNotebookSound(GameObject gameObject)
+    {
+        _db.closeNotebookCurrentVolume = ChangeSFXVolumeAsPerModifier(_db.closeNotebookVolume);
+        return CreateAudioSource(gameObject, _db.closeNotebookAC, _db.closeNotebookCurrentVolume, _db.closeNotebookPitchSwift, _db.closeNotebookMinDistance, _db.closeNotebookMaxDistance);
+    }
+
+    public AudioSource PlayPageSound(GameObject gameObject)
+    {
+        _db.pageCurrentVolume = ChangeSFXVolumeAsPerModifier(_db.pageVolume);
+        return CreateAudioSource(gameObject, _db.pageAC, _db.pageCurrentVolume, _db.pagePitchSwift, _db.pageMinDistance, _db.pageMaxDistance);
+    }
+
+    public AudioSource PlayPushpinSound(GameObject gameObject)
+    {
+        _db.pushpinCurrentVolume = ChangeSFXVolumeAsPerModifier(_db.pushpinVolume);
+        return CreateAudioSource(gameObject, _db.pushpinAC, _db.pushpinCurrentVolume, _db.pushpinPitchSwift, _db.pushpinMinDistance, _db.pushpinMaxDistance);
+    }
+
+    #endregion
+
+    #region Arpeggio
+    public AudioSource PlayArpeggioAmSound(GameObject gameObject)
+    {
+        _db.arpeggioAmCurrentVolume = ChangeSFXVolumeAsPerModifier(_db.arpeggioAmVolume);
+        return CreateAudioSource(gameObject, _db.arpeggioAmAC, _db.arpeggioAmCurrentVolume, _db.arpeggioAmPitchSwift, _db.arpeggioAmMinDistance, _db.arpeggioAmMaxDistance);
+    }
+
+    public AudioSource PlayArpeggioBbmajCSound(GameObject gameObject)
+    {
+        _db.arpeggioBbmajCCurrentVolume = ChangeSFXVolumeAsPerModifier(_db.arpeggioBbmajCVolume);
+        return CreateAudioSource(gameObject, _db.arpeggioBbmajCAC, _db.arpeggioBbmajCCurrentVolume, _db.arpeggioBbmajCPitchSwift, _db.arpeggioBbmajCMinDistance, _db.arpeggioBbmajCMaxDistance);
+    }
+
+    public AudioSource PlayArpeggioEmSound(GameObject gameObject)
+    {
+        _db.arpeggioEmCurrentVolume = ChangeSFXVolumeAsPerModifier(_db.arpeggioEmVolume);
+        return CreateAudioSource(gameObject, _db.arpeggioEmAC, _db.arpeggioEmCurrentVolume, _db.arpeggioEmPitchSwift, _db.arpeggioEmMinDistance, _db.arpeggioEmMaxDistance);
+    }
+
+    public AudioSource PlayArpeggioGSound(GameObject gameObject)
+    {
+        _db.arpeggioGCurrentVolume = ChangeSFXVolumeAsPerModifier(_db.arpeggioGVolume);
+        return CreateAudioSource(gameObject, _db.arpeggioGAC, _db.arpeggioGCurrentVolume, _db.arpeggioGPitchSwift, _db.arpeggioGMinDistance, _db.arpeggioGMaxDistance);
+    }
+
+    #endregion
+
 
     #endregion
 
