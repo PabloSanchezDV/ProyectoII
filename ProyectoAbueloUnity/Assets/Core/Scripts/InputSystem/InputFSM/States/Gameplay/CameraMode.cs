@@ -37,7 +37,13 @@ public class CameraMode : Gameplay
         timeBetweenSteps = ((InputHandler)_fsm).timeBetweenSteps / 2;
 
         AudioManager.Instance.PlayCameraOnSound(_camera.gameObject);
-        EventHolder.Instance.onCameraStateEnter?.Invoke();
+
+        ((InputHandler)_fsm).PlayerAnim.SetTrigger("CameraUp");
+        ((InputHandler)_fsm).ArmsAnim.SetTrigger("HoldCamera");
+
+        ((InputHandler)_fsm).Polaroid.GetComponent<MeshRenderer>().enabled = true;
+        ((InputHandler)_fsm).ArmsRenderer.enabled = true;
+
         EventHolder.Instance.onPictureShown.AddListener(ResetIsTakingPicture);
     }
 
@@ -81,7 +87,17 @@ public class CameraMode : Gameplay
         _inputActions.CameraMode.Disable();
 
         EventHolder.Instance.onPictureShown.RemoveListener(ResetIsTakingPicture);
-        EventHolder.Instance.onCameraStateExit?.Invoke();
+
+        if(((InputHandler)_fsm).PlayerAnim != null)
+            ((InputHandler)_fsm).PlayerAnim.SetTrigger("CameraDown");
+        UIManager.Instance.PlayCameraModeExitTransition();
+        if(_mainCamera != null)
+            _mainCamera.fieldOfView = 60f;
+
+        if(((InputHandler)_fsm).Polaroid != null)
+            ((InputHandler)_fsm).Polaroid.GetComponent<MeshRenderer>().enabled = true;
+        if (((InputHandler)_fsm).ArmsRenderer != null)
+            ((InputHandler)_fsm).ArmsRenderer.enabled = true;
     }
 
 

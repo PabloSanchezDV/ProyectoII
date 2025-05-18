@@ -35,8 +35,14 @@ public class InputHandler : FSMTemplateMachine
     [SerializeField] private Animator _playerAnim;
     [SerializeField] private Animator _armsAnim;
     [SerializeField] private Animator _notebookAnim;
+    [SerializeField] private Animator _mapAnim;
     [SerializeField] private SkinnedMeshRenderer _armsRenderer;
     [SerializeField] private SkinnedMeshRenderer _notebookRenderer;
+    [SerializeField] private SkinnedMeshRenderer _mapRenderer;
+    [SerializeField] private GameObject _clock;
+    [SerializeField] private GameObject _minuteHand;
+    [SerializeField] private GameObject _hourHand;
+    [SerializeField] private GameObject _polaroid;
 
     [Header("Parameters -  Free Move")]
     [SerializeField] public float moveSpeed;
@@ -55,7 +61,7 @@ public class InputHandler : FSMTemplateMachine
     [SerializeField] public float focalLengthChangeSpeedModifier;
 
     [Header("References -  Notebook")]
-    [SerializeField] private NotebookCT _notebookCT;
+    [SerializeField] private MapCT _mapCT;
     [SerializeField] private PostItCT _postIt;
     [SerializeField] private Transform _upperCoverTransform;
     [SerializeField] private Transform _notebookPageTransform;
@@ -81,7 +87,7 @@ public class InputHandler : FSMTemplateMachine
     private GameObject _player;
     private GameObject _camera;
 
-    private Collider _notebookCollider;
+    private Collider _mapCollider;
     private NotebookPage _currentNotebookPage = NotebookPage.None;
     private AnimalsPage _currentAnimalsPage;
     private AnimalsPage _animalsPageToGo;
@@ -102,12 +108,19 @@ public class InputHandler : FSMTemplateMachine
     public Animator PlayerAnim { get { return _playerAnim; } }
     public Animator ArmsAnim { get { return _armsAnim; } }
     public Animator NotebookAnim { get { return _notebookAnim; } }
+    public Animator MapAnim { get { return _mapAnim; } }
 
     public SkinnedMeshRenderer ArmsRenderer {  get { return _armsRenderer; } }
     public SkinnedMeshRenderer NotebookRenderer { get { return _notebookRenderer; } }
+    public SkinnedMeshRenderer MapRenderer { get { return _mapRenderer; } }
 
-    public Collider NotebookCollider { get { return _notebookCollider; } }
-    public NotebookCT NotebookCT {  get { return _notebookCT; } }
+    public GameObject Clock { get { return _clock; } }
+    public GameObject MinuteHand { get { return _minuteHand; } }
+    public GameObject HourHand { get { return _hourHand; } }
+    public GameObject Polaroid { get { return _polaroid; } }
+
+    public Collider MapCollider { get { return _mapCollider; } }
+    public MapCT MapCT {  get { return _mapCT; } }
 
     public Transform UpperCoverTransform {  get { return _upperCoverTransform; } }
     public Transform NotebookPageTransform { get { return _notebookPageTransform; } }
@@ -178,14 +191,16 @@ public class InputHandler : FSMTemplateMachine
         _player = GameObject.FindGameObjectWithTag("Player");
         _camera = GameObject.FindGameObjectWithTag("MainCamera");
 
-        DisableArmsRenderer();
-        _notebookCollider = _notebookAnim.gameObject.GetComponent<Collider>();
-        _notebookCollider.enabled = false;
+        HideArmsNotebook();
+        HideArmsCameraMode();
+
+        _mapCollider = _mapAnim.gameObject.GetComponent<Collider>();
+        _mapCollider.enabled = false;
         
         foreach(Transform postIt in _pagePostIts)
             postIt.gameObject.SetActive(false);
 
-        _notebookCT.postIt = _postIt;
+        _mapCT.postIt = _postIt;
 
         DebugManager.Instance.DebugGlobalSystemMessage("InputHandler initialized");
     }
@@ -373,5 +388,27 @@ public class InputHandler : FSMTemplateMachine
                 gameObject.SetActive(false);
             _turnOffAfterTurningPageGOs = null;
         }
+        else
+        {
+            if(_mapRenderer != null)
+                _mapRenderer.enabled = false;
+        }
+
+    }
+
+    public void HideArmsCameraMode()
+    {
+        _armsRenderer.enabled = false;
+        _polaroid.GetComponent<Renderer>().enabled = false;
+    }
+
+    public void HideArmsNotebook()
+    {
+        _armsRenderer.enabled = false;
+        _notebookRenderer.enabled = false;
+        _mapRenderer.enabled = false;
+        _clock.GetComponent<MeshRenderer>().enabled = false;
+        _minuteHand.GetComponent<MeshRenderer>().enabled = false;
+        _hourHand.GetComponent<MeshRenderer>().enabled = false;
     }
 }

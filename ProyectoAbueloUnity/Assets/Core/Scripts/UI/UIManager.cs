@@ -19,11 +19,6 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _nameText;
     [SerializeField] private TextMeshProUGUI _actionText;
 
-    [Header("FreeMove")]
-    [SerializeField] private TextMeshProUGUI _clockText;
-    [SerializeField] private RectTransform _hourHand;
-    [SerializeField] private RectTransform _minuteHand;
-
     [Header("Notebook")]
     [SerializeField] private RectTransform _notebookCursor;
     [SerializeField] private float _notebookCursorRaycastDistance;
@@ -46,8 +41,6 @@ public class UIManager : MonoBehaviour
 
         InitializeUI();
 
-        EventHolder.Instance.onCameraStateEnter.AddListener(PlayCameraModeEnterTransition);
-        EventHolder.Instance.onCameraStateExit.AddListener(PlayCameraModeExitTransition);
         EventHolder.Instance.onZoomChange.AddListener(MoveZoomArrow);
         EventHolder.Instance.onPictureTaken.AddListener(PlayFlashEffect);
     }
@@ -58,13 +51,13 @@ public class UIManager : MonoBehaviour
         _anim.enabled = true;
     }
 
-    private void PlayCameraModeEnterTransition()
+    public void PlayCameraModeEnterTransition()
     {
-        MoveZoomArrow();
         _anim.SetTrigger("TriggerCamera");
+        MoveZoomArrow();
     }
 
-    private void PlayCameraModeExitTransition()
+    public void PlayCameraModeExitTransition()
     {
         _anim.SetTrigger("TriggerCamera");
     }
@@ -102,17 +95,6 @@ public class UIManager : MonoBehaviour
         _nameText.text = name;
         _actionText.text = action;
         StartCoroutine(UpdatePicture());
-    }
-
-    public void UpdateClock(float daytime)
-    {
-        float hours = daytime / 60f;
-        float minutes = daytime % 60f;
-
-        //Debug.Log($"{Mathf.FloorToInt(hours):D2}:{Mathf.FloorToInt(minutes):D2}");
-
-        _hourHand.localEulerAngles = new Vector3(0f, 0f, -(hours % 12 * 30f));
-        _minuteHand.localEulerAngles = new Vector3(0f, 0f, -(minutes * 6f));
     }
 
     public void TriggerFadeOut()
@@ -171,10 +153,7 @@ public class UIManager : MonoBehaviour
     #region AnimationMethods
     public void SetCameraFOV()
     {
-        if (_anim.GetCurrentAnimatorStateInfo(0).speed == 1)
-            _mainCamera.fieldOfView = _inputHandler.zoomUpperLimit - _inputHandler.zoomLowerLimit;
-        else
-            _mainCamera.fieldOfView = 60f;
+        _mainCamera.fieldOfView = _inputHandler.zoomUpperLimit - _inputHandler.zoomLowerLimit;
     }
 
     public void ShowPicture()

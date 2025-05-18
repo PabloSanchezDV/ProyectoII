@@ -33,7 +33,12 @@ public class Notebook : FSMTemplateState
             ((InputHandler)_fsm).PlayerAnim.SetTrigger("OpenNotebook");
             ((InputHandler)_fsm).ArmsAnim.SetTrigger("OpenNotebook");
             ((InputHandler)_fsm).NotebookAnim.SetTrigger("OpenNotebook");
-        
+            ((InputHandler)_fsm).MapAnim.SetTrigger("OpenNotebook");
+
+            ((InputHandler)_fsm).Clock.GetComponent<MeshRenderer>().enabled = true;
+            ((InputHandler)_fsm).MinuteHand.GetComponent<MeshRenderer>().enabled = true;
+            ((InputHandler)_fsm).HourHand.GetComponent<MeshRenderer>().enabled = true;
+
             ((InputHandler)_fsm).ArmsRenderer.enabled = true;
             ((InputHandler)_fsm).NotebookRenderer.enabled = true;
 
@@ -75,6 +80,7 @@ public class Notebook : FSMTemplateState
         base.UpdatePhysics();
         MoveCursor();
         CheckTarget();
+        UpdateClock();
     }
     
 
@@ -90,6 +96,8 @@ public class Notebook : FSMTemplateState
                 ((InputHandler)_fsm).ArmsAnim.SetTrigger("CloseNotebook");
             if (((InputHandler)_fsm).NotebookAnim != null)
                 ((InputHandler)_fsm).NotebookAnim.SetTrigger("CloseNotebook");
+            if (((InputHandler)_fsm).MapAnim != null)
+                ((InputHandler)_fsm).MapAnim.SetTrigger("CloseNotebook");
             ((InputHandler)_fsm).ResetAction = ResetNotebook;
             ((InputHandler)_fsm).IsClosingNotebook = true;
             _exitToFreeMove = false;
@@ -100,10 +108,14 @@ public class Notebook : FSMTemplateState
             {
                 if (((InputHandler)_fsm).NotebookAnim != null)
                     ((InputHandler)_fsm).NotebookAnim.SetTrigger("NextPage");
+                if (((InputHandler)_fsm).MapAnim != null)
+                    ((InputHandler)_fsm).MapAnim.SetTrigger("NextPage");
             }
             else
                 if (((InputHandler)_fsm).NotebookAnim != null)
                 ((InputHandler)_fsm).NotebookAnim.SetTrigger("PreviousPage");
+                if (((InputHandler)_fsm).MapAnim != null)
+                ((InputHandler)_fsm).MapAnim.SetTrigger("PreviousPage");
         }
 
         _inputActions.Notebook.CloseNotebook.performed -= ToggleNotebook;
@@ -120,6 +132,15 @@ public class Notebook : FSMTemplateState
             foreach (GameObject gameObject in ((InputHandler)_fsm).TurnOffAfterTurningPageGOs)
                 SetLowerAsParent(gameObject);
         }
+    }
+
+    private void UpdateClock()
+    {
+        float hours = GameManager.Instance.Daytime / 60f;
+        float minutes = GameManager.Instance.Daytime % 60f;
+
+        ((InputHandler)_fsm).HourHand.transform.localEulerAngles = new Vector3(0f, 0f, -(hours % 12 * 30f));
+        ((InputHandler)_fsm).MinuteHand.transform.localEulerAngles = new Vector3(0f, 0f, -(minutes * 6f));
     }
 
     private void ToggleNotebook(InputAction.CallbackContext context)
@@ -319,11 +340,13 @@ public class Notebook : FSMTemplateState
     public void NextPage()
     {
         ((InputHandler)_fsm).NotebookAnim.SetTrigger("NextPage");
+        ((InputHandler)_fsm).MapAnim.SetTrigger("NextPage");
     }
 
     public void PreviousPage()
     {
         ((InputHandler)_fsm).NotebookAnim.SetTrigger("PreviousPage");
+        ((InputHandler)_fsm).MapAnim.SetTrigger("PreviousPage");
     }
 
     protected void SetPagePostItParent(NotebookPage notebookPage)
@@ -394,21 +417,33 @@ public class Notebook : FSMTemplateState
 
     private void ResetNotebook()
     {
-        ResetPostIts();
-        ResetPages();
+        AnimatorStateInfo animatorStateInfo = ((InputHandler)_fsm).NotebookAnim.GetCurrentAnimatorStateInfo(0);
+        //AnimatorClipInfo[] clipInfo = ((InputHandler)_fsm).NotebookAnim.GetCurrentAnimatorClipInfo(0);
+        if (animatorStateInfo.IsName("CloseBook"))
+        {
+            ResetPostIts();
+            DisablePostIts();
+            ResetPages();
 
-        ((InputHandler)_fsm).CurrentNotebookPage = NotebookPage.Map;
-        ((InputHandler)_fsm).CurrentAnimalsPage = AnimalsPage.Mammoth;
-        ((InputHandler)_fsm).CurrentPlantsPage = PlantsPage.Plants1;
-        ((InputHandler)_fsm).CurrentGalleryPage = GalleryPage.Gallery1;
+            ((InputHandler)_fsm).CurrentNotebookPage = NotebookPage.Map;
+            ((InputHandler)_fsm).CurrentAnimalsPage = AnimalsPage.Mammoth;
+            ((InputHandler)_fsm).CurrentPlantsPage = PlantsPage.Plants1;
+            ((InputHandler)_fsm).CurrentGalleryPage = GalleryPage.Gallery1;
 
-        ((InputHandler)_fsm).TurnOffAfterTurningPageGOs = null;
+            ((InputHandler)_fsm).TurnOffAfterTurningPageGOs = null;
+        }
     }
 
     private void ResetPostIts()
     {
         foreach (Transform postIt in ((InputHandler)_fsm).PagePostIts)
             postIt.gameObject.SetActive(true);
+    }
+
+    private void DisablePostIts()
+    {
+        foreach (Transform postIt in ((InputHandler)_fsm).PagePostIts)
+            postIt.gameObject.SetActive(false);
     }
 
     private void ResetPages()
