@@ -16,6 +16,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private RectTransform _zoomArrow;
     [SerializeField] private Animator _pictureFrameAnim;
     [SerializeField] private Image _picture;
+    [SerializeField] private Animator _notificationAnim;
 
     [Header("Notebook")]
     [SerializeField] private RectTransform _notebookCursor;
@@ -86,6 +87,11 @@ public class UIManager : MonoBehaviour
     public void UpdatePicture()
     {
         _picture.sprite = ScreenshotManager.Instance.LastPictureSprite;
+    }
+
+    public void TriggerNotification()
+    {
+        _notificationAnim.SetTrigger("NewNotebookEntry");
     }
 
     public void TriggerFadeOut()
