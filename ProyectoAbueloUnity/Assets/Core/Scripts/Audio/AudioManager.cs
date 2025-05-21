@@ -23,12 +23,12 @@ public class AudioManager : MonoBehaviour
     }
 
     #region Play Methods
-    #region SFX
-    public AudioSource PlayPlacerholderSound(GameObject gameObject)
+    public AudioSource PlayNightSound(GameObject gameObject)
     {
-        _db.placeholderCurrentVolume = ChangeSFXVolumeAsPerModifier(_db.placeholderVolume);
-        return CreateAudioSource(gameObject, _db.placeholderAC, _db.placeholderCurrentVolume, _db.placeholderPitchSwift, _db.placeholderMinDistance, _db.placeholderMaxDistance);
+        _db.nightCurrentVolume = ChangeSFXVolumeAsPerModifier(_db.nightVolume);
+        return CreateAudioSource(gameObject, _db.nightAC, _db.nightCurrentVolume, _db.nightPitchSwift, _db.nightMinDistance, _db.nightMaxDistance);
     }
+
     public AudioSource PlayStepsSound(GameObject gameObject)
     {
         _db.stepsCurrentVolume = ChangeSFXVolumeAsPerModifier(_db.stepsVolume);
@@ -235,7 +235,6 @@ public class AudioManager : MonoBehaviour
         _db.placeholderMusicCurrentVolume = ChangeMusicVolumeAsPerModifier(_db.placeholderMusicVolume);
         return CreateMusicAudioSource(_db.placeholderMusicAC, _db.placeholderMusicCurrentVolume);
     }
-    #endregion
     #endregion
 
     #region Stop Methods

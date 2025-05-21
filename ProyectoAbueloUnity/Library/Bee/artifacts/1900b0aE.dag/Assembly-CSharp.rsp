@@ -409,6 +409,7 @@
 "Assets/Core/Scripts/Animal/Deprecated/RoutinesController.cs"
 "Assets/Core/Scripts/Animal/Enum/Action.cs"
 "Assets/Core/Scripts/Animal/Enum/Animal.cs"
+"Assets/Core/Scripts/Audio/ArpeggioTrigger.cs"
 "Assets/Core/Scripts/Audio/AudioDatabase.cs"
 "Assets/Core/Scripts/Audio/AudioManager.cs"
 "Assets/Core/Scripts/Audio/PlayNightSound.cs"

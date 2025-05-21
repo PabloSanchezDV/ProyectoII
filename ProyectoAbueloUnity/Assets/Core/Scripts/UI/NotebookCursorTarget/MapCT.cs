@@ -23,6 +23,7 @@ public class MapCT : NotebookCursorTarget
         newPin.GetComponent<PinCT>().postIt = postIt;
         newPin.GetComponent<PinCT>().mapCT = this;
         _pinsList.Add(newPin);
+        AudioManager.Instance.PlayPushpinSound(newPin);
     }
 
     public void ShowPins()

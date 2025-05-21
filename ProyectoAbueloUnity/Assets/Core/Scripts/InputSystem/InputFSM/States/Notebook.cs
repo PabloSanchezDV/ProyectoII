@@ -44,6 +44,8 @@ public class Notebook : FSMTemplateState
 
             foreach (Transform postIt in ((InputHandler)_fsm).PagePostIts)
                 postIt.gameObject.SetActive(true);
+
+            AudioManager.Instance.PlayOpenNotebookSound(((InputHandler)_fsm).NotebookAnim.gameObject);
         }
         else
             _changePage = false;
@@ -95,11 +97,16 @@ public class Notebook : FSMTemplateState
             if (((InputHandler)_fsm).ArmsAnim != null)
                 ((InputHandler)_fsm).ArmsAnim.SetTrigger("CloseNotebook");
             if (((InputHandler)_fsm).NotebookAnim != null)
+            {
                 ((InputHandler)_fsm).NotebookAnim.SetTrigger("CloseNotebook");
+                if (AudioManager.Instance != null)
+                    AudioManager.Instance.PlayCloseNotebookSound(((InputHandler)_fsm).NotebookAnim.gameObject);
+            }
             if (((InputHandler)_fsm).MapAnim != null)
                 ((InputHandler)_fsm).MapAnim.SetTrigger("CloseNotebook");
             ((InputHandler)_fsm).ResetAction = ResetNotebook;
             ((InputHandler)_fsm).IsClosingNotebook = true;
+            
             _exitToFreeMove = false;
         }
         else
@@ -116,6 +123,7 @@ public class Notebook : FSMTemplateState
                 ((InputHandler)_fsm).NotebookAnim.SetTrigger("PreviousPage");
                 if (((InputHandler)_fsm).MapAnim != null)
                 ((InputHandler)_fsm).MapAnim.SetTrigger("PreviousPage");
+            AudioManager.Instance.PlayPageSound(((InputHandler)_fsm).NotebookAnim.gameObject);
         }
 
         _inputActions.Notebook.CloseNotebook.performed -= ToggleNotebook;

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8423762022066125590}
   - component: {fileID: 5054967128654288793}
   - component: {fileID: 8874941182973689412}
+  - component: {fileID: 3535375828583463921}
   m_Layer: 0
   m_Name: ArpeggioBbmajC
   m_TagString: Untagged
@@ -62,6 +63,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3535375828583463921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3628811243736557480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9460caed6e811f349a4a1b8881f20e8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _arpeggio: 0
 --- !u!1 &4934583172572916995
 GameObject:
   m_ObjectHideFlags: 0
@@ -73,6 +87,7 @@ GameObject:
   - component: {fileID: 3858113434183475936}
   - component: {fileID: 3929179554364633114}
   - component: {fileID: 5757033130190667807}
+  - component: {fileID: 3533861168646535471}
   m_Layer: 0
   m_Name: ArpeggioEm
   m_TagString: Untagged
@@ -124,6 +139,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3533861168646535471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4934583172572916995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9460caed6e811f349a4a1b8881f20e8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _arpeggio: 3
 --- !u!1 &8218927458745076864
 GameObject:
   m_ObjectHideFlags: 0
@@ -170,6 +198,7 @@ GameObject:
   - component: {fileID: 5819478643714897724}
   - component: {fileID: 7342759669178015904}
   - component: {fileID: 4569458532119222869}
+  - component: {fileID: 6752472991779954864}
   m_Layer: 0
   m_Name: ArpeggioG
   m_TagString: Untagged
@@ -221,6 +250,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6752472991779954864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8446817124755490186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9460caed6e811f349a4a1b8881f20e8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _arpeggio: 2
 --- !u!1 &9090111418089161192
 GameObject:
   m_ObjectHideFlags: 0
@@ -232,6 +274,7 @@ GameObject:
   - component: {fileID: 3145363723510758967}
   - component: {fileID: 1094200178069246799}
   - component: {fileID: 2402684177137745181}
+  - component: {fileID: 6789814630230658027}
   m_Layer: 0
   m_Name: ArpeggioAm
   m_TagString: Untagged
@@ -283,3 +326,16 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6789814630230658027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9090111418089161192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9460caed6e811f349a4a1b8881f20e8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _arpeggio: 1
