@@ -4186,7 +4186,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &98861214
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16029,6 +16029,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4149526d0a9b25e4aa58acde847327a6, type: 3}
       propertyPath: m_Name
       value: ARMS_v3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4149526d0a9b25e4aa58acde847327a6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1045905978844457668, guid: 4149526d0a9b25e4aa58acde847327a6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -28503,7 +28507,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -25, y: 25}
-  m_SizeDelta: {x: 50, y: 50}
+  m_SizeDelta: {x: 75, y: 75}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &757262900
 MonoBehaviour:
@@ -28518,14 +28522,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: eb0683801a50419479e68ef742ce5fbc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 564f5dddaf695ba4087f932834e67828, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -48396,7 +48400,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.17254902, g: 0.16470589, b: 0.16470589, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -60551,6 +60555,10 @@ PrefabInstance:
     - target: {fileID: 1147194518649625414, guid: c491d10f04388c7418c3c876c79e14b8, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 1147194518649625414, guid: c491d10f04388c7418c3c876c79e14b8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3860991373177436717, guid: c491d10f04388c7418c3c876c79e14b8, type: 3}
       propertyPath: m_Mesh

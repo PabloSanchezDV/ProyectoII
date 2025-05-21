@@ -90,7 +90,8 @@ public class CameraMode : Gameplay
 
         if(((InputHandler)_fsm).PlayerAnim != null)
             ((InputHandler)_fsm).PlayerAnim.SetTrigger("CameraDown");
-        UIManager.Instance.PlayCameraModeExitTransition();
+        if(UIManager.Instance != null)
+            UIManager.Instance.PlayCameraModeExitTransition();
         if(_mainCamera != null)
             _mainCamera.fieldOfView = 60f;
 
