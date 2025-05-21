@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.IO;
 using Palmmedia.ReportGenerator.Core.Common;
 using UnityEngine;
@@ -150,6 +151,7 @@ public static class SaveSystem
         public bool beePictureTaken;
 
         public bool[] galleryPicturesTaken;
+        public PinData[] pinsData;
 
         public SaveData()
         {
@@ -204,6 +206,26 @@ public static class SaveSystem
 
             var sourceArray = GameManager.Instance.GalleryPicturesTaken;
             galleryPicturesTaken = sourceArray != null ? (bool[])sourceArray.Clone() : new bool[0];
+
+            pinsData = new PinData[GameManager.Instance.PinsList.Count];
+
+            for(int i = 0; i < GameManager.Instance.PinsList.Count; i++)
+            {
+                pinsData[i] = new PinData(GameManager.Instance.PinsList[i].text, GameManager.Instance.PinsList[i].localPosition);
+            }
+        }
+
+        [Serializable]
+        public class PinData
+        {
+            public string text;
+            public Vector3 localPosition;
+
+            public PinData(string text, Vector3 localPosition)
+            {
+                this.text = text;
+                this.localPosition = localPosition;
+            }
         }
 
         public void Apply()
@@ -300,6 +322,19 @@ public static class SaveSystem
                 {
                     if (galleryPicturesTaken[i])
                         GameManager.Instance.SetPictureTaken(Target.None, i);
+                }
+            }
+
+            if(pinsData != null)
+            {
+                GameManager.Instance.PinsList = new List<PinCT>();
+
+                for(int i = 0; i < pinsData.Length; i++)
+                {
+                    PinCT recoveredPin = new PinCT();
+                    recoveredPin.localPosition = pinsData[i].localPosition;
+                    recoveredPin.text = pinsData[i].text;
+                    GameManager.Instance.PinsList.Add(recoveredPin);
                 }
             }
         }

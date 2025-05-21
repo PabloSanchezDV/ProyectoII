@@ -63,15 +63,12 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _AlphaThreshold: 0.5
-    - _BUILTIN_QueueControl: 0
-    - _BUILTIN_QueueOffset: 0
     - _HeightBlend: 0.6
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ShadowAttenuanceMultiplier: 0.5
     - _Smoothness: 0
-    - _TerrainOffset: 0.55
+    - _TerrainOffset: 0.59
     - _TerrainSize: 2000
     - _USETERRAINCOLOR: 1
     - _WindHeight: 0.5
@@ -80,11 +77,11 @@ Material:
     - _WindSpeed: 0.05
     m_Colors:
     - _BottomColor: {r: 0.16862743, g: 0.5294118, b: 0.25121707, a: 0}
-    - _Color: {r: 0.22579211, g: 0.8113208, b: 0.22580495, a: 0}
     - _FarColor: {r: 0.6166271, g: 1, b: 0.2688679, a: 0}
     - _NearColor: {r: 0.1517444, g: 0.5849056, b: 0.16705823, a: 1}
     - _NearFarRange: {r: 10, g: 25, b: 0, a: 0}
     - _ShadowColor: {r: 0, g: 0.03368504, b: 0.2830189, a: 0}
+    - _TerrainOffset: {r: 0, g: 0, b: 0, a: 0}
     - _WindDirection: {r: -1, g: 0, b: 0, a: 0}
     - _WindNoiseContrast: {r: 0, g: 1, b: 0, a: 0}
     - _WindNoiseScale: {r: 40, g: 100, b: 0, a: 0}

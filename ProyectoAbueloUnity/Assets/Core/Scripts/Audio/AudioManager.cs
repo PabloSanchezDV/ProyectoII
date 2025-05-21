@@ -259,24 +259,27 @@ public class AudioManager : MonoBehaviour
     #region Private Methods
     private AudioSource CreateAudioSource(GameObject go, AudioClip audioClip, float volume, float pitchSwift = 0, float minDistance = 1, float maxDistance = 500, bool loop = false)
     {
-        AudioSource aS = go.AddComponent<AudioSource>();
-        aS.clip = audioClip;
-        aS.volume = volume;
-        aS.pitch = GetPitch(pitchSwift);
-        aS.minDistance = minDistance;
-        aS.maxDistance = maxDistance;
-        aS.loop = loop;
-        aS.spatialBlend = 1;
-
-        aS.Play();
-        _aSList.Add(aS);
-
-        if (!loop)
+        if(go != null)
         {
-            StartCoroutine(DestroyAudioSourceWhenFinish(aS));
-        }
+            AudioSource aS = go.AddComponent<AudioSource>();
+            aS.clip = audioClip;
+            aS.volume = volume;
+            aS.pitch = GetPitch(pitchSwift);
+            aS.minDistance = minDistance;
+            aS.maxDistance = maxDistance;
+            aS.loop = loop;
+            aS.spatialBlend = 1;
 
-        return aS;
+            aS.Play();
+            _aSList.Add(aS);
+
+            if (!loop)
+            {
+                StartCoroutine(DestroyAudioSourceWhenFinish(aS));
+            }
+            return aS;
+        }
+        return null;
     }
 
     private AudioSource CreateMusicAudioSource(AudioClip audioclip, float volume)

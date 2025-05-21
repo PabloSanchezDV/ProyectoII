@@ -12,6 +12,9 @@ public class UIManager : MonoBehaviour
     [SerializeField] private Camera _mainCamera;
     [SerializeField] private InputHandler _inputHandler;
 
+    [Header("FreeMove")]
+    [SerializeField] private GameObject _freeMovePanel;
+
     [Header("Camera")]
     [SerializeField] private RectTransform _zoomArrow;
     [SerializeField] private Animator _pictureFrameAnim;
@@ -22,6 +25,9 @@ public class UIManager : MonoBehaviour
     [SerializeField] private RectTransform _notebookCursor;
     [SerializeField] private float _notebookCursorRaycastDistance;
     [SerializeField] private LayerMask _notebookCursorRaycastLayerMask;
+    [SerializeField] private GameObject _notebookPanel;
+    [SerializeField] private GameObject _mapPanel;
+    [SerializeField] private GameObject _galleryPanel;
     
     private Animator _anim;
 
@@ -88,6 +94,51 @@ public class UIManager : MonoBehaviour
     {
         _picture.sprite = ScreenshotManager.Instance.LastPictureSprite;
     }
+
+    #region Show / Hide Controls
+    public void ShowFreeMoveControls()
+    {
+        _freeMovePanel.SetActive(true);
+    }
+
+    public void HideFreeMoveControls()
+    {
+        if(_freeMovePanel != null)
+        {
+            _freeMovePanel.SetActive(false);
+        }
+    }
+
+    public void ShowNotebookControls()
+    {
+        _notebookPanel.SetActive(true);
+    }
+
+    public void HideNotebookControls()
+    {
+        _notebookPanel.SetActive(false);
+    }
+
+    public void ShowMapControls()
+    {
+        _mapPanel.SetActive(true);
+    }
+
+    public void HideMapControls()
+    {
+        _mapPanel.SetActive(false);
+    }
+
+    public void ShowGalleryControls()
+    {
+        _galleryPanel.SetActive(true);
+    }
+
+    public void HideGalleryControls()
+    {
+        _galleryPanel.SetActive(false);
+    }
+    #endregion
 
     public void TriggerNotification()
     {
