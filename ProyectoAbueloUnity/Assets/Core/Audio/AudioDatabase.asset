@@ -38,17 +38,17 @@ MonoBehaviour:
   newNotebookEntryMaxDistance: 5
   newNotebookEntryPitchSwift: 0
   openNotebookAC: {fileID: 8300000, guid: 33331075e5c8c014d9a9cc1076132030, type: 3}
-  openNotebookVolume: 1
+  openNotebookVolume: 0.6
   openNotebookMinDistance: 5
   openNotebookMaxDistance: 5
   openNotebookPitchSwift: 0
   closeNotebookAC: {fileID: 8300000, guid: 72738e46117324c4d8c7df3bf735c5f0, type: 3}
-  closeNotebookVolume: 1
+  closeNotebookVolume: 0.1
   closeNotebookMinDistance: 5
   closeNotebookMaxDistance: 5
   closeNotebookPitchSwift: 0
   pageAC: {fileID: 8300000, guid: 365e3133e4a0803438148842d9453d7a, type: 3}
-  pageVolume: 1
+  pageVolume: 0.2
   pageMinDistance: 5
   pageMaxDistance: 5
   pagePitchSwift: 0
