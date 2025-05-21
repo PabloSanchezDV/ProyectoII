@@ -13,3 +13,6 @@ MonoBehaviour:
   m_Name: ChestnutTree
   m_EditorClassIdentifier: 
   _target: 15
+  _mask:
+    serializedVersion: 2
+    m_Bits: 1023

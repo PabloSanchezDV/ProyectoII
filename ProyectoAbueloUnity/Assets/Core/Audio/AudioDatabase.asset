@@ -33,9 +33,9 @@ MonoBehaviour:
   photoMaxDistance: 5
   photoPitchSwift: 0
   newNotebookEntryAC: {fileID: 8300000, guid: 157e601d92dbc4146b8d1570b9976523, type: 3}
-  newNotebookEntryVolume: 0
-  newNotebookEntryMinDistance: 0
-  newNotebookEntryMaxDistance: 0
+  newNotebookEntryVolume: 1
+  newNotebookEntryMinDistance: 5
+  newNotebookEntryMaxDistance: 5
   newNotebookEntryPitchSwift: 0
   openNotebookAC: {fileID: 8300000, guid: 33331075e5c8c014d9a9cc1076132030, type: 3}
   openNotebookVolume: 0

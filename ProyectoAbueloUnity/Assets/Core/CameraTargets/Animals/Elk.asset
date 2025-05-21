@@ -13,3 +13,6 @@ MonoBehaviour:
   m_Name: Elk
   m_EditorClassIdentifier: 
   _target: 5
+  _mask:
+    serializedVersion: 2
+    m_Bits: 1023

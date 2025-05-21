@@ -65,6 +65,8 @@ public class ScreenshotManager : MonoBehaviour
         if(_screenshotTarget != Target.None)
         {
             SaveScreenshot(_lastPictureTexture2D, _screenshotTarget.ToString());
+            UIManager.Instance.TriggerNotification();
+            AudioManager.Instance.PlayNewNotebookEntrySound(cam.gameObject);
         }
 
         EventHolder.Instance.onScreenshotTaken?.Invoke();

@@ -12,4 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9de492cdc4fe4c418d32a7e4e26f3b1, type: 3}
   m_Name: Mammoth
   m_EditorClassIdentifier: 
-  targetName: Mamut
+  _target: 0
+  _mask:
+    serializedVersion: 2
+    m_Bits: 1023

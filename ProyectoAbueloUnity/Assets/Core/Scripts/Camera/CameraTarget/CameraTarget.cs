@@ -5,6 +5,7 @@ using UnityEngine;
 public class CameraTarget : ScriptableObject
 {
     [SerializeField] protected Target _target;
+    [SerializeField] protected LayerMask _mask;
     [NonSerialized] public Transform[] checkPoints;
     protected Transform targetTransform;
 
@@ -19,7 +20,7 @@ public class CameraTarget : ScriptableObject
         foreach (Transform checkpoint in checkPoints)
         {
             Vector3 direction = checkpoint.transform.position - camera.transform.position;
-            if (Physics.Raycast(camera.transform.position, direction, out RaycastHit hit, Mathf.Infinity))
+            if (Physics.Raycast(camera.transform.position, direction, out RaycastHit hit, Mathf.Infinity, _mask))
             {
 
                 if (hit.transform.gameObject.Equals(targetTransform.gameObject))
