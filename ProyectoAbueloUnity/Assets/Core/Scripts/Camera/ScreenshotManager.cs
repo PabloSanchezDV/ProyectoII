@@ -9,11 +9,14 @@ public class ScreenshotManager : MonoBehaviour
 
     [SerializeField] private Camera _mainCamera;
     [SerializeField] private LayerMask _pictureCullingMask;
-
-    private Sprite _lastPictureSprite;
     [SerializeField] private LayerMask _baseCullingMask;
 
+    private Texture2D _lastPictureTexture2D;
+    private Sprite _lastPictureSprite;
+    private Target _screenshotTarget = Target.None;
+
     public Sprite LastPictureSprite { get { return _lastPictureSprite; } }
+    public Target ScreenshotTarget { get { return _screenshotTarget; } set { _screenshotTarget = value; } }
 
     private void Awake()
     {
@@ -27,10 +30,15 @@ public class ScreenshotManager : MonoBehaviour
     {
         _baseCullingMask = _mainCamera.cullingMask;
 
-        EventHolder.Instance.onPictureTaken.AddListener(SaveScreenshot);
+        EventHolder.Instance.onPhotoObjectsDetected.AddListener(TakeScreenshot);
     }
 
-    private void SaveScreenshot()
+    private void OnDisable()
+    {
+        EventHolder.Instance.onPhotoObjectsDetected.RemoveListener(TakeScreenshot);
+    }
+
+    private void TakeScreenshot()
     {
         _mainCamera.cullingMask = _pictureCullingMask;
         TakeScreenshot(_mainCamera);
@@ -46,32 +54,45 @@ public class ScreenshotManager : MonoBehaviour
         RenderTexture.active = screenTexture;
         cam.Render();
 
-        Texture2D renderedTexture = new Texture2D(Screen.width, Screen.height);
-        renderedTexture.ReadPixels(new Rect(0, 0, Screen.width, Screen.height), 0, 0);
-        renderedTexture.Apply();
+        _lastPictureTexture2D = new Texture2D(Screen.width, Screen.height);
+        _lastPictureTexture2D.ReadPixels(new Rect(0, 0, Screen.width, Screen.height), 0, 0);
+        _lastPictureTexture2D.Apply();
         RenderTexture.active = null;
         cam.targetTexture = null;
 
-        _lastPictureSprite = Texture2DToSprite(renderedTexture);
-        if(SettingsManager.Instance.Database.IsSavingPicturesEnabled)
-            SaveScreenshot(renderedTexture);
+        _lastPictureSprite = Texture2DToSprite(_lastPictureTexture2D);
+        
+        if(_screenshotTarget != Target.None)
+        {
+            SaveScreenshot(_lastPictureTexture2D, _screenshotTarget.ToString());
+        }
+
+        EventHolder.Instance.onScreenshotTaken?.Invoke();
     }
 
-    private void SaveScreenshot(Texture2D texture2D)
+    private void SaveScreenshot(Texture2D texture2D, string screenshotName)
     {
-        byte[] byteArray = texture2D.EncodeToPNG();
-        System.IO.File.WriteAllBytes(Application.dataPath + $"/Pictures/{GetScreenshotName()}", byteArray);
-        Debug.Log($"Screenshot cameracapture-{GetScreenshotName()}.png saved at " + Application.dataPath + "\"/Pictures");
+        SaveSystem.SaveScreenshot(texture2D, screenshotName);
+    }
+
+    public Sprite LoadScreenshot(Target target)
+    {
+        return Texture2DToSprite(SaveSystem.LoadScreenshot(target.ToString()));
+    }
+
+    public Sprite LoadScreenshot(int galleryIndex)
+    {
+        return Texture2DToSprite(SaveSystem.LoadScreenshot("GalleryPicture" + galleryIndex.ToString()));
+    }
+
+    public void SaveGalleryScreenshot(int galleryIndex)
+    {
+        SaveScreenshot(_lastPictureTexture2D, "GalleryPicture" + galleryIndex.ToString());
     }
 
     private Sprite Texture2DToSprite(Texture2D texture2D)
     {
         Rect rect = new Rect(0, 0, texture2D.width, texture2D.height);
         return Sprite.Create(texture2D, rect, Vector2.one * 0.5f, 100);
-    }
-
-    private string GetScreenshotName()
-    {
-        return $"cameracapture-{System.DateTime.Now.Year}-{System.DateTime.Now.Month}-{System.DateTime.Now.Day}-{System.DateTime.Now.Hour}-{System.DateTime.Now.Minute}-{System.DateTime.Now.Second}.png";
     }
 }

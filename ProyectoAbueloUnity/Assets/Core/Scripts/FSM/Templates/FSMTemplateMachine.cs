@@ -43,7 +43,7 @@ public class FSMTemplateMachine : MonoBehaviour
         _currentState.Enter();
     }
 
-    private void OnDisable()
+    protected virtual void OnDisable()
     {
         _currentState.Exit();
     }

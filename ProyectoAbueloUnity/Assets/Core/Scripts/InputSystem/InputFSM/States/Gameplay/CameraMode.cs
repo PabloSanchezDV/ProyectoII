@@ -208,10 +208,8 @@ public class CameraMode : Gameplay
 
         AudioManager.Instance.PlayPhotoSound(_camera.gameObject);
 
-        // New Camera Detection System
         LookForTargetsOnCamera();
-        
-        //AnimalsHolder.Instance.CheckAnimalsOnCamera();
+
         EventHolder.Instance.onPictureTaken?.Invoke();
         _isTakingPicture = true;
     }
@@ -232,36 +230,27 @@ public class CameraMode : Gameplay
     {
         _cameraMeshCollider.enabled = false;
 
-        bool targetOnCamera = false;
+        Target target = Target.None;
 
         foreach(CameraTarget cameraTarget in _cameraTargetsDetector.cameraTargetsList)
         {
             if(cameraTarget.DoesRayHit(_mainCamera))
             {
-                if (cameraTarget is AnimalCameraTarget)
-                {
-                    Debug.Log(cameraTarget.targetName + " captured in camera doing " + ((AnimalCameraTarget)cameraTarget).GetAnimalAction() + ".");
-                    UIManager.Instance.UpdatePicture(cameraTarget.targetName, ((AnimalCameraTarget)cameraTarget).GetAnimalAction());
-                    targetOnCamera = true;
-                    break;
-                }
-                else
-                {
-                    Debug.Log(cameraTarget.targetName + " captured in camera.");
-                    UIManager.Instance.UpdatePicture(cameraTarget.name);
-                    targetOnCamera = true;
-                    break;
-                }
+                DebugManager.Instance.DebugCameraSystemMessage(cameraTarget.GetTarget().ToString() + " captured in camera.");
+                target = cameraTarget.GetTarget();
+                break;
             }            
         }
 
-        if(!targetOnCamera)
-            UIManager.Instance.UpdatePicture(" ", " ");
+        ((InputHandler)_fsm).ScreenshotTarget = target;
+        ScreenshotManager.Instance.ScreenshotTarget = target;
+
+        if(!target.Equals(Target.None))
+            GameManager.Instance.SetPictureTaken(target);
 
         _cameraTargetsDetector.cameraTargetsList.Clear();
+        EventHolder.Instance.onPhotoObjectsDetected?.Invoke();
     }
-
-
     
 
     private enum CameraSetting { FocusDistance, Aperture, FocalLength }

@@ -6,140 +6,113 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "PhotographableObjects/AnimalPhotographable")]
 public class AnimalCameraTarget : CameraTarget
 {
-    [NonSerialized] public Animal animal;
     [NonSerialized] private AnimalFSM animalFSM;
-    [NonSerialized] public Transform[] checkPoints;
+    private Animal _animal;
 
     public void InitializeAnimalCameraTarget(Transform transform, Animal animal, AnimalFSM animalFSM, Transform[] checkPoints)
     {
-        InitializeCameraTarget(transform);
+        InitializeCameraTarget(transform, checkPoints);
 
-        this.animal = animal;
+        _animal = animal;
         this.animalFSM = animalFSM;
         this.checkPoints = checkPoints;
     }
 
-    public override bool DoesRayHit(Camera camera)
+    public override Target GetTarget()
     {
-        foreach (Transform checkpoint in checkPoints)
-        {
-            Vector3 direction = checkpoint.transform.position - camera.transform.position;
-            if (Physics.Raycast(camera.transform.position, direction, out RaycastHit hit, Mathf.Infinity))
-            {
-
-                if (hit.transform.gameObject.Equals(targetTransform.gameObject))
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-            }
-            else
-            {
-                return false;
-            }
-        }
-
-        throw new Exception("The animal " + targetTransform.name + " doesn't have any checkpoints.");
-    }
-
-    public string GetAnimalAction()
-    {
-        switch (animal)
+        switch (_animal) 
         {
             case (Animal.Mammoth):
-                return GetMammothAction(animalFSM.CurrentAction);
+                return GetMammothActionAsTarget();
             case (Animal.Elk):
-                return GetElkAction(animalFSM.CurrentAction);
-            case (Animal.Bird):
-                return GetBirdAction(animalFSM.CurrentAction);
+                return GetElkActionAsTarget();
             case (Animal.Ornito):
-                return GetOrnitoAction(animalFSM.CurrentAction);
-            case (Animal.None):
-                return "";
+                return GetOrnitoActionAsTarget();
             default:
-                throw new System.Exception("Cannot get animal action. Check animal name and action are properly set.");
+                throw new System.Exception("Couldn't switch from Animal to Target.");
         }
     }
 
     #region Animal Actions
-    private string GetMammothAction(Action action)
+    private Target GetMammothActionAsTarget()
     {
-        switch (action)
+        switch (animalFSM.CurrentAction)
         {
             case (Action.Walking):
-                return "";          // Walking is the default action. It triggers the animal but doesn't trigger any specific state 
+                return Target.MammothGlobal; // Walking is the default action. It triggers the animal but doesn't trigger any specific state 
             case (Action.Action1):
-                return "Comiendo";
+                return Target.MammothEat;
             case (Action.Action2):
-                return "Durmiendo";
+                return Target.MammothSleep;
             case (Action.Action3):
-                return "Placando árbol";
+                return Target.MammothHeadbutt;
             case (Action.Action4):
-                return "Bañándose";
+                return Target.MammothShake;
             case (Action.Other):
-                return "";
+                return Target.MammothGlobal;
             default:
-                throw new System.Exception("Cannot get Mammoth action. Check Mammoth action is properly set.");
+                throw new System.Exception("Cannot convert Mammoth Action to Target. Check Mammoth action is properly set.");
         }
     }
 
-    private string GetElkAction(Action action)
+    private Target GetElkActionAsTarget()
     {
-        switch (action)
+        switch (animalFSM.CurrentAction)
         {
+            case (Action.Walking):
+                return Target.ElkGlobal;
             case (Action.Action1):
-                return "Comiendo";
+                return Target.ElkEat;
             case (Action.Action2):
-                return "Agitando los adornos";
+                return Target.ElkShake;
             case (Action.Action3):
-                return "Berreando";
+                return Target.ElkGrowl;
             case (Action.Action4):
-                return "Presumiendo";
+                return Target.ElkShowOff;
             case (Action.Other):
-                return "";
+                return Target.ElkGlobal;
             default:
-                throw new System.Exception("Cannot get Elk action. Check Elk action is properly set.");
+                throw new System.Exception("Cannot convert Elk Action to Target. Check Elk action is properly set.");
         }
     }
 
-    private string GetBirdAction(Action action)
-    {
-        switch (action)
-        {
-            case (Action.Action1):
-                return "Comiendo";
-            case (Action.Action2):
-                return "Tragando piedras";
-            case (Action.Action3):
-                return "Picoteando al mamut";
-            case (Action.Action4):
-                return "Volando";
-            case (Action.Other):
-                return "";
-            default:
-                throw new System.Exception("Cannot get Bird action. Check Bird action is properly set.");
-        }
-    }
+    //private string GetBirdAction(Action action)
+    //{
+    //    switch (action)
+    //    {
+    //        case (Action.Action1):
+    //            return "Comiendo";
+    //        case (Action.Action2):
+    //            return "Tragando piedras";
+    //        case (Action.Action3):
+    //            return "Picoteando al mamut";
+    //        case (Action.Action4):
+    //            return "Volando";
+    //        case (Action.Other):
+    //            return "";
+    //        default:
+    //            throw new System.Exception("Cannot get Bird action. Check Bird action is properly set.");
+    //    }
+    //}
 
-    private string GetOrnitoAction(Action action)
+    private Target GetOrnitoActionAsTarget()
     {
-        switch (action)
+        switch (animalFSM.CurrentAction)
         {
+            case (Action.Walking):
+                return Target.OrnitoGlobal;
             case (Action.Action1):
-                return "Comiendo";
+                return Target.OrnitoEat;
             case (Action.Action2):
-                return "Nadando";
+                return Target.OrnitoSwim;
             case (Action.Action3):
-                return "Tomando el sol";
+                return Target.OrnitoSunbathing;
             case (Action.Action4):
-                return "Protegiendo el nido";
+                return Target.OrnitoProtect;
             case (Action.Other):
-                return "";
+                return Target.OrnitoGlobal;
             default:
-                throw new System.Exception("Cannot get Ornito action. Check Ornito action is properly set.");
+                throw new System.Exception("Cannot convert Ornito Action to Target. Check Ornito action is properly set.");
         }
     }
     #endregion

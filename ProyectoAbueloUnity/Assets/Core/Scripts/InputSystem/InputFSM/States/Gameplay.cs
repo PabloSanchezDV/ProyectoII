@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using static UnityEditor.Timeline.TimelinePlaybackControls;
@@ -17,12 +18,12 @@ public class Gameplay : FSMTemplateState
     private float _timeToNextStep;
 
     protected bool isCameraToggled;
-    private bool _exitCondition;
+    protected bool _exitCondition;
 
     private bool _isInitialized;
     private Vector3 direction;
     
-    private ExitReason _exitReason;
+    protected ExitReason _exitReason;
 
     public Gameplay(FSMTemplateMachine fsm, InputActions inputActions) : base(fsm)
     {
@@ -44,7 +45,6 @@ public class Gameplay : FSMTemplateState
 
         _movement = _inputActions.Gameplay.Movement;
         _cameraRotation = _inputActions.Gameplay.CameraRotation;
-        _inputActions.Gameplay.ToggleMap.started += ToggleMap;
         _inputActions.Gameplay.ToggleMenu.started += ToggleNotebook;
         _inputActions.Gameplay.ToggleCamera.started += ToggleCamera;
 
@@ -81,7 +81,6 @@ public class Gameplay : FSMTemplateState
     {
         _movement = null;
         _cameraRotation = null;
-        _inputActions.Gameplay.ToggleMap.started -= ToggleMap;
         _inputActions.Gameplay.ToggleMenu.started -= ToggleNotebook;
         _inputActions.Gameplay.ToggleCamera.started -= ToggleCamera;
 
@@ -124,12 +123,6 @@ public class Gameplay : FSMTemplateState
         _camera.localRotation = Quaternion.Euler(new Vector3(_camera.localRotation.eulerAngles.x, 0f, 0f));
     }
 
-    protected void ToggleMap(InputAction.CallbackContext context)
-    {
-        _exitReason = ExitReason.Map;
-        _exitCondition = true;
-    }
-
     protected void ToggleNotebook(InputAction.CallbackContext context)
     {
         _exitReason = ExitReason.Notebook;
@@ -141,5 +134,5 @@ public class Gameplay : FSMTemplateState
         isCameraToggled = true;
     }
 
-    private enum ExitReason { Map, Notebook, Camera }
+    protected enum ExitReason { Map, Notebook, Camera }
 }

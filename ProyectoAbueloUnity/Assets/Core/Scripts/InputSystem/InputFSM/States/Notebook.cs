@@ -418,7 +418,6 @@ public class Notebook : FSMTemplateState
     private void ResetNotebook()
     {
         AnimatorStateInfo animatorStateInfo = ((InputHandler)_fsm).NotebookAnim.GetCurrentAnimatorStateInfo(0);
-        //AnimatorClipInfo[] clipInfo = ((InputHandler)_fsm).NotebookAnim.GetCurrentAnimatorClipInfo(0);
         if (animatorStateInfo.IsName("CloseBook"))
         {
             ResetPostIts();
