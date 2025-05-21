@@ -9,6 +9,7 @@ public class DebugManager : MonoBehaviour
     [SerializeField] private bool _showAnimalStateChangesMessages;
     [SerializeField] private bool _showInputHandlerStateChangesMessages;
     [SerializeField] private bool _showDebugMessages;
+    [SerializeField] private bool _showDebugCameraSystemMessages;
 
     private void Awake()
     {
@@ -45,6 +46,12 @@ public class DebugManager : MonoBehaviour
     public void DebugInputHandlerStateChangeMessage(string message)
     {
         if(_showInputHandlerStateChangesMessages)
+            Debug.Log(message);
+    }
+
+    public void DebugCameraSystemMessage(string message)
+    {
+        if(_showDebugCameraSystemMessages)
             Debug.Log(message);
     }
 }

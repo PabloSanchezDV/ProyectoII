@@ -21,4 +21,4 @@ MonoBehaviour:
   _mouseSensitivity: 1
   _cursorSensitivity: 1000
   _fov: 60
-  _isSavingPicturesEnabled: 0
+  _isSavingPicturesEnabled: 1

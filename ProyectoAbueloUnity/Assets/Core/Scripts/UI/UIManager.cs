@@ -16,8 +16,6 @@ public class UIManager : MonoBehaviour
     [SerializeField] private RectTransform _zoomArrow;
     [SerializeField] private Animator _pictureFrameAnim;
     [SerializeField] private Image _picture;
-    [SerializeField] private TextMeshProUGUI _nameText;
-    [SerializeField] private TextMeshProUGUI _actionText;
 
     [Header("Notebook")]
     [SerializeField] private RectTransform _notebookCursor;
@@ -43,6 +41,7 @@ public class UIManager : MonoBehaviour
 
         EventHolder.Instance.onZoomChange.AddListener(MoveZoomArrow);
         EventHolder.Instance.onPictureTaken.AddListener(PlayFlashEffect);
+        EventHolder.Instance.onScreenshotTaken.AddListener(UpdatePicture);
     }
 
     #region Private Methods
@@ -81,20 +80,12 @@ public class UIManager : MonoBehaviour
     {
         return 216f + (fov - _inputHandler.zoomLowerLimit) * ((-112f) - 216f) / (_inputHandler.zoomUpperLimit - _inputHandler.zoomLowerLimit);
     }
-
-    private IEnumerator UpdatePicture()
-    {
-        yield return new WaitForEndOfFrame();
-        _picture.sprite = ScreenshotManager.Instance.LastPictureSprite;
-    }
     #endregion
 
     #region Public Methods
-    public void UpdatePicture(string name, string action = " ")
+    public void UpdatePicture()
     {
-        _nameText.text = name;
-        _actionText.text = action;
-        StartCoroutine(UpdatePicture());
+        _picture.sprite = ScreenshotManager.Instance.LastPictureSprite;
     }
 
     public void TriggerFadeOut()

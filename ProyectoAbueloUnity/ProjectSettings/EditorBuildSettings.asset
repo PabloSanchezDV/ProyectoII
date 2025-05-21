@@ -6,6 +6,27 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Core/Scenes/FirstExperience.unity
+    path: Assets/Core/Scenes/Definitive/0-Logos.unity
+    guid: 32600a30db21609409b7c4009a992d11
+  - enabled: 1
+    path: Assets/Core/Scenes/Definitive/1-MainMenu.unity
+    guid: ad20198e351b38741be0b1d2bedb10f8
+  - enabled: 1
+    path: Assets/Core/Scenes/Definitive/2-Cinematic.unity
+    guid: bf5aad84e5db75343a8acf1c2cab64ac
+  - enabled: 1
+    path: Assets/Core/Scenes/Definitive/3-Fase1.unity
     guid: 632fe0761d920884c9daf5c766620b27
+  - enabled: 1
+    path: Assets/Core/Scenes/Definitive/4-Fase2.unity
+    guid: b1707ac960cbaaa4694bbee526168a14
+  - enabled: 1
+    path: Assets/Core/Scenes/Definitive/5-Fase3.unity
+    guid: b2c61eca6145f364c8dc37a7fc41255d
+  - enabled: 1
+    path: Assets/Core/Scenes/Definitive/6-Credits.unity
+    guid: 22f070d2398fb41428837da9466df80f
+  - enabled: 1
+    path: Assets/Core/Scenes/Definitive/7-Night.unity
+    guid: 53f717402947ce645926e7eccd9f66d1
   m_configObjects: {}

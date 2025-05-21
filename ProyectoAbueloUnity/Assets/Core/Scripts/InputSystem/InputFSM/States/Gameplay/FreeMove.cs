@@ -14,6 +14,7 @@ public class FreeMove : Gameplay
 
         timeBetweenSteps = ((InputHandler)_fsm).timeBetweenSteps;
         _inputActions.FreeMove.Interact.started += Interact;
+        _inputActions.Gameplay.ToggleMap.started += ToggleMap;
 
         _inputActions.FreeMove.Enable();
     }
@@ -39,6 +40,7 @@ public class FreeMove : Gameplay
         base.Exit();
 
         _inputActions.FreeMove.Interact.started -= Interact;
+        _inputActions.Gameplay.ToggleMap.started -= ToggleMap;
 
         _inputActions.FreeMove.Disable();
     }
@@ -51,5 +53,11 @@ public class FreeMove : Gameplay
                 iInteractive.Interact();
         }
         DebugManager.Instance.DebugMessage("Interacting");
+    }
+
+    protected void ToggleMap(InputAction.CallbackContext context)
+    {
+        _exitReason = ExitReason.Map;
+        _exitCondition = true;
     }
 }

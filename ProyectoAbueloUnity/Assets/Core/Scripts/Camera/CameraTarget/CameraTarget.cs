@@ -4,32 +4,44 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "PhotographableObjects/BasicPhotographable")]
 public class CameraTarget : ScriptableObject
 {
-    public string targetName;
+    [SerializeField] protected Target _target;
+    [NonSerialized] public Transform[] checkPoints;
     protected Transform targetTransform;
 
-    public void InitializeCameraTarget(Transform transform)
+    public void InitializeCameraTarget(Transform transform, Transform[] checkPoints)
     {
         targetTransform = transform;
+        this.checkPoints = checkPoints;
     }
 
-    public virtual bool DoesRayHit(Camera camera)
+    public bool DoesRayHit(Camera camera)
     {
-        Vector3 direction = targetTransform.position - camera.transform.position;
-        if (Physics.Raycast(camera.transform.position, direction, out RaycastHit hit, Mathf.Infinity))
+        foreach (Transform checkpoint in checkPoints)
         {
-
-            if (hit.transform.gameObject.Equals(targetTransform.gameObject))
+            Vector3 direction = checkpoint.transform.position - camera.transform.position;
+            if (Physics.Raycast(camera.transform.position, direction, out RaycastHit hit, Mathf.Infinity))
             {
-                return true;
+
+                if (hit.transform.gameObject.Equals(targetTransform.gameObject))
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
             else
             {
                 return false;
             }
         }
-        else
-        {
-            return false;
-        }
+
+        throw new Exception("The Camera Target " + targetTransform.name + " doesn't have any checkpoints.");
+    }
+
+    public virtual Target GetTarget()
+    {
+        return _target;
     }
 }

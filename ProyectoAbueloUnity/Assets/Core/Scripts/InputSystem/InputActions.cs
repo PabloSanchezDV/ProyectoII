@@ -551,6 +551,17 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""a5ea5782-f153-4660-806e-614121c848f6"",
+                    ""path"": ""<Keyboard>/tab"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard & Mouse"",
+                    ""action"": ""CloseNotebook"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""6a6e1951-6085-47bc-8c02-9a7e869e254f"",
                     ""path"": ""<Mouse>/delta"",
                     ""interactions"": """",
