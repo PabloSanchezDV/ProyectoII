@@ -6,13 +6,13 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Audio/AudioDatabase")]
 public class AudioDatabase : ScriptableObject
 {
-    [Header("Placerholder SFX")]
-    public AudioClip placeholderAC;
-    [Range(0, 1)] public float placeholderVolume;
-    public float placeholderMinDistance;
-    public float placeholderMaxDistance;
-    [Range(0, 1)] public float placeholderPitchSwift;
-    [NonSerialized] public float placeholderCurrentVolume;
+    [Header("Night")]
+    public AudioClip nightAC;
+    [Range(0, 1)] public float nightVolume;
+    public float nightMinDistance;
+    public float nightMaxDistance;
+    [Range(0, 1)] public float nightPitchSwift;
+    [NonSerialized] public float nightCurrentVolume;
 
     [Header("Player")]
 

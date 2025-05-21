@@ -10,7 +10,7 @@ public class PlayNightSound : MonoBehaviour
 
     void Start()
     {
-        _aS = AudioManager.Instance.PlayCameraOnSound(gameObject);
+        _aS = AudioManager.Instance.PlayNightSound(gameObject);
         _hasTriggered = false;
     }
 

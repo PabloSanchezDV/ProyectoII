@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d562e75120792324e8e2b651795fbe46, type: 3}
   m_Name: AudioDatabase
   m_EditorClassIdentifier: 
-  placeholderAC: {fileID: 0}
-  placeholderVolume: 0
-  placeholderMinDistance: 0
-  placeholderMaxDistance: 0
-  placeholderPitchSwift: 0
+  nightAC: {fileID: 8300000, guid: 49bb74b0600a84947bc460a246ae571a, type: 3}
+  nightVolume: 1
+  nightMinDistance: 5
+  nightMaxDistance: 5
+  nightPitchSwift: 0
   stepsAC: {fileID: 8300000, guid: f1cf56d5694ed5a40b3c27a375df7fc3, type: 3}
   stepsVolume: 0.005
   stepsMinDistance: 1
@@ -38,24 +38,24 @@ MonoBehaviour:
   newNotebookEntryMaxDistance: 5
   newNotebookEntryPitchSwift: 0
   openNotebookAC: {fileID: 8300000, guid: 33331075e5c8c014d9a9cc1076132030, type: 3}
-  openNotebookVolume: 0
-  openNotebookMinDistance: 0
-  openNotebookMaxDistance: 0
+  openNotebookVolume: 1
+  openNotebookMinDistance: 5
+  openNotebookMaxDistance: 5
   openNotebookPitchSwift: 0
   closeNotebookAC: {fileID: 8300000, guid: 72738e46117324c4d8c7df3bf735c5f0, type: 3}
-  closeNotebookVolume: 0
-  closeNotebookMinDistance: 0
-  closeNotebookMaxDistance: 0
+  closeNotebookVolume: 1
+  closeNotebookMinDistance: 5
+  closeNotebookMaxDistance: 5
   closeNotebookPitchSwift: 0
   pageAC: {fileID: 8300000, guid: 365e3133e4a0803438148842d9453d7a, type: 3}
-  pageVolume: 0
-  pageMinDistance: 0
-  pageMaxDistance: 0
+  pageVolume: 1
+  pageMinDistance: 5
+  pageMaxDistance: 5
   pagePitchSwift: 0
   pushpinAC: {fileID: 8300000, guid: 3e7ff02bb675fdd4f8fc972bea592ae9, type: 3}
-  pushpinVolume: 0
-  pushpinMinDistance: 0
-  pushpinMaxDistance: 0
+  pushpinVolume: 1
+  pushpinMinDistance: 5
+  pushpinMaxDistance: 5
   pushpinPitchSwift: 0
   stepsMammothAC: {fileID: 8300000, guid: 5b8a9ae681c6fc14793556743552b025, type: 3}
   stepsMammothVolume: 0.15
@@ -138,24 +138,24 @@ MonoBehaviour:
   waterfallMaxDistance: 2
   waterfallPitchSwift: 0
   arpeggioAmAC: {fileID: 8300000, guid: 7f3e5cf703810204fa4166d8341785c4, type: 3}
-  arpeggioAmVolume: 0
-  arpeggioAmMinDistance: 0
-  arpeggioAmMaxDistance: 0
+  arpeggioAmVolume: 1
+  arpeggioAmMinDistance: 5
+  arpeggioAmMaxDistance: 5
   arpeggioAmPitchSwift: 0
   arpeggioBbmajCAC: {fileID: 8300000, guid: c68baea1edbe9504b9bba044a9cd9a7a, type: 3}
-  arpeggioBbmajCVolume: 0
-  arpeggioBbmajCMinDistance: 0
-  arpeggioBbmajCMaxDistance: 0
+  arpeggioBbmajCVolume: 1
+  arpeggioBbmajCMinDistance: 5
+  arpeggioBbmajCMaxDistance: 5
   arpeggioBbmajCPitchSwift: 0
   arpeggioEmAC: {fileID: 8300000, guid: 58ac9be9395aa16428096b1bb4c6609f, type: 3}
-  arpeggioEmVolume: 0
-  arpeggioEmMinDistance: 0
-  arpeggioEmMaxDistance: 0
+  arpeggioEmVolume: 1
+  arpeggioEmMinDistance: 5
+  arpeggioEmMaxDistance: 5
   arpeggioEmPitchSwift: 0
   arpeggioGAC: {fileID: 8300000, guid: 8e1a1a4dc9e4ead4e8c559595c7928c7, type: 3}
-  arpeggioGVolume: 0
-  arpeggioGMinDistance: 0
-  arpeggioGMaxDistance: 0
+  arpeggioGVolume: 1
+  arpeggioGMinDistance: 5
+  arpeggioGMaxDistance: 5
   arpeggioGPitchSwift: 0
   placeholderTinnitusAC: {fileID: 0}
   placeholderTinnitusVolume: 0
