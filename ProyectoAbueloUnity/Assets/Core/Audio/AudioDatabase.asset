@@ -24,33 +24,58 @@ MonoBehaviour:
   stepsPitchSwift: 0.2
   cameraOnAC: {fileID: 8300000, guid: c7883e95563fddf4681891e56734f9cb, type: 3}
   cameraOnVolume: 1
-  cameraOnMinDistance: 1
-  cameraOnMaxDistance: 10
+  cameraOnMinDistance: 5
+  cameraOnMaxDistance: 5
   cameraOnPitchSwift: 0.2
   photoAC: {fileID: 8300000, guid: 664adb6fea5636e4490a077e82b807b6, type: 3}
   photoVolume: 1
-  photoMinDistance: 1
-  photoMaxDistance: 10
+  photoMinDistance: 5
+  photoMaxDistance: 5
   photoPitchSwift: 0
+  newNotebookEntryAC: {fileID: 8300000, guid: 157e601d92dbc4146b8d1570b9976523, type: 3}
+  newNotebookEntryVolume: 0
+  newNotebookEntryMinDistance: 0
+  newNotebookEntryMaxDistance: 0
+  newNotebookEntryPitchSwift: 0
+  openNotebookAC: {fileID: 8300000, guid: 33331075e5c8c014d9a9cc1076132030, type: 3}
+  openNotebookVolume: 0
+  openNotebookMinDistance: 0
+  openNotebookMaxDistance: 0
+  openNotebookPitchSwift: 0
+  closeNotebookAC: {fileID: 8300000, guid: 72738e46117324c4d8c7df3bf735c5f0, type: 3}
+  closeNotebookVolume: 0
+  closeNotebookMinDistance: 0
+  closeNotebookMaxDistance: 0
+  closeNotebookPitchSwift: 0
+  pageAC: {fileID: 8300000, guid: 365e3133e4a0803438148842d9453d7a, type: 3}
+  pageVolume: 0
+  pageMinDistance: 0
+  pageMaxDistance: 0
+  pagePitchSwift: 0
+  pushpinAC: {fileID: 8300000, guid: 3e7ff02bb675fdd4f8fc972bea592ae9, type: 3}
+  pushpinVolume: 0
+  pushpinMinDistance: 0
+  pushpinMaxDistance: 0
+  pushpinPitchSwift: 0
   stepsMammothAC: {fileID: 8300000, guid: 5b8a9ae681c6fc14793556743552b025, type: 3}
-  stepsMammothVolume: 0.1
+  stepsMammothVolume: 0.15
   stepsMammothMinDistance: 5
-  stepsMammothMaxDistance: 15
+  stepsMammothMaxDistance: 5
   stepsMammothPitchSwift: 0.2
   eatingMammothAC: {fileID: 8300000, guid: 34ca2b6723b0c9448b345918a79d114d, type: 3}
-  eatingMammothVolume: 0.3
+  eatingMammothVolume: 0.4
   eatingMammothMinDistance: 5
-  eatingMammothMaxDistance: 15
+  eatingMammothMaxDistance: 5
   eatingMammothPitchSwift: 0
   sleepingMammothAC: {fileID: 8300000, guid: aba8882ae543f2c45930f603c419108f, type: 3}
-  sleepingMammothVolume: 0.6
+  sleepingMammothVolume: 0.7
   sleepingMammothMinDistance: 5
-  sleepingMammothMaxDistance: 20
+  sleepingMammothMaxDistance: 5
   sleepingMammothPitchSwift: 0
   scaredMammothAC: {fileID: 8300000, guid: 7829eef9bd6186440bb215ab9614556b, type: 3}
-  scaredMammothVolume: 0.5
+  scaredMammothVolume: 0.6
   scaredMammothMinDistance: 5
-  scaredMammothMaxDistance: 30
+  scaredMammothMaxDistance: 5
   scaredMammothPitchSwift: 0.2
   howlMammothAC: {fileID: 8300000, guid: 44766f56983015b4c93fa7c1ad27dfb0, type: 3}
   howlMammothVolume: 0
@@ -58,40 +83,80 @@ MonoBehaviour:
   howlMammothMaxDistance: 50
   howlMammothPitchSwift: 0
   headbuttMammothAC: {fileID: 8300000, guid: 9f2532abf4aa02041bc4cc7bee0d5742, type: 3}
-  headbuttMammothVolume: 0.4
+  headbuttMammothVolume: 0.6
   headbuttMammothMinDistance: 5
-  headbuttMammothMaxDistance: 15
+  headbuttMammothMaxDistance: 5
   headbuttMammothPitchSwift: 0
   eatingElkAC: {fileID: 8300000, guid: 1dc5e072cc026d04a9c4a7c6c5c51eea, type: 3}
-  eatingElkVolume: 0.2
-  eatingElkMinDistance: 5
-  eatingElkMaxDistance: 15
+  eatingElkVolume: 0.3
+  eatingElkMinDistance: 2
+  eatingElkMaxDistance: 5
   eatingElkPitchSwift: 0
   howlElkAC: {fileID: 8300000, guid: 48bf0314d89f03540add2454ff12cfae, type: 3}
-  howlElkVolume: 0.4
-  howlElkMinDistance: 4
-  howlElkMaxDistance: 20
+  howlElkVolume: 0.5
+  howlElkMinDistance: 2
+  howlElkMaxDistance: 5
   howlElkPitchSwift: 0.2
   scaredElkAC: {fileID: 8300000, guid: ea89565c989c03449819af029119ccd2, type: 3}
-  scaredElkVolume: 0.4
-  scaredElkMinDistance: 5
-  scaredElkMaxDistance: 30
+  scaredElkVolume: 0.5
+  scaredElkMinDistance: 2
+  scaredElkMaxDistance: 5
   scaredElkPitchSwift: 0
   stepsElkAC: {fileID: 8300000, guid: f8109a921f6c51449a06d90ddb09ab72, type: 3}
-  stepsElkVolume: 0.1
-  stepsElkMinDistance: 5
-  stepsElkMaxDistance: 15
-  stepsElkPitchSwift: 0.2
-  windAC: {fileID: 8300000, guid: c32b2abeecf0d5e4d878e3186c4a496b, type: 3}
-  windVolume: 0.011
-  windMinDistance: 5
-  windMaxDistance: 20
+  stepsElkVolume: 0.15
+  stepsElkMinDistance: 2
+  stepsElkMaxDistance: 5
+  stepsElkPitchSwift: 0.4
+  windAC: {fileID: 8300000, guid: 594a6b1b140e12b45b20f21d61cfbbbc, type: 3}
+  windVolume: 0.5
+  windMinDistance: 10
+  windMaxDistance: 5
   windPitchSwift: 0
+  windLonelinessAC: {fileID: 8300000, guid: b66d2e9837f64f1498af4410c5af8eb1, type: 3}
+  windLonelinessVolume: 0.2
+  windLonelinessMinDistance: 6
+  windLonelinessMaxDistance: 4
+  windLonelinessPitchSwift: 0
   leafsAC: {fileID: 8300000, guid: 00385411c9827e149b86b1e99893ae0a, type: 3}
-  leafsVolume: 0.03
-  leafsMinDistance: 5
-  leafsMaxDistance: 20
-  leafsPitchSwift: 0
+  leafsVolume: 0.1
+  leafsMinDistance: 6
+  leafsMaxDistance: 3
+  leafsPitchSwift: 0.2
+  birdsAC: {fileID: 8300000, guid: 98d6ac51b720b2c4a8ae34981c3074d5, type: 3}
+  birdsVolume: 0.2
+  birdsMinDistance: 4
+  birdsMaxDistance: 2
+  birdsPitchSwift: 0
+  riverAC: {fileID: 8300000, guid: dafdb9098f5ffc34e805b604d19ab7fa, type: 3}
+  riverVolume: 0.2
+  riverMinDistance: 3
+  riverMaxDistance: 2
+  riverPitchSwift: 0
+  waterfallAC: {fileID: 8300000, guid: 9298b3893b5e62a4eb59000d3b80cf4a, type: 3}
+  waterfallVolume: 0.1
+  waterfallMinDistance: 3
+  waterfallMaxDistance: 2
+  waterfallPitchSwift: 0
+  arpeggioAmAC: {fileID: 8300000, guid: 7f3e5cf703810204fa4166d8341785c4, type: 3}
+  arpeggioAmVolume: 0
+  arpeggioAmMinDistance: 0
+  arpeggioAmMaxDistance: 0
+  arpeggioAmPitchSwift: 0
+  arpeggioBbmajCAC: {fileID: 8300000, guid: c68baea1edbe9504b9bba044a9cd9a7a, type: 3}
+  arpeggioBbmajCVolume: 0
+  arpeggioBbmajCMinDistance: 0
+  arpeggioBbmajCMaxDistance: 0
+  arpeggioBbmajCPitchSwift: 0
+  arpeggioEmAC: {fileID: 8300000, guid: 58ac9be9395aa16428096b1bb4c6609f, type: 3}
+  arpeggioEmVolume: 0
+  arpeggioEmMinDistance: 0
+  arpeggioEmMaxDistance: 0
+  arpeggioEmPitchSwift: 0
+  arpeggioGAC: {fileID: 8300000, guid: 8e1a1a4dc9e4ead4e8c559595c7928c7, type: 3}
+  arpeggioGVolume: 0
+  arpeggioGMinDistance: 0
+  arpeggioGMaxDistance: 0
+  arpeggioGPitchSwift: 0
   placeholderTinnitusAC: {fileID: 0}
   placeholderTinnitusVolume: 0
   placeholderTinnitusMinDistance: 0
