@@ -123,7 +123,9 @@ public class Notebook : FSMTemplateState
                 ((InputHandler)_fsm).NotebookAnim.SetTrigger("PreviousPage");
                 if (((InputHandler)_fsm).MapAnim != null)
                 ((InputHandler)_fsm).MapAnim.SetTrigger("PreviousPage");
-            AudioManager.Instance.PlayPageSound(((InputHandler)_fsm).NotebookAnim.gameObject);
+
+            if(AudioManager.Instance != null)
+                AudioManager.Instance.PlayPageSound(((InputHandler)_fsm).NotebookAnim.gameObject);
         }
 
         _inputActions.Notebook.CloseNotebook.performed -= ToggleNotebook;
@@ -131,7 +133,8 @@ public class Notebook : FSMTemplateState
         _inputActions.Notebook.SecondaryCursorTrigger.performed -= SecondaryCursorTriggered;
         _cursorMovement = null;
 
-        UIManager.Instance.HideCursor();
+        if(UIManager.Instance != null)
+            UIManager.Instance.HideCursor();
 
         _inputActions.Notebook.Disable();
 
@@ -366,18 +369,27 @@ public class Notebook : FSMTemplateState
         {
             if((i == (int)notebookPage && (notebookPage > ((InputHandler)_fsm).CurrentNotebookPage)) || (i > minIndex && i < maxIndex) || (i == (int)((InputHandler)_fsm).CurrentNotebookPage) && (notebookPage < ((InputHandler)_fsm).CurrentNotebookPage))
             {
-                ((InputHandler)_fsm).PagePostIts[i].parent = ((InputHandler)_fsm).NotebookPageTransform;
-                ((InputHandler)_fsm).PagePostIts[i].localPosition = ((InputHandler)_fsm).PagePostIts[i].GetComponent<PagePostItCT>().NotebookPagePosition;
+                if(((InputHandler)_fsm).PagePostIts[i] != null)
+                {
+                    ((InputHandler)_fsm).PagePostIts[i].parent = ((InputHandler)_fsm).NotebookPageTransform;
+                    ((InputHandler)_fsm).PagePostIts[i].localPosition = ((InputHandler)_fsm).PagePostIts[i].GetComponent<PagePostItCT>().NotebookPagePosition;
+                }
             }
             else if(i <= minIndex)
             {
-                ((InputHandler)_fsm).PagePostIts[i].parent = ((InputHandler)_fsm).UpperCoverTransform;
-                ((InputHandler)_fsm).PagePostIts[i].localPosition = ((InputHandler)_fsm).PagePostIts[i].GetComponent<PagePostItCT>().UpperCoverPosition;
+                if (((InputHandler)_fsm).PagePostIts[i] != null)
+                {
+                    ((InputHandler)_fsm).PagePostIts[i].parent = ((InputHandler)_fsm).UpperCoverTransform;
+                    ((InputHandler)_fsm).PagePostIts[i].localPosition = ((InputHandler)_fsm).PagePostIts[i].GetComponent<PagePostItCT>().UpperCoverPosition;
+                }
             }
             else
             {
-                ((InputHandler)_fsm).PagePostIts[i].parent = ((InputHandler)_fsm).LowerCoverTransform;
-                ((InputHandler)_fsm).PagePostIts[i].localPosition = ((InputHandler)_fsm).PagePostIts[i].GetComponent<PagePostItCT>().LoweCoverPosition;
+                if (((InputHandler)_fsm).PagePostIts[i] != null)
+                {
+                    ((InputHandler)_fsm).PagePostIts[i].parent = ((InputHandler)_fsm).LowerCoverTransform;
+                    ((InputHandler)_fsm).PagePostIts[i].localPosition = ((InputHandler)_fsm).PagePostIts[i].GetComponent<PagePostItCT>().LoweCoverPosition;
+                }
             }
         }
     }
@@ -401,25 +413,29 @@ public class Notebook : FSMTemplateState
 
     protected void SetUpperAsParent(GameObject gameObject) 
     {
-        gameObject.transform.parent = ((InputHandler)_fsm).UpperCoverTransform;
+        if(((InputHandler)_fsm).UpperCoverTransform != null)
+            gameObject.transform.parent = ((InputHandler)_fsm).UpperCoverTransform;
         gameObject.transform.localRotation = Quaternion.Euler(new Vector3(180f, 180f, -90f));
     }
 
     protected void SetLeftNotebookPageAsParent(GameObject gameObject)
     {
-        gameObject.transform.parent = ((InputHandler)_fsm).NotebookPageTransform;
+        if (((InputHandler)_fsm).NotebookPageTransform != null)
+            gameObject.transform.parent = ((InputHandler)_fsm).NotebookPageTransform;
         gameObject.transform.localRotation = Quaternion.Euler(new Vector3(0f, 0f, -90f));
     }
 
     protected void SetRightNotebookPageAsParent(GameObject gameObject)
     {
-        gameObject.transform.parent = ((InputHandler)_fsm).NotebookPageTransform;
+        if (((InputHandler)_fsm).NotebookPageTransform != null)
+            gameObject.transform.parent = ((InputHandler)_fsm).NotebookPageTransform;
         gameObject.transform.localRotation = Quaternion.Euler(new Vector3(180f, 0f, -90f));
     }
 
-    protected void SetLowerAsParent(GameObject gameObject) 
+    protected void SetLowerAsParent(GameObject gameObject)
     {
-        gameObject.transform.parent = ((InputHandler)_fsm).LowerCoverTransform;
+        if (((InputHandler)_fsm).LowerCoverTransform != null)
+            gameObject.transform.parent = ((InputHandler)_fsm).LowerCoverTransform;
         gameObject.transform.localRotation = Quaternion.Euler(new Vector3(0f, 0f, 0f));
     }
 
