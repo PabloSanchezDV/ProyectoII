@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5274152297827993380
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3608928081805947014}
+  m_Layer: 7
+  m_Name: Checkpoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3608928081805947014
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5274152297827993380}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.1573, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3183874417199094172}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &3145163545199935095
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -76,6 +107,14 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: d31460b37a524194081af718fa686716, type: 2}
+    - target: {fileID: 4742473837712756890, guid: 083a7b35bdfadfc42abc5501d6dd8709, type: 3}
+      propertyPath: m_LODs.Array.data[0].screenRelativeHeight
+      value: 0.1772716
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742473837712756890, guid: 083a7b35bdfadfc42abc5501d6dd8709, type: 3}
+      propertyPath: m_LODs.Array.data[1].screenRelativeHeight
+      value: 0.07528119
+      objectReference: {fileID: 0}
     - target: {fileID: 4970274355855474898, guid: 083a7b35bdfadfc42abc5501d6dd8709, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
@@ -86,11 +125,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 083a7b35bdfadfc42abc5501d6dd8709, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3608928081805947014}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 083a7b35bdfadfc42abc5501d6dd8709, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8213403876801802234}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 083a7b35bdfadfc42abc5501d6dd8709, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6737710924845043200}
   m_SourcePrefab: {fileID: 100100000, guid: 083a7b35bdfadfc42abc5501d6dd8709, type: 3}
 --- !u!1 &2838591874739684134 stripped
 GameObject:
@@ -116,5 +161,25 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.27236938, y: 0.23860931, z: 0.3093091}
-  m_Center: {x: -0.014907837, y: 0.10355759, z: -0.040846866}
+  m_Size: {x: 0.08, y: 0.2, z: 0.08}
+  m_Center: {x: 0, y: 0.1, z: 0}
+--- !u!114 &6737710924845043200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2838591874739684134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dfb5cdce004294468537991397253e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraTarget: {fileID: 11400000, guid: dad66a6fa35159b4eb65bcb20932eab7, type: 2}
+  _checkPoints:
+  - {fileID: 3608928081805947014}
+--- !u!4 &3183874417199094172 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 083a7b35bdfadfc42abc5501d6dd8709, type: 3}
+  m_PrefabInstance: {fileID: 3145163545199935095}
+  m_PrefabAsset: {fileID: 0}

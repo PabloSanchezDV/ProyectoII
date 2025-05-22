@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &846985739058314020
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1393259136161939526}
+  m_Layer: 7
+  m_Name: Checkpoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1393259136161939526
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 846985739058314020}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5737482781430535269}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &5194087765094642574
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -104,21 +135,31 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 4742473837712756890, guid: bd027cb04764fdf48b3cd8ad7c532cfe, type: 3}
+      propertyPath: m_LODs.Array.data[1].screenRelativeHeight
+      value: 0.07528119
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: bd027cb04764fdf48b3cd8ad7c532cfe, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1393259136161939526}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: bd027cb04764fdf48b3cd8ad7c532cfe, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 3701916190412148328}
+      addedObject: {fileID: 6440297864688141185}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: bd027cb04764fdf48b3cd8ad7c532cfe, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5317946254816160153}
   m_SourcePrefab: {fileID: 100100000, guid: bd027cb04764fdf48b3cd8ad7c532cfe, type: 3}
 --- !u!1 &4959715105838599903 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: bd027cb04764fdf48b3cd8ad7c532cfe, type: 3}
   m_PrefabInstance: {fileID: 5194087765094642574}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &3701916190412148328
-BoxCollider:
+--- !u!136 &6440297864688141185
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -135,6 +176,28 @@ BoxCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 6.11335, y: 17.228722, z: 5.6127534}
-  m_Center: {x: 7.08144, y: 8.114361, z: -0.24683769}
+  serializedVersion: 2
+  m_Radius: 1.44
+  m_Height: 14.5
+  m_Direction: 1
+  m_Center: {x: 7.2, y: 5.9, z: 0}
+--- !u!114 &5317946254816160153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4959715105838599903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dfb5cdce004294468537991397253e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraTarget: {fileID: 11400000, guid: 9677f38d8c74d4d4285d6d2a5ff5bf9e, type: 2}
+  _checkPoints:
+  - {fileID: 1393259136161939526}
+--- !u!4 &5737482781430535269 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bd027cb04764fdf48b3cd8ad7c532cfe, type: 3}
+  m_PrefabInstance: {fileID: 5194087765094642574}
+  m_PrefabAsset: {fileID: 0}

@@ -14,7 +14,7 @@ public class RandomizeObjects : MonoBehaviour
         foreach (Transform t in transforms)
         {
             t.localScale = new Vector3(t.localScale.x, t.localScale.y, Random.Range(minHeight, maxHeight));
-            t.localRotation = Quaternion.Euler(Vector3.forward * Random.Range(0, 360) + Vector3.right * -90f);
+            t.localRotation = Quaternion.Euler(Vector3.up * Random.Range(0, 360));
             #if UNITY_EDITOR
                     UnityEditor.EditorUtility.SetDirty(t);
             #endif
