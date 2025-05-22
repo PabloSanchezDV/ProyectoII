@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638834453181748104
-    m_Hash: 521265612
+      ticks: 638835096115095424
+    m_Hash: 3356394281
   m_LockFileStatus:
     m_FilePath: C:/Users/Usuario/Documents/GitHub/ProyectoII/ProyectoAbueloUnity/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638834453181793188
-    m_Hash: 731259385
+      ticks: 638835096115095424
+    m_Hash: 1199700428
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:

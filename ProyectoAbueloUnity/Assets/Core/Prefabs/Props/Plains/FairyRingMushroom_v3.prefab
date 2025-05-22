@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6060281148404477424
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9100786145335035705}
+  m_Layer: 7
+  m_Name: Checkpoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9100786145335035705
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6060281148404477424}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.0875, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6904533653605562459}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &6366803151573409712
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -86,11 +117,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: c652d86eab585c249b936422658e4364, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9100786145335035705}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c652d86eab585c249b936422658e4364, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6495062641784192074}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c652d86eab585c249b936422658e4364, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4949236972961873349}
   m_SourcePrefab: {fileID: 100100000, guid: c652d86eab585c249b936422658e4364, type: 3}
 --- !u!1 &6096189899589018337 stripped
 GameObject:
@@ -116,5 +153,25 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.37848663, y: 0.31591034, z: 0.33419383}
-  m_Center: {x: 0.015338898, y: 0.08702469, z: -0.032468062}
+  m_Size: {x: 0.3794098, y: 0.15977478, z: 0.29332307}
+  m_Center: {x: -0.008857727, y: 0.07239914, z: 0.021608656}
+--- !u!114 &4949236972961873349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6096189899589018337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dfb5cdce004294468537991397253e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraTarget: {fileID: 11400000, guid: 7e243f89b02414a49ad2cf3e256db986, type: 2}
+  _checkPoints:
+  - {fileID: 9100786145335035705}
+--- !u!4 &6904533653605562459 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c652d86eab585c249b936422658e4364, type: 3}
+  m_PrefabInstance: {fileID: 6366803151573409712}
+  m_PrefabAsset: {fileID: 0}
