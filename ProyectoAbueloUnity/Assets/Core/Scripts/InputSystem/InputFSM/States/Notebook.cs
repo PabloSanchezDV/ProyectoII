@@ -41,6 +41,7 @@ public class Notebook : FSMTemplateState
 
             ((InputHandler)_fsm).ArmsRenderer.enabled = true;
             ((InputHandler)_fsm).NotebookRenderer.enabled = true;
+            ((InputHandler)_fsm).CoverRenderer.enabled = true;
 
             foreach (Transform postIt in ((InputHandler)_fsm).PagePostIts)
                 postIt.gameObject.SetActive(true);
@@ -56,8 +57,10 @@ public class Notebook : FSMTemplateState
         _cursorMovement = _inputActions.Notebook.CursorMovement;
 
         UIManager.Instance.ShowCursor();
+        UIManager.Instance.ShowNotebookControls();
 
         _inputActions.Notebook.Enable();
+
     }
 
     public override void UpdateLogic()
@@ -124,7 +127,7 @@ public class Notebook : FSMTemplateState
                 if (((InputHandler)_fsm).MapAnim != null)
                 ((InputHandler)_fsm).MapAnim.SetTrigger("PreviousPage");
 
-            if(AudioManager.Instance != null)
+            if(AudioManager.Instance != null && ((InputHandler)_fsm).NotebookAnim != null)
                 AudioManager.Instance.PlayPageSound(((InputHandler)_fsm).NotebookAnim.gameObject);
         }
 
@@ -134,7 +137,10 @@ public class Notebook : FSMTemplateState
         _cursorMovement = null;
 
         if(UIManager.Instance != null)
+        {
             UIManager.Instance.HideCursor();
+            UIManager.Instance.HideNotebookControls();
+        }
 
         _inputActions.Notebook.Disable();
 

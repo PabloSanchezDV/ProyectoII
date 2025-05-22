@@ -42,6 +42,7 @@ public class InputHandler : FSMTemplateMachine
     [SerializeField] private SkinnedMeshRenderer _armsRenderer;
     [SerializeField] private SkinnedMeshRenderer _notebookRenderer;
     [SerializeField] private SkinnedMeshRenderer _mapRenderer;
+    [SerializeField] private SpriteRenderer _coverRenderer;
     [SerializeField] private GameObject _clock;
     [SerializeField] private GameObject _minuteHand;
     [SerializeField] private GameObject _hourHand;
@@ -230,6 +231,7 @@ public class InputHandler : FSMTemplateMachine
 
     public SkinnedMeshRenderer ArmsRenderer {  get { return _armsRenderer; } }
     public SkinnedMeshRenderer NotebookRenderer { get { return _notebookRenderer; } }
+    public SpriteRenderer CoverRenderer { get { return _coverRenderer; } }
     public SkinnedMeshRenderer MapRenderer { get { return _mapRenderer; } }
 
     public GameObject Clock { get { return _clock; } }
@@ -675,6 +677,7 @@ public class InputHandler : FSMTemplateMachine
         _armsRenderer.enabled = false;
         _notebookRenderer.enabled = false;
         _mapRenderer.enabled = false;
+        _coverRenderer.enabled = false;
         _clock.GetComponent<MeshRenderer>().enabled = false;
         _minuteHand.GetComponent<MeshRenderer>().enabled = false;
         _hourHand.GetComponent<MeshRenderer>().enabled = false;

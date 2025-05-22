@@ -19,10 +19,10 @@ public class SettingsDatabase : ScriptableObject
 
     [SerializeField] private bool _isSavingPicturesEnabled = true;
 
-    public bool AreSFXEnabled { get { return _areSoundsEnabled; } }
+    public bool AreSFXEnabled { get { return _areSoundsEnabled; } set { _areSoundsEnabled = value; } }
     public bool AreTinnitusSFXEnabled { get { return _areTinnitusSoundsEnabled; } }
     public bool IsMusicEnabled { get { return _isMusicEnabled; } }
-    public float SFXVolumeModifier { get { return _sfxVolumeModifier; } }
+    public float SFXVolumeModifier { get { return _sfxVolumeModifier; } set { _sfxVolumeModifier = value; } }
     public float TinnitusSFXVolumeModifier { get { return _tinnitusSFXVolumeModifier; } }
     public float MusicVolumeModifier { get { return _musicVolumeModifier; } }
 

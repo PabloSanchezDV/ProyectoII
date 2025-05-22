@@ -12,6 +12,8 @@ public class FreeMove : Gameplay
     {
         base.Enter();
 
+        UIManager.Instance.ShowFreeMoveControls();
+
         timeBetweenSteps = ((InputHandler)_fsm).timeBetweenSteps;
         _inputActions.FreeMove.Interact.started += Interact;
         _inputActions.Gameplay.ToggleMap.started += ToggleMap;
@@ -38,6 +40,9 @@ public class FreeMove : Gameplay
     public override void Exit()
     {
         base.Exit();
+
+        if(UIManager.Instance != null)
+            UIManager.Instance.HideFreeMoveControls();
 
         _inputActions.FreeMove.Interact.started -= Interact;
         _inputActions.Gameplay.ToggleMap.started -= ToggleMap;

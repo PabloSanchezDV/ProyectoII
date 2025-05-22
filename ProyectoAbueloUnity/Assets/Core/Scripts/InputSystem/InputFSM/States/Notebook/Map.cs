@@ -16,6 +16,7 @@ public class Map : Notebook
         ((InputHandler)_fsm).MapCollider.enabled = true;
         ((InputHandler)_fsm).MapRenderer.enabled = true;
 
+        UIManager.Instance.ShowMapControls();
     }
 
     public override void Exit()
@@ -26,5 +27,7 @@ public class Map : Notebook
             ((InputHandler)_fsm).MapCT.HideMapElements();
         if (((InputHandler)_fsm).MapCollider != null)
             ((InputHandler)_fsm).MapCollider.enabled = false;
+        if(UIManager.Instance != null)
+            UIManager.Instance.HideMapControls();
     }    
 }

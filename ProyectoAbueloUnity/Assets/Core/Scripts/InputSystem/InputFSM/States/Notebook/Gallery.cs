@@ -19,11 +19,14 @@ public class Gallery : Notebook
         }
 
         ((InputHandler)_fsm).CurrentNotebookPage = NotebookPage.Gallery;
+        UIManager.Instance.ShowGalleryControls();
     }
 
     public override void Exit()
     {
         base.Exit();
         SetPagePostItParent(NotebookPage.Gallery);
+        if(UIManager.Instance != null)
+            UIManager.Instance.HideGalleryControls();
     }
 }

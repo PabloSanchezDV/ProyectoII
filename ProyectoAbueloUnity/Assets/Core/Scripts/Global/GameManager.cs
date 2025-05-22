@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -12,6 +13,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int _startMinute;
     [SerializeField] private int _endingHour;
     [SerializeField] private int _endingMinute;
+    [SerializeField] private List<PinCT> _pinsList;
 
     private bool _dayEnded = false;
 
@@ -87,6 +89,8 @@ public class GameManager : MonoBehaviour
     public float StartHour { get { return _startHour; } }
     public float StartMinute { get { return _startMinute; } }
     public bool HasLoadedData { get { return ScenesController.Instance.DoesLoad; } }
+
+    public List<PinCT> PinsList { get { return _pinsList; } set { _pinsList = value; } }
 
     #region Pictures Taken
 

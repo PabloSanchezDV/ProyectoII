@@ -390,6 +390,7 @@ public class AnimalFSM : FSMTemplateMachine, IPhotographable
     public void PlayHeadbuttSound()
     {
         AudioManager.Instance.PlayHeadbuttMammothSound(gameObject);
+        EventHolder.Instance.onMammothHeadbutt?.Invoke();
     }
     #endregion
 

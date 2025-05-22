@@ -7,6 +7,7 @@ public class PinCT : NotebookCursorTarget
     public PostItCT postIt;
     public Color color;
     public string text;
+    public Vector3 localPosition;
     public MapCT mapCT;
     private MeshRenderer _meshRenderer;
 

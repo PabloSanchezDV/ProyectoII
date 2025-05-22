@@ -55,8 +55,8 @@ public class ScenesController : MonoBehaviour
 
     public void NewGame()
     {
-        _faseIndex = 3; //Fase1
-        LoadScene(_faseIndex, false);
+        _faseIndex = 3; // Fase1
+        LoadScene(2, false); // Cinematic
     }
 
     public void ContinueGame()
@@ -71,9 +71,9 @@ public class ScenesController : MonoBehaviour
             float progress = GameManager.Instance.GetProgress();
 
             if(progress >= 100)
-                LoadScene(6); //Credits
+                LoadScene(6); // Credits
             else if(progress > _progressToGoToFase3)
-                _faseIndex = 5; //Fase3
+                _faseIndex = 5; // Fase3
             else if (progress > _progressToGoToFase2)
                 _faseIndex = 4; // Fase2
 

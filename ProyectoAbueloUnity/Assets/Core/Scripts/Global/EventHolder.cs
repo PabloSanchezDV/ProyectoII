@@ -14,6 +14,7 @@ public class EventHolder : MonoBehaviour
     [NonSerialized] public UnityEvent onPageTurned = new UnityEvent();
     [NonSerialized] public UnityEvent onScreenshotTaken = new UnityEvent();
     [NonSerialized] public UnityEvent onPhotoObjectsDetected = new UnityEvent();
+    [NonSerialized] public UnityEvent onMammothHeadbutt = new UnityEvent();
 
     private void Awake()
     {
