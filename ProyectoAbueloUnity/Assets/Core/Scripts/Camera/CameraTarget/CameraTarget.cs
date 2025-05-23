@@ -7,7 +7,7 @@ public class CameraTarget : ScriptableObject
     [SerializeField] protected Target _target;
     [SerializeField] protected LayerMask _mask;
     [NonSerialized] public Transform[] checkPoints;
-    protected Transform targetTransform;
+    public Transform targetTransform;
 
     public void InitializeCameraTarget(Transform transform, Transform[] checkPoints)
     {

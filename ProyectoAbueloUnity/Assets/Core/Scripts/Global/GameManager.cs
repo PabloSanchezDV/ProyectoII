@@ -174,8 +174,6 @@ public class GameManager : MonoBehaviour
 
         if (ScenesController.Instance.DoesLoad)
             SaveSystem.LoadGameData(true);
-
-        ScenesController.Instance.DoesLoad = true;
     }
 
     void Update()

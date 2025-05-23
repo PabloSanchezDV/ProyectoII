@@ -1,10 +1,8 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using PathCreation;
-using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.AI;
+using PathCreation;
 
 public class AnimalFSM : FSMTemplateMachine, IPhotographable
 {

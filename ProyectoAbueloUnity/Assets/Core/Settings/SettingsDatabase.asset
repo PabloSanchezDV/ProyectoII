@@ -15,10 +15,10 @@ MonoBehaviour:
   _areSoundsEnabled: 1
   _areTinnitusSoundsEnabled: 1
   _isMusicEnabled: 1
-  _sfxVolumeModifier: 1
+  _sfxVolumeModifier: 0
   _tinnitusSFXVolumeModifier: 1
   _musicVolumeModifier: 1
-  _mouseSensitivity: 1
+  _mouseSensitivity: 0.33333334
   _cursorSensitivity: 1000
   _fov: 60
   _isSavingPicturesEnabled: 1

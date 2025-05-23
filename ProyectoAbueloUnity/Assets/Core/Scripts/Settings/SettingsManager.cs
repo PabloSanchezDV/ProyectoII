@@ -34,8 +34,9 @@ public class SettingsManager : MonoBehaviour
                 _db.AreSFXEnabled = true;
             }
         }
-
-        throw new System.Exception("Couldn't find SettingsDatabase");
+        else
+            throw new System.Exception("Couldn't find SettingsDatabase");
+        return false;
     }
 
 
@@ -45,7 +46,8 @@ public class SettingsManager : MonoBehaviour
         {
             _db.SFXVolumeModifier = volume;
         }
-        throw new System.Exception("Couldn't find SettingsDatabase");
+        else
+            throw new System.Exception("Couldn't find SettingsDatabase");
     }
 
     public void SetMouseSensitivity(float sensitivity)
@@ -54,6 +56,7 @@ public class SettingsManager : MonoBehaviour
         {
             _db.MouseSensitivity = sensitivity;
         }
-        throw new System.Exception("Couldn't find SettingsDatabase");
+        else
+            throw new System.Exception("Couldn't find SettingsDatabase");
     }
 }

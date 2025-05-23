@@ -178,9 +178,9 @@ public class CameraMode : Gameplay
                 _mainCamera = _camera.GetComponent<Camera>();
                 _cameraMeshCollider = _mainCamera.GetComponent<MeshCollider>();
                 _cameraTargetsDetector = _mainCamera.GetComponent<CameraTargetsDetector>();
-                _postProcessVolume = _camera.GetComponent<PostProcessVolume>();
-                _postProcessVolume.profile.TryGetSettings<DepthOfField>(out _depthOfField);
-            } while (_mainCamera == null || _postProcessVolume == null || _depthOfField == null);
+                //_postProcessVolume = _camera.GetComponent<PostProcessVolume>();
+                //_postProcessVolume.profile.TryGetSettings<DepthOfField>(out _depthOfField);
+            } while (_mainCamera == null || _cameraMeshCollider == null || _cameraTargetsDetector == null);
 
             _isCameraInitialized = true;
         }
@@ -252,7 +252,6 @@ public class CameraMode : Gameplay
         _cameraTargetsDetector.cameraTargetsList.Clear();
         EventHolder.Instance.onPhotoObjectsDetected?.Invoke();
     }
-    
 
     private enum CameraSetting { FocusDistance, Aperture, FocalLength }
 }

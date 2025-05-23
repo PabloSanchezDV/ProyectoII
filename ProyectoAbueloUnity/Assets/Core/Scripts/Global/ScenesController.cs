@@ -9,6 +9,7 @@ public class ScenesController : MonoBehaviour
 
     [SerializeField] private float _progressToGoToFase2;
     [SerializeField] private float _progressToGoToFase3;
+    [SerializeField] private float _progressToEnd;
 
     private AsyncOperation _sceneLoader;
     private bool _isCheckingForSceneLoaded;
@@ -70,7 +71,7 @@ public class ScenesController : MonoBehaviour
         {
             float progress = GameManager.Instance.GetProgress();
 
-            if(progress >= 100)
+            if(progress >= _progressToEnd)
                 LoadScene(6); // Credits
             else if(progress > _progressToGoToFase3)
                 _faseIndex = 5; // Fase3
@@ -81,9 +82,9 @@ public class ScenesController : MonoBehaviour
         }
     }
 
-    public void GoToFase()
+    public void GoToFase(bool doesLoad)
     {
-        LoadScene(_faseIndex);
+        LoadScene(_faseIndex, doesLoad);
     }
 
     public void GoToMainMenu()

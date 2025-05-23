@@ -8,6 +8,6 @@ public class SoundSliderCT : SliderCT
     {
         base.SetLevel(level);
 
-        SettingsManager.Instance.SetSFXVolume(level / _levels);
+        SettingsManager.Instance.SetSFXVolume((float)level / (float)_levels);
     }
 }

@@ -22,6 +22,6 @@ public class GoToFase1AfterCinematic : MonoBehaviour
 
     private void GoToFase1(VideoPlayer videoPlayer)
     {
-        ScenesController.Instance.GoToFase();
+        ScenesController.Instance.GoToFase(false);
     }
 }
