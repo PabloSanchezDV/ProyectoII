@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering.PostProcessing;
@@ -222,23 +223,173 @@ public class CameraMode : Gameplay
 
     private void LookForTargetsOnCamera()
     {
-        FrustrumToCollider.ApplyFrustumCollider(_mainCamera, _cameraMeshCollider); // Update Mesh
-        _cameraMeshCollider.enabled = true;
-        ((InputHandler)_fsm).LookForTargetsOnCamera();
+        //FrustrumToCollider.ApplyFrustumCollider(_mainCamera, _cameraMeshCollider); // Update Mesh
+        //_cameraMeshCollider.enabled = true;
+        //((InputHandler)_fsm).LookForTargetsOnCamera();
+
+        CalculateFrustumBounds(out Vector3 center, out Vector3 halfExtents);
+        Collider[] collidersInsideBox = GetPhotographableObjectsCollidersInsideBox(center, halfExtents);
+        List<Collider> collidersList = GetFilteredCollidersInsideFrustum(collidersInsideBox);
+        List<Collider> sortedCollidersList = SortListByScreenCoveragePercentage(collidersList);
+        CheckTargetsOnCamera(GetCameraTargetHolders(sortedCollidersList));
     }
 
-    public void CheckTargetsOnCamera()
+    private void CalculateFrustumBounds(out Vector3 center, out Vector3 halfExtents)
     {
-        _cameraMeshCollider.enabled = false;
+        float fov = _mainCamera.fieldOfView * Mathf.Deg2Rad;
+        float near = _mainCamera.nearClipPlane;
+        float far = _mainCamera.farClipPlane;
+        float depth = (far - near) / 2f;
+
+        float heightAtFar = Mathf.Tan(fov / 2f) * far;
+        float widthAtFar = heightAtFar * _mainCamera.aspect;
+
+        center = _mainCamera.transform.position + _mainCamera.transform.forward * (near + depth);
+        halfExtents = new Vector3(widthAtFar, heightAtFar, depth);
+    }
+
+    private Collider[] GetPhotographableObjectsCollidersInsideBox(Vector3 center, Vector3 halfExtents)
+    {
+        return Physics.OverlapBox(center, halfExtents, _mainCamera.transform.rotation, ((InputHandler)_fsm).photographableObjectsLayerMask);
+    }
+
+    private List<CameraTarget> GetFilteredTargetsInsideFrustum(Collider[] collidersInsideBox)
+    {
+        Plane[] frustrumPlanes = GeometryUtility.CalculateFrustumPlanes(_mainCamera);
+        List<CameraTarget> cameraTargetsList = new List<CameraTarget>();
+
+        foreach (Collider collider in collidersInsideBox)
+        {
+            Renderer renderer = collider.GetComponentInChildren<Renderer>();
+
+            if (renderer == null) 
+                continue;
+
+            if (!GeometryUtility.TestPlanesAABB(frustrumPlanes, renderer.bounds))
+                continue;
+            // else ( it's inside )
+
+            IPhotographable photographable = collider.GetComponent<IPhotographable>();
+            if (photographable != null)
+                cameraTargetsList.Add(photographable.GetCameraTarget());
+        }
+
+        return cameraTargetsList;
+    }
+
+    private List<Collider> GetFilteredCollidersInsideFrustum(Collider[] collidersInsideBox)
+    {
+        Plane[] frustrumPlanes = GeometryUtility.CalculateFrustumPlanes(_mainCamera);
+        List<Collider> collidersList = new List<Collider>();
+
+        foreach (Collider collider in collidersInsideBox)
+        {
+            Renderer renderer = collider.GetComponentInChildren<Renderer>();
+
+            if (renderer == null)
+                continue;
+
+            if (!GeometryUtility.TestPlanesAABB(frustrumPlanes, renderer.bounds))
+                continue;
+            // else ( it's inside )
+
+            collidersList.Add(collider);
+        }
+
+        return collidersList;
+    }
+
+    private List<Collider> SortListByScreenCoveragePercentage(List<Collider> collidersList)
+    {
+        Dictionary<Collider, float> coverageByCollider = new Dictionary<Collider, float>();
+
+        foreach (Collider collider in collidersList)
+        {
+            Renderer renderer = collider.GetComponentInChildren<Renderer>();
+            float coverage = GetScreenCoveragePercentage(renderer.bounds, _mainCamera);
+            coverageByCollider[collider] = coverage;
+        }
+
+        var orderedPairs = coverageByCollider.OrderByDescending(pair => pair.Value);
+        List<Collider> sortedColliders = new List<Collider>();
+
+        foreach (var pair in orderedPairs)
+        {
+            sortedColliders.Add(pair.Key);
+        }
+
+        return sortedColliders;
+    }
+
+    private float GetScreenCoveragePercentage(Bounds bounds, Camera camera)
+    {
+        Vector3[] corners = new Vector3[8];
+        Vector3 center = bounds.center;
+        Vector3 extents = bounds.extents;
+
+        // Building Bounding Box corners
+        corners[0] = _mainCamera.WorldToScreenPoint(center + new Vector3(extents.x, extents.y, extents.z));
+        corners[1] = _mainCamera.WorldToScreenPoint(center + new Vector3(extents.x, extents.y, -extents.z));
+        corners[2] = _mainCamera.WorldToScreenPoint(center + new Vector3(extents.x, -extents.y, extents.z));
+        corners[3] = _mainCamera.WorldToScreenPoint(center + new Vector3(extents.x, -extents.y, -extents.z));
+        corners[4] = _mainCamera.WorldToScreenPoint(center + new Vector3(-extents.x, extents.y, extents.z));
+        corners[5] = _mainCamera.WorldToScreenPoint(center + new Vector3(-extents.x, extents.y, -extents.z));
+        corners[6] = _mainCamera.WorldToScreenPoint(center + new Vector3(-extents.x, -extents.y, extents.z));
+        corners[7] = _mainCamera.WorldToScreenPoint(center + new Vector3(-extents.x, -extents.y, -extents.z));
+
+        float minX = float.MaxValue;
+        float minY = float.MaxValue;
+        float maxX = float.MinValue;
+        float maxY = float.MinValue;
+
+        foreach (var corner in corners)
+        {
+            minX = Mathf.Min(minX, corner.x);
+            minY = Mathf.Min(minY, corner.y);
+            maxX = Mathf.Max(maxX, corner.x);
+            maxY = Mathf.Max(maxY, corner.y);
+        }
+
+        float visibleMinX = Mathf.Clamp(minX, 0, Screen.width);
+        float visibleMaxX = Mathf.Clamp(maxX, 0, Screen.width);
+        float visibleMinY = Mathf.Clamp(minY, 0, Screen.height);
+        float visibleMaxY = Mathf.Clamp(maxY, 0, Screen.height);
+
+        float visibleWidth = Mathf.Max(0, visibleMaxX - visibleMinX);
+        float visibleHeight = Mathf.Max(0, visibleMaxY - visibleMinY);
+        float visibleArea = visibleWidth * visibleHeight;
+
+        float screenArea = Screen.width * Screen.height;
+
+        return visibleArea / screenArea;
+    }
+
+    private List<CameraTargetHolder> GetCameraTargetHolders(List<Collider> collidersList)
+    {
+        List<CameraTargetHolder> cameraTargetHoldersList = new List<CameraTargetHolder>();
+
+        foreach (Collider collider in collidersList)
+        {
+            IPhotographable photographable = collider.GetComponent<IPhotographable>();
+            if (photographable != null)
+                cameraTargetHoldersList.Add((CameraTargetHolder)photographable);
+        }
+
+        return cameraTargetHoldersList;
+    }
+
+    public void CheckTargetsOnCamera(List<CameraTargetHolder> cameraTargetHoldersList)
+    {
+        //_cameraMeshCollider.enabled = false;
 
         Target target = Target.None;
 
-        foreach(CameraTarget cameraTarget in _cameraTargetsDetector.cameraTargetsList)
+        foreach(CameraTargetHolder cameraTargetHolder in cameraTargetHoldersList)
         {
-            if(cameraTarget.DoesRayHit(_mainCamera))
+            if(cameraTargetHolder.GetCameraTarget().DoesRayHit(_mainCamera, cameraTargetHolder.CheckPoints, cameraTargetHolder.transform))
             {
-                DebugManager.Instance.DebugCameraSystemMessage(cameraTarget.GetTarget().ToString() + " captured in camera.");
-                target = cameraTarget.GetTarget();
+                DebugManager.Instance.DebugCameraSystemMessage(cameraTargetHolder.GetCameraTarget().GetTarget().ToString() + " captured in camera.");
+                target = cameraTargetHolder.GetCameraTarget().GetTarget();
                 break;
             }            
         }
@@ -249,9 +400,26 @@ public class CameraMode : Gameplay
         if(!target.Equals(Target.None))
             GameManager.Instance.SetPictureTaken(target);
 
-        _cameraTargetsDetector.cameraTargetsList.Clear();
+        //_cameraTargetsDetector.cameraTargetsList.Clear();
         EventHolder.Instance.onPhotoObjectsDetected?.Invoke();
     }
+
+#if UNITY_EDITOR
+    public void DrawCameraOverlappingBoxGizmo()
+    {
+        if (_mainCamera == null)
+            return;
+
+        CalculateFrustumBounds(out Vector3 center, out Vector3 halfExtents);
+
+        Gizmos.color = new Color(0f, 1f, 0f, 0.25f); // Verde translúcido
+        Gizmos.matrix = Matrix4x4.TRS(center, _mainCamera.transform.rotation, Vector3.one);
+        Gizmos.DrawCube(Vector3.zero, halfExtents * 2f);
+
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireCube(Vector3.zero, halfExtents * 2f);
+    }
+#endif
 
     private enum CameraSetting { FocusDistance, Aperture, FocalLength }
 }

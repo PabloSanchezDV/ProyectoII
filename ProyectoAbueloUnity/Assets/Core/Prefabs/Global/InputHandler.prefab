@@ -44,10 +44,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b573bf2b8ac7f840868785aafb8377b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerAnim: {fileID: 0}
+  _armsAnim: {fileID: 0}
+  _notebookAnim: {fileID: 0}
+  _mapAnim: {fileID: 0}
+  _armsRenderer: {fileID: 0}
+  _notebookRenderer: {fileID: 0}
+  _mapRenderer: {fileID: 0}
+  _coverRenderer: {fileID: 0}
+  _clock: {fileID: 0}
+  _minuteHand: {fileID: 0}
+  _hourHand: {fileID: 0}
+  _polaroid: {fileID: 0}
+  _polaroidPictureSprite: {fileID: 0}
   moveSpeed: 2000
   maxMoveSpeed: 5
   maxMoveSpeedCameraMode: 2
   interactiveRaycastDistance: 5
+  timeBetweenSteps: 0.5
   playerLayerMask:
     serializedVersion: 2
     m_Bits: 0
@@ -57,3 +71,233 @@ MonoBehaviour:
   focusDistanceChangeSpeedModifier: 0
   apertureChangeSpeedModifier: 0
   focalLengthChangeSpeedModifier: 0
+  photographableObjectsLayerMask:
+    serializedVersion: 2
+    m_Bits: 384
+  _mapCT: {fileID: 0}
+  _postIt: {fileID: 0}
+  _upperCoverTransform: {fileID: 0}
+  _notebookPageTransform: {fileID: 0}
+  _lowerCoverTransform: {fileID: 0}
+  _pagePostIts: []
+  _mammothPageObjects: []
+  _elkPageObjects: []
+  _ornitoPageObjects: []
+  _plantsPage1Objects: []
+  _plantsPage2Objects: []
+  _plantsPage3Objects: []
+  _fungusPageObjects: []
+  _bugsPageObjects: []
+  _galleryPage1Objects: []
+  _galleryPage2Objects: []
+  _galleryPage3Objects: []
+  _galleryPage4Objects: []
+  _settingsPageObjects: []
+  _mammothGlobalPictureSpriteRenderer: {fileID: 0}
+  _mammothEatPictureSpriteRenderer: {fileID: 0}
+  _mammothSleepPictureSpriteRenderer: {fileID: 0}
+  _mammothHeadbuttPictureSpriteRenderer: {fileID: 0}
+  _mammothShakePictureSpriteRenderer: {fileID: 0}
+  _elkGlobalPictureSpriteRenderer: {fileID: 0}
+  _elkEatPictureSpriteRenderer: {fileID: 0}
+  _elkShakePictureSpriteRenderer: {fileID: 0}
+  _elkGrowlPictureSpriteRenderer: {fileID: 0}
+  _elkShowOffPictureSpriteRenderer: {fileID: 0}
+  _ornitoGlobalPictureSpriteRenderer: {fileID: 0}
+  _ornitoEatPictureSpriteRenderer: {fileID: 0}
+  _ornitoSwimPictureSpriteRenderer: {fileID: 0}
+  _ornitoSunbathingPictureSpriteRenderer: {fileID: 0}
+  _ornitoProtectPictureSpriteRenderer: {fileID: 0}
+  _chestnutTreePictureSpriteRenderer: {fileID: 0}
+  _birchTreePictureSpriteRenderer: {fileID: 0}
+  _heatherPictureSpriteRenderer: {fileID: 0}
+  _gorsePictureSpriteRenderer: {fileID: 0}
+  _hollyPictureSpriteRenderer: {fileID: 0}
+  _rushPictureSpriteRenderer: {fileID: 0}
+  _dandelionPictureSpriteRenderer: {fileID: 0}
+  _cloverPictureSpriteRenderer: {fileID: 0}
+  _sprucePictureSpriteRenderer: {fileID: 0}
+  _cypressPictureSpriteRenderer: {fileID: 0}
+  _fernPictureSpriteRenderer: {fileID: 0}
+  _redChestnutTreePictureSpriteRenderer: {fileID: 0}
+  _beechTreePictureSpriteRenderer: {fileID: 0}
+  _willowTreePictureSpriteRenderer: {fileID: 0}
+  _fairyRingPictureSpriteRenderer: {fileID: 0}
+  _amanitaPictureSpriteRenderer: {fileID: 0}
+  _parasolPictureSpriteRenderer: {fileID: 0}
+  _goldenChanterellePictureSpriteRenderer: {fileID: 0}
+  _boletusPictureSpriteRenderer: {fileID: 0}
+  _moonBeatlePictureSpriteRenderer: {fileID: 0}
+  _fireflyPictureSpriteRenderer: {fileID: 0}
+  _butterflyPictureSpriteRenderer: {fileID: 0}
+  _dragonflyPictureSpriteRenderer: {fileID: 0}
+  _beePictureSpriteRenderer: {fileID: 0}
+  _galleryPicturesSpriteRenderers:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  _mammothGlobalPictureGOs: []
+  _mammothEatPictureGOs: []
+  _mammothSleepPictureGOs: []
+  _mammothHeadbuttPictureGOs: []
+  _mammothShakePictureGOs: []
+  _elkGlobalPictureGOs: []
+  _elkEatPictureGOs: []
+  _elkShakePictureGOs: []
+  _elkGrowlPictureGOs: []
+  _elkShowOffPictureGOs: []
+  _ornitoGlobalPictureGOs: []
+  _ornitoEatPictureGOs: []
+  _ornitoSwimPictureGOs: []
+  _ornitoSunbathingPictureGOs: []
+  _ornitoProtectPictureGOs: []
+  _chestnutTreePictureGOs: []
+  _birchTreePictureGOs: []
+  _heatherPictureGOs: []
+  _gorsePictureGOs: []
+  _hollyPictureGOs: []
+  _rushPictureGOs: []
+  _dandelionPictureGOs: []
+  _cloverPictureGOs: []
+  _sprucePictureGOs: []
+  _cypressPictureGOs: []
+  _fernPictureGOs: []
+  _redChestnutTreePictureGOs: []
+  _beechTreePictureGOs: []
+  _willowTreePictureGOs: []
+  _fairyRingPictureGOs: []
+  _amanitaPictureGOs: []
+  _parasolPictureGOs: []
+  _goldenChanterellePictureGOs: []
+  _boletusPictureGOs: []
+  _moonBeatlePictureGOs: []
+  _fireflyPictureGOs: []
+  _butterflyPictureGOs: []
+  _dragonflyPictureGOs: []
+  _beePictureGOs: []
+  _galleryPicturesGOs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

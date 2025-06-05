@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2695338316777410495}
   - component: {fileID: 4027899837311919106}
   - component: {fileID: 244139647880071313}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Leaves_LOD2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 1459992737084375728}
   - component: {fileID: 5298758417170704608}
   - component: {fileID: 210353804817415448}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Castano_Shader_LOD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -215,12 +215,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 663088788813085477}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Checkpoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &663088788813085477
 Transform:
@@ -248,7 +248,7 @@ GameObject:
   - component: {fileID: 3167954844415540577}
   - component: {fileID: 1321486227951891201}
   - component: {fileID: 2862971537768651566}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Leaves_LOD0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -438,7 +438,7 @@ GameObject:
   - component: {fileID: 8780983680842659681}
   - component: {fileID: 182697802515931839}
   - component: {fileID: 6248334735496826219}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Castano_Shader_LOD0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -562,7 +562,7 @@ GameObject:
   - component: {fileID: 9221178035055300381}
   - component: {fileID: 2036837520040682691}
   - component: {fileID: 2865963767596719578}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Castano_ShaderLOD2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -683,7 +683,7 @@ GameObject:
   - component: {fileID: 6780274562808435171}
   - component: {fileID: 7835779129266023224}
   - component: {fileID: 5511256953162877009}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Leaves_LOD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -809,7 +809,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3424377337057836111, guid: 2a6b471b48022b24cb75e399214a4e12, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3424377337057836111, guid: 2a6b471b48022b24cb75e399214a4e12, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

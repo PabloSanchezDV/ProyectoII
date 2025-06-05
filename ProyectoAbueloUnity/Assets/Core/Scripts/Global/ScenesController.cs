@@ -72,7 +72,10 @@ public class ScenesController : MonoBehaviour
             float progress = GameManager.Instance.GetProgress();
 
             if(progress >= _progressToEnd)
-                LoadScene(6); // Credits
+            {
+                LoadScene(6, false); // Credits
+                return;
+            }
             else if(progress > _progressToGoToFase3)
                 _faseIndex = 5; // Fase3
             else if (progress > _progressToGoToFase2)
