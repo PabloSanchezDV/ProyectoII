@@ -8,6 +8,6 @@ public class MouseSensitivitySliderCT : SliderCT
     {
         base.SetLevel(level);
 
-        SettingsManager.Instance.SetMouseSensitivity(level / _levels);
+        SettingsManager.Instance.SetMouseSensitivity((float)level / (float)_levels);
     }
 }

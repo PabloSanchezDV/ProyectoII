@@ -474,6 +474,8 @@
 "Assets/Core/Scripts/Tools/RandomizeObjects.cs"
 "Assets/Core/Scripts/Tools/RandomizeObjectsEditor.cs"
 "Assets/Core/Scripts/Tools/SlowTime.cs"
+"Assets/Core/Scripts/Tools/SnapObjectsToTerrain.cs"
+"Assets/Core/Scripts/Tools/SnapObjectsToTerrainEditor.cs"
 "Assets/Core/Scripts/UI/MainMenuManager.cs"
 "Assets/Core/Scripts/UI/NotebookCursorTarget/AnimalPageCT.cs"
 "Assets/Core/Scripts/UI/NotebookCursorTarget/BackToMenuButtonCT.cs"
@@ -499,8 +501,6 @@
 "Assets/PathCreator/Examples/Scripts/PathSceneTool.cs"
 "Assets/PathCreator/Examples/Scripts/PathSpawner.cs"
 "Assets/PathCreator/Examples/Scripts/RoadMeshCreator.cs"
-"Assets/Z - TO DELETE/SnapObjectsToTerrain.cs"
-"Assets/Z - TO DELETE/SnapObjectsToTerrainEditor.cs"
 -langversion:9.0
 
 /deterministic

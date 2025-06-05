@@ -68,6 +68,7 @@ public class InputHandler : FSMTemplateMachine
     [SerializeField] public float focusDistanceChangeSpeedModifier;
     [SerializeField] public float apertureChangeSpeedModifier;
     [SerializeField] public float focalLengthChangeSpeedModifier;
+    [SerializeField] public LayerMask photographableObjectsLayerMask;
     #endregion
 
     #region References -  Notebook
@@ -449,24 +450,33 @@ public class InputHandler : FSMTemplateMachine
 
         _mapCT.postIt = _postIt;
 
-        EventHolder.Instance.onScreenshotTaken.AddListener(SetPictureToPolaroidPicture);
+        
         InitializeGalleryPictures();
 
         StartCoroutine(WaitUntilGameManagerHasLoadedToLoadPolariodPictures());
+        StartCoroutine(WaitUntilEventHolderInstanceIsNotNull());
 
-        DebugManager.Instance.DebugGlobalSystemMessage("InputHandler initialized");
+        if(DebugManager.Instance != null)
+            DebugManager.Instance.DebugGlobalSystemMessage("InputHandler initialized");
     }
 
     protected override void OnDisable()
     {
         base.OnDisable();
-        EventHolder.Instance.onScreenshotTaken.RemoveListener(SetPictureToPolaroidPicture);
+        if(EventHolder.Instance != null)
+            EventHolder.Instance.onScreenshotTaken.RemoveListener(SetPictureToPolaroidPicture);
     }
 
     IEnumerator WaitUntilGameManagerHasLoadedToLoadPolariodPictures()
     {
-        yield return new WaitUntil(() => GameManager.Instance.HasLoadedData);
+        yield return new WaitUntil(() => GameManager.Instance != null && GameManager.Instance.HasLoadedData);
         LoadPolaroidPictures();
+    }
+    
+    IEnumerator WaitUntilEventHolderInstanceIsNotNull()
+    {
+        yield return new WaitUntil(() => EventHolder.Instance != null);
+        EventHolder.Instance.onScreenshotTaken.AddListener(SetPictureToPolaroidPicture);
     }
 
     protected override void GetInitialState(out FSMTemplateState state)
@@ -475,22 +485,22 @@ public class InputHandler : FSMTemplateMachine
         freeMove.Enter();
     }
 
-    public void LookForTargetsOnCamera()
-    {
-        StartCoroutine(WaitUntilPhotoLayerObjectsDetected());
-    }
+    //public void LookForTargetsOnCamera()
+    //{
+    //    StartCoroutine(WaitUntilPhotoLayerObjectsDetected());
+    //}
 
-    // A Coroutine is needed as this code is executed after physics operations.
-    // The first frame is used just to enable the collider.
-    // The second one is used to detect the collisions.
-    // Only then we can check the targets added to the list.
-    private IEnumerator WaitUntilPhotoLayerObjectsDetected()
-    {
-        yield return new WaitForEndOfFrame();
-        // CameraCollider detects objects in Photo layer
-        yield return new WaitForEndOfFrame();
-        cameraMode.CheckTargetsOnCamera();
-    }
+    //// A Coroutine is needed as this code is executed after physics operations.
+    //// The first frame is used just to enable the collider.
+    //// The second one is used to detect the collisions.
+    //// Only then we can check the targets added to the list.
+    //private IEnumerator WaitUntilPhotoLayerObjectsDetected()
+    //{
+    //    yield return new WaitForEndOfFrame();
+    //    // CameraCollider detects objects in Photo layer
+    //    yield return new WaitForEndOfFrame();
+    //    cameraMode.CheckTargetsOnCamera();
+    //}
 
     public void DisableArmsRenderer()
     {
@@ -1353,4 +1363,12 @@ public class InputHandler : FSMTemplateMachine
         }
     }
     #endregion
+
+#if UNITY_EDITOR
+    public void OnDrawGizmosSelected()
+    {
+        if(cameraMode != null)
+            cameraMode.DrawCameraOverlappingBoxGizmo();
+    }
+#endif
 }

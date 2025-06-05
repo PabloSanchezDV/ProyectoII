@@ -9,12 +9,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5669154612689770733}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Checkpoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &5669154612689770733
 Transform:
@@ -85,7 +85,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 00e16615d64fd1c4f81f22d9fe63ec53, type: 2}
     - target: {fileID: -6075610233949034833, guid: b1c91db1f0ce03f4c972ff8c6eb7813b, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -6075610233949034833, guid: b1c91db1f0ce03f4c972ff8c6eb7813b, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -109,7 +109,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -769109532228094135, guid: b1c91db1f0ce03f4c972ff8c6eb7813b, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -769109532228094135, guid: b1c91db1f0ce03f4c972ff8c6eb7813b, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -145,7 +145,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4365333280704459160, guid: b1c91db1f0ce03f4c972ff8c6eb7813b, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4365333280704459160, guid: b1c91db1f0ce03f4c972ff8c6eb7813b, type: 3}
       propertyPath: m_StaticEditorFlags

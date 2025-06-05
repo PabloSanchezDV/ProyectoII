@@ -419,6 +419,9 @@ public class Notebook : FSMTemplateState
 
     protected void SetUpperAsParent(GameObject gameObject) 
     {
+        if (gameObject == null)
+            return;
+
         if(((InputHandler)_fsm).UpperCoverTransform != null)
             gameObject.transform.parent = ((InputHandler)_fsm).UpperCoverTransform;
         gameObject.transform.localRotation = Quaternion.Euler(new Vector3(180f, 180f, -90f));
@@ -426,6 +429,9 @@ public class Notebook : FSMTemplateState
 
     protected void SetLeftNotebookPageAsParent(GameObject gameObject)
     {
+        if (gameObject == null)
+            return;
+
         if (((InputHandler)_fsm).NotebookPageTransform != null)
             gameObject.transform.parent = ((InputHandler)_fsm).NotebookPageTransform;
         gameObject.transform.localRotation = Quaternion.Euler(new Vector3(0f, 0f, -90f));
@@ -433,6 +439,9 @@ public class Notebook : FSMTemplateState
 
     protected void SetRightNotebookPageAsParent(GameObject gameObject)
     {
+        if (gameObject == null)
+            return;
+
         if (((InputHandler)_fsm).NotebookPageTransform != null)
             gameObject.transform.parent = ((InputHandler)_fsm).NotebookPageTransform;
         gameObject.transform.localRotation = Quaternion.Euler(new Vector3(180f, 0f, -90f));
@@ -440,6 +449,9 @@ public class Notebook : FSMTemplateState
 
     protected void SetLowerAsParent(GameObject gameObject)
     {
+        if (gameObject == null)
+            return;
+
         if (((InputHandler)_fsm).LowerCoverTransform != null)
             gameObject.transform.parent = ((InputHandler)_fsm).LowerCoverTransform;
         gameObject.transform.localRotation = Quaternion.Euler(new Vector3(0f, 0f, 0f));

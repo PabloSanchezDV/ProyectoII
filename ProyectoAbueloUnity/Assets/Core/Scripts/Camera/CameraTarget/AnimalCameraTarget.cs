@@ -9,13 +9,10 @@ public class AnimalCameraTarget : CameraTarget
     [NonSerialized] private AnimalFSM animalFSM;
     private Animal _animal;
 
-    public void InitializeAnimalCameraTarget(Transform transform, Animal animal, AnimalFSM animalFSM, Transform[] checkPoints)
+    public void InitializeAnimalCameraTarget(Animal animal, AnimalFSM animalFSM)
     {
-        InitializeCameraTarget(transform, checkPoints);
-
         _animal = animal;
         this.animalFSM = animalFSM;
-        this.checkPoints = checkPoints;
     }
 
     public override Target GetTarget()

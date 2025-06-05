@@ -21,7 +21,7 @@ public class SliderCT : MonoBehaviour
             throw new System.Exception("Level value is higher than the maximum or lower than the minimum.");
 
         bool barrierFound = false;
-        for (int i = 0; i < _levels; i++)
+        for (int i = 0; i <= _levels; i++)
         {         
             if(!barrierFound)
                 _buttonsSpriteRenderers[i].color = _enabledColor;

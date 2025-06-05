@@ -23,7 +23,7 @@ public class PlayNightSound : MonoBehaviour
         {
             if (!_aS.isPlaying)
             {
-                ScenesController.Instance.GoToFase();
+                ScenesController.Instance.GoToFase(true);
                 _hasTriggered = false;
             }
         }

@@ -1,12 +1,10 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using PathCreation;
-using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.AI;
+using PathCreation;
 
-public class AnimalFSM : FSMTemplateMachine, IPhotographable
+public class AnimalFSM : FSMTemplateMachine
 {
     #region States
     [NonSerialized] public Idle idle;
@@ -28,7 +26,7 @@ public class AnimalFSM : FSMTemplateMachine, IPhotographable
     [SerializeField] private PathCreator[] _pathCreators;
     [SerializeField] private Transform[] _checkPoints;
     [SerializeField] private PathFollower _pathFollower;
-    [SerializeField] private AnimalCameraTarget _cameraTarget;
+    [SerializeField] private CameraTargetHolder _cameraTargetHolder;
 
     [Header("Atributes")]
     [SerializeField] private float _speed;
@@ -133,7 +131,6 @@ public class AnimalFSM : FSMTemplateMachine, IPhotographable
         SetActions();
 
         InitializeAnimal();
-        _cameraTarget.InitializeAnimalCameraTarget(transform, animal, this, _checkPoints);
     }
 
     protected override void GetInitialState(out FSMTemplateState state)
@@ -213,6 +210,8 @@ public class AnimalFSM : FSMTemplateMachine, IPhotographable
         IntializeAnimalPosition();
         _playerRB = _player.GetComponent<Rigidbody>();
 
+        ((AnimalCameraTarget)_cameraTargetHolder.GetCameraTarget()).InitializeAnimalCameraTarget(animal, this);
+
         if(DebugManager.Instance != null)
             DebugManager.Instance.DebugAnimalMessage(transform.name + " is initialized");
     }
@@ -222,8 +221,6 @@ public class AnimalFSM : FSMTemplateMachine, IPhotographable
         transform.position = _pathFollower.transform.position;
         transform.rotation = _pathFollower.transform.rotation;
     }
-
-    public CameraTarget GetCameraTarget() { return _cameraTarget; }
 
     public void DespawnAfterTime()
     {

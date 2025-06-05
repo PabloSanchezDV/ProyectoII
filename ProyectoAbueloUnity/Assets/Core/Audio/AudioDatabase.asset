@@ -33,7 +33,7 @@ MonoBehaviour:
   photoMaxDistance: 5
   photoPitchSwift: 0
   newNotebookEntryAC: {fileID: 8300000, guid: 157e601d92dbc4146b8d1570b9976523, type: 3}
-  newNotebookEntryVolume: 1
+  newNotebookEntryVolume: 0.4
   newNotebookEntryMinDistance: 5
   newNotebookEntryMaxDistance: 5
   newNotebookEntryPitchSwift: 0
@@ -138,22 +138,22 @@ MonoBehaviour:
   waterfallMaxDistance: 2
   waterfallPitchSwift: 0
   arpeggioAmAC: {fileID: 8300000, guid: 7f3e5cf703810204fa4166d8341785c4, type: 3}
-  arpeggioAmVolume: 1
+  arpeggioAmVolume: 0.3
   arpeggioAmMinDistance: 5
   arpeggioAmMaxDistance: 5
   arpeggioAmPitchSwift: 0
   arpeggioBbmajCAC: {fileID: 8300000, guid: c68baea1edbe9504b9bba044a9cd9a7a, type: 3}
-  arpeggioBbmajCVolume: 1
+  arpeggioBbmajCVolume: 0.3
   arpeggioBbmajCMinDistance: 5
   arpeggioBbmajCMaxDistance: 5
   arpeggioBbmajCPitchSwift: 0
   arpeggioEmAC: {fileID: 8300000, guid: 58ac9be9395aa16428096b1bb4c6609f, type: 3}
-  arpeggioEmVolume: 1
+  arpeggioEmVolume: 0.3
   arpeggioEmMinDistance: 5
   arpeggioEmMaxDistance: 5
   arpeggioEmPitchSwift: 0
   arpeggioGAC: {fileID: 8300000, guid: 8e1a1a4dc9e4ead4e8c559595c7928c7, type: 3}
-  arpeggioGVolume: 1
+  arpeggioGVolume: 0.3
   arpeggioGMinDistance: 5
   arpeggioGMaxDistance: 5
   arpeggioGPitchSwift: 0

@@ -44,5 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 566d1cd2c70a1dc48926e3dcfab5e564, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _progressToGoToFase2: 35
-  _progressToGoToFase3: 75
+  _progressToGoToFase2: 25
+  _progressToGoToFase3: 50
+  _progressToEnd: 75

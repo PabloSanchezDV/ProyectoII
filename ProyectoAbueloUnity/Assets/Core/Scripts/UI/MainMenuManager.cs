@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class MainMenuManager : MonoBehaviour
 {
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.None;
+    }
+
     public void StartNewGame()
     {
         ScenesController.Instance.NewGame();
