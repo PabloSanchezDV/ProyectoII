@@ -397,8 +397,8 @@ public class CameraMode : Gameplay
         ((InputHandler)_fsm).ScreenshotTarget = target;
         ScreenshotManager.Instance.ScreenshotTarget = target;
 
-        if(!target.Equals(Target.None))
-            GameManager.Instance.SetPictureTaken(target);
+        //if(!target.Equals(Target.None))
+        //    GameManager.Instance.SetPictureTaken(target);
 
         //_cameraTargetsDetector.cameraTargetsList.Clear();
         EventHolder.Instance.onPhotoObjectsDetected?.Invoke();

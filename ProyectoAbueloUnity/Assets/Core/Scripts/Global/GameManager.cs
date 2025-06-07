@@ -153,7 +153,7 @@ public class GameManager : MonoBehaviour
     public bool BeePictureTaken { get { return _beePictureTaken; } }
     #endregion
 
-    public bool[] GalleryPicturesTaken {  get { return _galleryPicturesTaken; } }
+    public bool[] GalleryPicturesTaken { get { return _galleryPicturesTaken; } }
 
     #endregion
 
@@ -161,7 +161,7 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
-        if(Instance == null)
+        if (Instance == null)
             Instance = this;
         else
             Destroy(this);
@@ -201,88 +201,88 @@ public class GameManager : MonoBehaviour
     {
         int picturesTaken = 0;
 
-        if (_mammothGlobalPictureTaken) 
+        if (_mammothGlobalPictureTaken)
             picturesTaken++;
-        if (_mammothEatPictureTaken) 
+        if (_mammothEatPictureTaken)
             picturesTaken++;
-        if (_mammothSleepPictureTaken) 
+        if (_mammothSleepPictureTaken)
             picturesTaken++;
-        if (_mammothHeadbuttPictureTaken) 
+        if (_mammothHeadbuttPictureTaken)
             picturesTaken++;
-        if (_mammothShakePictureTaken) 
-            picturesTaken++;
-
-        if (_elkGlobalPictureTaken) 
-            picturesTaken++;
-        if (_elkEatPictureTaken) 
-            picturesTaken++;
-        if (_elkShakePictureTaken) 
-            picturesTaken++;
-        if (_elkGrowlPictureTaken) 
-            picturesTaken++;
-        if (_elkShowOffPictureTaken) 
+        if (_mammothShakePictureTaken)
             picturesTaken++;
 
-        if (_ornitoGlobalPictureTaken) 
+        if (_elkGlobalPictureTaken)
             picturesTaken++;
-        if (_ornitoEatPictureTaken) 
+        if (_elkEatPictureTaken)
             picturesTaken++;
-        if (_ornitoSwimPictureTaken) 
+        if (_elkShakePictureTaken)
             picturesTaken++;
-        if (_ornitoSunbathingPictureTaken) 
+        if (_elkGrowlPictureTaken)
             picturesTaken++;
-        if (_ornitoProtectPictureTaken) 
-            picturesTaken++;
-
-        if (_chestnutTreePictureTaken) 
-            picturesTaken++;
-        if (_birchTreePictureTaken) 
-            picturesTaken++;
-        if (_heatherPictureTaken) 
-            picturesTaken++;
-        if (_gorsePictureTaken) 
-            picturesTaken++;
-        if (_hollyPictureTaken) 
-            picturesTaken++;
-        if (_rushPictureTaken) 
-            picturesTaken++;
-        if (_dandelionPictureTaken) 
-            picturesTaken++;
-        if (_cloverPictureTaken) 
-            picturesTaken++;
-        if (_sprucePictureTaken) 
-            picturesTaken++;
-        if (_cypressPictureTaken) 
-            picturesTaken++;
-        if (_fernPictureTaken) 
-            picturesTaken++;
-        if (_redChestnutTreePictureTaken) 
-            picturesTaken++;
-        if (_beechTreePictureTaken) 
-            picturesTaken++;
-        if (_willowTreePictureTaken) 
+        if (_elkShowOffPictureTaken)
             picturesTaken++;
 
-        if (_fairyRingPictureTaken) 
+        if (_ornitoGlobalPictureTaken)
             picturesTaken++;
-        if (_amanitaPictureTaken) 
+        if (_ornitoEatPictureTaken)
             picturesTaken++;
-        if (_parasolPictureTaken) 
+        if (_ornitoSwimPictureTaken)
             picturesTaken++;
-        if (_goldenChanterellePictureTaken) 
+        if (_ornitoSunbathingPictureTaken)
             picturesTaken++;
-        if (_boletusPictureTaken) 
+        if (_ornitoProtectPictureTaken)
             picturesTaken++;
 
-        if (_moonBeatlePictureTaken) 
+        if (_chestnutTreePictureTaken)
             picturesTaken++;
-        if (_fireflyPictureTaken) 
+        if (_birchTreePictureTaken)
             picturesTaken++;
-        if (_butterflyPictureTaken) 
+        if (_heatherPictureTaken)
             picturesTaken++;
-        if (_dragonflyPictureTaken) 
+        if (_gorsePictureTaken)
             picturesTaken++;
-        if (_beePictureTaken) 
+        if (_hollyPictureTaken)
+            picturesTaken++;
+        if (_rushPictureTaken)
+            picturesTaken++;
+        if (_dandelionPictureTaken)
+            picturesTaken++;
+        if (_cloverPictureTaken)
+            picturesTaken++;
+        if (_sprucePictureTaken)
+            picturesTaken++;
+        if (_cypressPictureTaken)
+            picturesTaken++;
+        if (_fernPictureTaken)
+            picturesTaken++;
+        if (_redChestnutTreePictureTaken)
+            picturesTaken++;
+        if (_beechTreePictureTaken)
+            picturesTaken++;
+        if (_willowTreePictureTaken)
+            picturesTaken++;
+
+        if (_fairyRingPictureTaken)
+            picturesTaken++;
+        if (_amanitaPictureTaken)
+            picturesTaken++;
+        if (_parasolPictureTaken)
+            picturesTaken++;
+        if (_goldenChanterellePictureTaken)
+            picturesTaken++;
+        if (_boletusPictureTaken)
+            picturesTaken++;
+
+        if (_moonBeatlePictureTaken)
+            picturesTaken++;
+        if (_fireflyPictureTaken)
+            picturesTaken++;
+        if (_butterflyPictureTaken)
+            picturesTaken++;
+        if (_dragonflyPictureTaken)
+            picturesTaken++;
+        if (_beePictureTaken)
             picturesTaken++;
 
         return (float)picturesTaken / 40 * 100;
@@ -421,6 +421,101 @@ public class GameManager : MonoBehaviour
                 break;
             default:
                 throw new System.Exception($"Unable to set the value for {target.ToString()} in GameManager. The picture won't be seen in the notebook.");
+        }
+    }
+
+    public bool IsPictureTaken(Target target)
+    {
+        switch (target)
+        {
+            case Target.MammothGlobal:
+                return _mammothGlobalPictureTaken;
+            case Target.MammothEat:
+                return _mammothEatPictureTaken;
+            case Target.MammothSleep:
+                return _mammothSleepPictureTaken;
+            case Target.MammothHeadbutt:
+                return _mammothHeadbuttPictureTaken;
+            case Target.MammothShake:
+                return _mammothShakePictureTaken;
+
+            case Target.ElkGlobal:
+                return _elkGlobalPictureTaken;
+            case Target.ElkEat:
+                return _elkEatPictureTaken;
+            case Target.ElkShake:
+                return _elkShakePictureTaken;
+            case Target.ElkGrowl:
+                return _elkGrowlPictureTaken;
+            case Target.ElkShowOff:
+                return _elkShowOffPictureTaken;
+
+            case Target.OrnitoGlobal:
+                return _ornitoGlobalPictureTaken;
+            case Target.OrnitoEat:
+                return _ornitoEatPictureTaken;
+            case Target.OrnitoSwim:
+                return _ornitoSwimPictureTaken;
+            case Target.OrnitoSunbathing:
+                return _ornitoSunbathingPictureTaken;
+            case Target.OrnitoProtect:
+                return _ornitoProtectPictureTaken;
+
+            case Target.ChestnutTree:
+                return _chestnutTreePictureTaken;
+            case Target.BirchTree:
+                return _birchTreePictureTaken;
+            case Target.Heather:
+                return _heatherPictureTaken;
+            case Target.Gorse:
+                return _gorsePictureTaken;
+            case Target.Holly:
+                return _hollyPictureTaken;
+
+            case Target.Rush:
+                return _rushPictureTaken;
+            case Target.Dandelion:
+                return _dandelionPictureTaken;
+            case Target.Clover:
+                return _cloverPictureTaken;
+            case Target.Spruce:
+                return _sprucePictureTaken;
+            case Target.Cypress:
+                return _cypressPictureTaken;
+
+            case Target.Fern:
+                return _fernPictureTaken;
+            case Target.RedChestnutTree:
+                return _redChestnutTreePictureTaken;
+            case Target.BeechTree:
+                return _beechTreePictureTaken;
+            case Target.WillowTree:
+                return _willowTreePictureTaken;
+
+            case Target.FairyRing:
+                return _fairyRingPictureTaken;
+            case Target.Amanita:
+                return _amanitaPictureTaken;
+            case Target.Parasol:
+                return _parasolPictureTaken;
+            case Target.GoldenChanterelle:
+                return _goldenChanterellePictureTaken;
+            case Target.Boletus:
+                return _boletusPictureTaken;
+
+            case Target.MoonBeatle:
+                return _moonBeatlePictureTaken;
+            case Target.Firefly:
+                return _fireflyPictureTaken;
+            case Target.Butterfly:
+                return _butterflyPictureTaken;
+            case Target.Dragonfly:
+                return _dragonflyPictureTaken;
+            case Target.Bee:
+                return _beePictureTaken;
+
+            default:
+                throw new System.Exception($"Unable to get the value for {target.ToString()} in GameManager.");
         }
     }
 }

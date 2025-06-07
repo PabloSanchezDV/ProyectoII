@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class ScreenshotManager : MonoBehaviour
 {
@@ -65,8 +66,12 @@ public class ScreenshotManager : MonoBehaviour
         if(_screenshotTarget != Target.None)
         {
             SaveScreenshot(_lastPictureTexture2D, _screenshotTarget.ToString());
-            UIManager.Instance.TriggerNotification();
-            AudioManager.Instance.PlayNewNotebookEntrySound(cam.gameObject);
+            if (!GameManager.Instance.IsPictureTaken(_screenshotTarget))
+            {
+                UIManager.Instance.TriggerNotification();
+                AudioManager.Instance.PlayNewNotebookEntrySound(cam.gameObject);
+                GameManager.Instance.SetPictureTaken(_screenshotTarget);
+            }
         }
 
         EventHolder.Instance.onScreenshotTaken?.Invoke();
