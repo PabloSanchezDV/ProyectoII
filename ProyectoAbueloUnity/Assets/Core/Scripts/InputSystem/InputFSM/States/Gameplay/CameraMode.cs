@@ -24,13 +24,6 @@ public class CameraMode : Gameplay
     {
         base.Enter();
 
-        _zoom = _inputActions.CameraMode.Zoom;
-        _inputActions.CameraMode.TakePicture.started += TakePicture;
-        _inputActions.CameraMode.ChangeSetting.started += ChangeSetting;
-        _inputActions.CameraMode.ResetCamera.started += ResetCamera;
-
-        _inputActions.CameraMode.Enable();
-
         if(!_isCameraInitialized)
             InitializeCamera();
 
@@ -105,6 +98,9 @@ public class CameraMode : Gameplay
 
     private void Zoom()
     {
+        if (_zoom == null)
+            return;
+
         _mainCamera.fieldOfView -= _zoom.ReadValue<Vector2>().y * ((InputHandler)_fsm).zoomModifier * Time.deltaTime;
         if (_mainCamera.fieldOfView > ((InputHandler)_fsm).zoomUpperLimit)
             _mainCamera.fieldOfView = ((InputHandler)_fsm).zoomUpperLimit;
@@ -223,10 +219,6 @@ public class CameraMode : Gameplay
 
     private void LookForTargetsOnCamera()
     {
-        //FrustrumToCollider.ApplyFrustumCollider(_mainCamera, _cameraMeshCollider); // Update Mesh
-        //_cameraMeshCollider.enabled = true;
-        //((InputHandler)_fsm).LookForTargetsOnCamera();
-
         CalculateFrustumBounds(out Vector3 center, out Vector3 halfExtents);
         Collider[] collidersInsideBox = GetPhotographableObjectsCollidersInsideBox(center, halfExtents);
         List<Collider> collidersList = GetFilteredCollidersInsideFrustum(collidersInsideBox);
@@ -251,30 +243,6 @@ public class CameraMode : Gameplay
     private Collider[] GetPhotographableObjectsCollidersInsideBox(Vector3 center, Vector3 halfExtents)
     {
         return Physics.OverlapBox(center, halfExtents, _mainCamera.transform.rotation, ((InputHandler)_fsm).photographableObjectsLayerMask);
-    }
-
-    private List<CameraTarget> GetFilteredTargetsInsideFrustum(Collider[] collidersInsideBox)
-    {
-        Plane[] frustrumPlanes = GeometryUtility.CalculateFrustumPlanes(_mainCamera);
-        List<CameraTarget> cameraTargetsList = new List<CameraTarget>();
-
-        foreach (Collider collider in collidersInsideBox)
-        {
-            Renderer renderer = collider.GetComponentInChildren<Renderer>();
-
-            if (renderer == null) 
-                continue;
-
-            if (!GeometryUtility.TestPlanesAABB(frustrumPlanes, renderer.bounds))
-                continue;
-            // else ( it's inside )
-
-            IPhotographable photographable = collider.GetComponent<IPhotographable>();
-            if (photographable != null)
-                cameraTargetsList.Add(photographable.GetCameraTarget());
-        }
-
-        return cameraTargetsList;
     }
 
     private List<Collider> GetFilteredCollidersInsideFrustum(Collider[] collidersInsideBox)
@@ -420,6 +388,18 @@ public class CameraMode : Gameplay
         Gizmos.DrawWireCube(Vector3.zero, halfExtents * 2f);
     }
 #endif
+
+    public override void EnableInputs()
+    {
+        base.EnableInputs();
+
+        _zoom = _inputActions.CameraMode.Zoom;
+        _inputActions.CameraMode.TakePicture.started += TakePicture;
+        _inputActions.CameraMode.ChangeSetting.started += ChangeSetting;
+        _inputActions.CameraMode.ResetCamera.started += ResetCamera;
+
+        _inputActions.CameraMode.Enable();
+    }
 
     private enum CameraSetting { FocusDistance, Aperture, FocalLength }
 }
