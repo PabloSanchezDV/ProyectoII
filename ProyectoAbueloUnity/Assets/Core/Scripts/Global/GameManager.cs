@@ -88,6 +88,8 @@ public class GameManager : MonoBehaviour
     public float Daytime { get { return _daytime; } set { _daytime = value; } }
     public float StartHour { get { return _startHour; } }
     public float StartMinute { get { return _startMinute; } }
+
+    public float StartDaytime { get { return _startHour * 60 + _startMinute; } }
     public bool HasLoadedData { get { return ScenesController.Instance.DoesLoad; } }
 
     public List<PinCT> PinsList { get { return _pinsList; } set { _pinsList = value; } }
