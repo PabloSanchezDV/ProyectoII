@@ -20,4 +20,14 @@ public class ArmsAnimationEvents : MonoBehaviour
     {
         _inputHandler.HideArmsCameraMode();
     }
+
+    public void EnableFreeMoveInputs()
+    {
+        _inputHandler.EnableFreeMoveInputs();
+    }
+
+    public void EnableCameraModeInputs()
+    {
+        _inputHandler.EnableCameraModeInputs();
+    }
 }

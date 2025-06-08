@@ -41,14 +41,6 @@ public class Gameplay : FSMTemplateState
                 _isInitialized = true;
         } while (!_isInitialized);
 
-        _movement = _inputActions.Gameplay.Movement;
-        _cameraRotation = _inputActions.Gameplay.CameraRotation;
-        _inputActions.Gameplay.ToggleMenu.started += ToggleNotebook;
-        _inputActions.Gameplay.ToggleCamera.started += ToggleCamera;
-
-        _inputActions.Gameplay.Enable();
-
-        Cursor.lockState = CursorLockMode.Locked;
         _exitCondition = false;
     }
 
@@ -87,6 +79,9 @@ public class Gameplay : FSMTemplateState
 
     protected void Move()
     {
+        if (_movement == null)
+            return;
+
         direction = ((InputHandler)_fsm).Player.transform.forward * _movement.ReadValue<Vector2>().y + ((InputHandler)_fsm).Player.transform.right * _movement.ReadValue<Vector2>().x;
         direction.Normalize();
         _rb.AddForce(direction * ((InputHandler)_fsm).moveSpeed * Time.deltaTime);
@@ -115,6 +110,9 @@ public class Gameplay : FSMTemplateState
 
     protected void LookAround()
     {
+        if (_cameraRotation == null)
+            return;
+
         ((InputHandler)_fsm).Player.transform.Rotate(Vector3.up, SettingsManager.Instance.Database.MouseSensitivity * _cameraRotation.ReadValue<Vector2>().x);
         _camera.Rotate(Vector3.right, SettingsManager.Instance.Database.MouseSensitivity * -_cameraRotation.ReadValue<Vector2>().y);
         float fixedCameraRotation = Mathf.Clamp(_camera.localRotation.eulerAngles.x, -90f, 90f);
@@ -130,6 +128,17 @@ public class Gameplay : FSMTemplateState
     protected virtual void ToggleCamera(InputAction.CallbackContext context)
     {
         isCameraToggled = true;
+    }
+
+    public virtual void EnableInputs()
+    {
+        _movement = _inputActions.Gameplay.Movement;
+        _cameraRotation = _inputActions.Gameplay.CameraRotation;
+        _inputActions.Gameplay.ToggleMenu.started += ToggleNotebook;
+        _inputActions.Gameplay.ToggleCamera.started += ToggleCamera;
+
+        _inputActions.Gameplay.Enable();
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     protected enum ExitReason { Map, Notebook, Camera }

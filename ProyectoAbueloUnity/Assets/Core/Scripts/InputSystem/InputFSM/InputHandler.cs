@@ -483,6 +483,7 @@ public class InputHandler : FSMTemplateMachine
     {
         state = freeMove;
         freeMove.Enter();
+        freeMove.EnableInputs();
     }
 
     //public void LookForTargetsOnCamera()
@@ -658,6 +659,18 @@ public class InputHandler : FSMTemplateMachine
                 throw new System.Exception("Unable to filter gallery page state. Make sure each NextPageCT has properly set up PageToGo field.");
         }
         GoToPage(NotebookPage.Gallery);
+    }
+
+    public void EnableCameraModeInputs()
+    {
+        if(cameraMode != null)
+            cameraMode.EnableInputs();
+    }
+
+    public void EnableFreeMoveInputs()
+    {
+        if (freeMove != null)
+            freeMove.EnableInputs();
     }
 
     public void DeactivateObjectsAfterTurningPage()
