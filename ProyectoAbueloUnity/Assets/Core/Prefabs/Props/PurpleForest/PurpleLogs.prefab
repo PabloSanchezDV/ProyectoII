@@ -92,6 +92,14 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 06be9dd2b9d777f4eb5d8978659dc84f, type: 2}
+    - target: {fileID: 4742473837712756890, guid: ae4232cdefcd10f47b57717a7f644409, type: 3}
+      propertyPath: m_LODs.Array.data[0].screenRelativeHeight
+      value: 0.07208097
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742473837712756890, guid: ae4232cdefcd10f47b57717a7f644409, type: 3}
+      propertyPath: m_LODs.Array.data[1].screenRelativeHeight
+      value: 0.032057855
+      objectReference: {fileID: 0}
     - target: {fileID: 7126450635726592633, guid: ae4232cdefcd10f47b57717a7f644409, type: 3}
       propertyPath: m_Name
       value: PurpleLog_LOD1
