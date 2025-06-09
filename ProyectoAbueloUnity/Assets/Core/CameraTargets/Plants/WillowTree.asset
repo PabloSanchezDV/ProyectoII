@@ -16,5 +16,4 @@ MonoBehaviour:
   _mask:
     serializedVersion: 2
     m_Bits: 1023
-  _raycastDistance: 60
-  targetTransform: {fileID: 0}
+  _raycastDistance: 105
