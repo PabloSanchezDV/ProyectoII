@@ -27527,12 +27527,16 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3406853193134487169, guid: a14adcd996f4efd449887b027cc8668b, type: 3}
+      propertyPath: m_text
+      value: "Escribe \naqu\xED..."
+      objectReference: {fileID: 0}
+    - target: {fileID: 3406853193134487169, guid: a14adcd996f4efd449887b027cc8668b, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3406853193134487169, guid: a14adcd996f4efd449887b027cc8668b, type: 3}
       propertyPath: m_fontSize
-      value: 18
+      value: 23.95
       objectReference: {fileID: 0}
     - target: {fileID: 5556116737658371221, guid: a14adcd996f4efd449887b027cc8668b, type: 3}
       propertyPath: m_Layer

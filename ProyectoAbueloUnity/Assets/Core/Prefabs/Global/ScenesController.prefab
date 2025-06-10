@@ -46,4 +46,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _progressToGoToFase2: 25
   _progressToGoToFase3: 50
-  _progressToEnd: 75
+  _progressToEnd: 65
