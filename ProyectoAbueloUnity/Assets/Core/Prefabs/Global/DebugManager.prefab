@@ -44,9 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b32f1fc39e644c44809d693825eb5d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _showAnimalMessages: 0
-  _showGlobalSystemsMessages: 0
-  _showAnimalStateChangesMessages: 0
-  _showInputHandlerStateChangesMessages: 0
-  _showDebugMessages: 0
+  _showAnimalMessages: 1
+  _showGlobalSystemsMessages: 1
+  _showAnimalStateChangesMessages: 1
+  _showInputHandlerStateChangesMessages: 1
+  _showDebugMessages: 1
   _showDebugCameraSystemMessages: 1

@@ -19,7 +19,6 @@ public class PinCT : NotebookCursorTarget
 
     public override void Hovering()
     {
-        Debug.Log("Hovering over " + transform.name);
         _meshRenderer.materials[1].color = Color.yellow;
     }
 
